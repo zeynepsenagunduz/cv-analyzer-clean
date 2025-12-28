@@ -1,0 +1,37 @@
+About the job
+A U.S.-based company that is developing a cloud-based shipping platform that helps businesses save time and money on shipping, is looking for a Front-End Developer. The developer will be collaborating closely with the design team to create beautiful, interactive, and responsive interfaces. The company's automated shipping solutions provide businesses access to discounted rates from all major carriers, including USPS, FedEx, and UPS. The company has managed to securely raise more than $150mn during their Series E round of funding.
+
+Job Responsibilities:
+
+Develop new pages from beginning to end on your own or collaborate with other team members to lead the execution of the user interfaces
+Working with design, identifying, proposing, and leading/assisting others in the development of reusable front-end components will help the application appear and feel more consistent
+Streamline designs for implementation with early input from the design team, and take part in design evaluations for new features, products, and systems
+Together with the design team, develop a tool for building interactive interfaces, rapid prototypes of design ideas, and designs that are responsive and accessible
+Lead the construction of a UI testing framework and tests, architect the user interface layer to maximize design and code reuse, and deliver new pages and features
+Develop the engineering team's UI competencies through mentoring, offer suggestions to make the product more usable, and simplify the user interface
+Keep abreast of high-performance best practices, run performance tests frequently, continuously improve web pages, and promote the use of HTML, CSS, and JavaScript developments
+
+Job Requirements:
+
+Bachelor’s/Master’s degree in Engineering, Computer Science (or equivalent experience)
+At least 5+ years of relevant experience as a front-end developer
+7+ years of experience developing front-end applications 
+Expertise in web technologies, including the most recent advancements in the HTML, CSS, and JavaScript ecosystems
+Knowledge of creating and managing codebases React
+A solid understanding of API Design and REST principles
+Working knowledge of integrating several different API Calls
+Ability to create extendable style libraries in the past and arranging code for reuse and maintainability
+Comprehension and knowledge of recommended practices for high-performance websites
+Familiar with utilizing browser and device capabilities to create responsive web experiences, as well as with using upcoming technologies and best practices
+Good command of AJAX, partial page updates, and asynchronous request handling
+Master new frameworks and technologies with interest
+Nice to have some working experience with server-side programming languages like Go, Python, Java, or Scala
+Familiarity with MVC frameworks, TypeScript is desirable
+ Experience building e-commerce applications and UI from scratch is preferred
+ Experience with Internationalization is desirable
+ Nice to have some experience building stable and effective end-to-end testing
+Interest in and understanding of security practices and test automation
+ Excellent verbal and written English communication
+Great interpersonal communication skills
+Ability to communicate with non-technical team members with a deep
+Solid understanding of customer needs and passion for customer success

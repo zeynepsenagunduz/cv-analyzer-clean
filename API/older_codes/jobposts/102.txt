@@ -1,0 +1,29 @@
+About the job
+You drive and manage your own projects for the digitization and automation of production and logistics processes. You design, develop and implement independently applications based on different technologies and interfaces to other systems
+Understanding for critical processes and the evaluation of smart solutions
+Operating with state-of-the-art devices and equipment in an intercultural environment
+Find and create new products in the area of I4.0
+Onsite customer support
+
+Qualifications
+
+Having graduated from Electronics, Mechatronics or Computer Science Engineering
+More than 2 years of technical experience in the Autonomous Mobile Robot environment
+Work in software design, implementation, documentation and testing processes
+Knowledge of at least on: ROS, C, C++, SQL,.NET, C#, JavaScript
+Knowledge about AGV / AMR control systems and fleet managersis crucial
+Having knowledge about communication protocols isa plus
+Working with international project teams
+Strong analytical and technical skills with respect to problem solving
+Strong commitment to customer satisfaction
+Flexible for travelling internationally
+
+Additional Information
+
+Your future job location offers you: Flexible benefits and services, medical services, employee discounts, on-site parking, catering facilities, access to local public transport, room for improvements.
+
+Only positive candidates will be replied via a video interview invitation.
+
+Bosch Grubu þirketlerine ilginiz için teþekkür ederiz. 6698 sayýlý Kiþisel Verilerin Korunmasý Kanunu kapsamýnda kiþisel verilerinizi önemsiyor ve bu kapsamda baþvurmuþ olduðunuz pozisyon hangi Bosch Grubu þirketi bünyesinde yer alýyor ise söz konusu þirketin veri sorumlusu sýfatýyla hareket ettiðini açýkça belirtmek istiyoruz. Mevcut yapacaðýnýz baþvurunuz için Kiþisel Verilerin Korunmasý Kanunu kapsamýnda hazýrlanmýþ olan Aydýnlatma Metni’ne buradan ulaþabilirsiniz. Ýþ baþvurunuz kapsamýnda bu ve yönlendirileceðiniz diðer sayfalarda birden fazla Bosch Grubu þirketi aydýnlatma metninin bulunmasý halinde, kiþisel verilerinizin iþlenmesi bakýmýndan veri sorumlusu sýfatýyla hareket eden ve baþvuru yapmýþ olduðunuz þirkete ait aydýnlatma metnini inceleyerek kiþisel verileriniz hakkýnda detaylý bilgiye de her zaman ulaþabilirsiniz.
+
+Thank you for your interest in Bosch Group companies. Within the scope of Personal Data Protection Law no.6698, we give importance your personal data and we want to clearly define that the Bosch Group is acting as the data controller for the position you are applying for. For your current application, you can find privacy notice here which was prepared in scope of Personal Data Protection Law. If more than one privacy notice of Bosch Group’s will appear in scope of your job application in this page and pages you will be redirected, you can always access detailed information by reviewing privacy notice of the company you are applying for and acting as a data controller for the processing of your personal data.

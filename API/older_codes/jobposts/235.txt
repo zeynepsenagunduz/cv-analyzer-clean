@@ -1,0 +1,55 @@
+About the job
+Crossover is the world's #1 source of full-time remote jobs. Our clients offer top-tier pay for top-tier talent. We're recruiting this role for our client, Trilogy. Have you got what it takes?
+
+Every tech company is after JavaScript and Python programmers to power their enterprise platform development. At Trilogy, we acknowledge the tried-and-true power of low-level languages for obtaining high-performance applications. If you are a seasoned C++ developer with deep knowledge of systems programming, then we have an exciting opportunity for you.
+
+Trilogy is a software platform that powers 100+ B2B SaaS products, and we are on a mission to build many more. Our products are carefully architected using simple, modular, high-quality code and cutting-edge AWS technologies, not to mention that our software engineers are real product experts. We give our engineers codebase ownership so they can solve the most demanding coding problems and deliver features without regressions.
+
+In this role, you will constantly face new challenges, leveraging your C++ expertise to transform legacy on-prem products into cloud-native products or to build leading cloud-based engines from scratch. Our fast-paced environment is powered by an infrastructure that ships every merge and a broad range of technologies and products, enabling you to experience multiple products and learn at an unprecedented pace.
+
+If you are looking for the ultimate learning and self-development opportunity, apply today!
+
+What You Will Be Doing
+
+Implementing new features on existing software products by solving complex implementation problems and making the appropriate technical decisions.
+Fixing bugs to permanently eliminate defects that impair product functionality.
+Reviewing code from other developers to ensure they meet strict code quality standards and will not cause a regression.
+
+What You Won’t Be Doing
+
+Working on a single product: Our engineers handle multiple codebases and technologies and work on multiple releases every year.
+Mindless code writing: Every code change must consider architectural implications.
+Managing projects or tasks: We have automated management overhead so you can focus entirely on software development.
+
+Senior C++ Engineer key responsibilities
+
+Deliver flawless features and bug fixes that make customers delighted with Trilogy products.
+
+Basic Requirements
+
+10+ years of C/C++ software development experience
+Expertise in low-level and systems/network programming
+Excited to work close to hardware and with critical infrastructure
+
+About Trilogy
+
+Hundreds of software businesses run on the Trilogy Business Platform. For three decades, Trilogy has been known for 3 things: Relentlessly seeking top talent, Innovating new technology, and incubating new businesses. Our technological innovation is spearheaded by a passion for simple customer-facing designs. Our incubation of new businesses ranges from entirely new moon-shot ideas to rearchitecting existing projects for today's modern cloud-based stack. Trilogy is a place where you can be surrounded with great people, be proud of doing great work, and grow your career by leaps and bounds.
+
+There is so much to cover for this exciting role, and space here is limited. Hit the Apply button if you found this interesting and want to learn more. We look forward to meeting you!
+
+Working with Crossover
+
+This is a full-time (40 hours per week), long-term position. The position is immediately available and requires entering into an independent contractor agreement with Crossover. The compensation level for this role is $100 USD/hour, which equates to $200,000 USD/year assuming 40 hours per week and 50 weeks per year. The payment period is weekly. Consult www.crossover.com/help-and-faqs for more details on this topic.
+
+What to expect next:
+
+You will receive an email with a link to start your self-paced, online job application.
+Our hiring platform will guide you through a series of online “screening” assessments to check for basic job fit, job-related skills, and finally a few real-world job-specific assignments.
+
+Important! If you do not receive an email from us:
+
+First, emails may take up to 15 minutes to send, refresh and check again.
+Second, check your spam and junk folders for an email from Crossover.com, mark as “Not Spam” since you will receive other emails as well.
+Third, we will send to whatever email account you indicated on the Apply form - by default, that is the email address you use as your LinkedIn username and it might be different than the one you have already checked.
+If all else fails, just reset your password by visiting https://www.crossover.com/auth/password-recovery if you already applied using LinkedIn EasyApply.
+Crossover Job Code: LJ-4821-TR-Antalya-SeniorC++Engin.002

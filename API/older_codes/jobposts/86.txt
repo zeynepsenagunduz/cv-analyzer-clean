@@ -1,0 +1,35 @@
+About the job
+Rollic is an Istanbul-based game developer and publisher.
+
+Founded in December 2018 and acquired in October 2020 by Zynga who has joined the Take-Two roof as of May 2022. Rollic is an Istanbul-based, leading game developer and publisher focusing on free-to-play hyper-casual games for iOS and Android.
+
+Rollic has over 2 billion downloads across its diverse portfolio of games and thanks to an intensive development process utilizing a massive test pipeline, has a steady cadence of globally hit titles such as Tangle Master 3D, High Heels!, and Hair Challenge all of which have gained over 100 million downloads worldwide within a few months after their release.
+
+Working at Rollic,
+
+A chance to become a Take-Two Stockholder with the “Take-Two RSU System” under Rollic;
+Being a part of our dynamic and fast-paced environment;
+Opportunity to take responsibility and improve your skills continuously;
+Remote office support to help you improve your well-being at home;
+Competitive salary to help everyone achieve their highest potential;
+Private health insurance which allows you to take care of your health in a wide range of hospitals;
+Being a part of the next big thing.
+
+We are looking for: Mobile Developer
+
+Main Responsibilities:
+
+Designing, coding, and developing new features/fix bugs/enhancements to mobile SDKs for Unity engine,
+Following engineering best methodologies towards ensuring performance, reliability, scalability, and measurability.
+Work with Product Management to translate business requirements into technical requirements,
+Work effectively with teammates, contributing to an innovative environment of technical excellence,
+Provide production and integration support for all Rollic Games.
+
+Desired Skills and Qualifications:
+
+BS, MS in Computer Science, or related technical discipline (or equivalent)
+2+ years of professional experience in software development
+Experience in mobile application (iOS/Android) development or/and Unity engine
+Experience with C# or similar programming languages
+SDK development experience is a plus
+Native iOS/Android development experience is a plus

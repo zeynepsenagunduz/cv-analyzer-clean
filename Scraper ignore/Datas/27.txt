@@ -1,0 +1,34 @@
+About the job
+Huawei Turkey Research and Development Center (R&D) Wireless department is working on LTE and 5G related software development and innovation projects.
+
+Are you looking for a work environment to share your technical skills with other team members? D Do you want to work in a project with Agile practices and Agile project life cycle? This job is a good opportunity to show your skills.
+
+Brief Job Description:
+Participate requirement analysis, high and low level design of requirements, and testing.
+Coordination with other testers for cross-functional requirements tests.
+Resolve issues proactively to deliver high quality products based on customers’ needs.
+Take ownership and responsibility for solutions provided.
+Work with team members collaboratively, complete Test Case Design and reviews and report issues on demand.
+Join to Execution activities (Performance, Security, UAT, SVT and SDV)
+
+Essential Skills Required:
+1-5 years of testing experience in big software projects (telecom industry highly preferable)
+Candidate should have knowledge and working experience in test techniques and methodologies
+Application Cyber Security and Penetration Testing knowledge is required. (APIs, Protocol test, Fuzzing Test, Vulnerability Scanners Tool)
+Performance Test frameworks design, development and tool knowledge is required. (with JMeter, LoadRunner etc.)
+Automation Test frameworks design, develop, execute, and working experience of maintain automated test suites is required (with Selenium, maven, Log4j, Appium etc.)
+Demonstrable knowledge of OOP concepts and test automation experience with Java programming language, TestNG, Visual testing with Sikuli and Git
+Good to have experience in BDD (Cucumber), CI/CD tools like Jenkins
+Has an understanding of networks and network topology, IP, swithces, routing, OSI and TCP/IP models, IP addressing and subnetting 
+Strong issue analysis and problem solving skill is required
+Background of Data Trace, Log Analysis & Defect Management (Linux, Wireshark)
+Data manipulation, simulation experience is nice to have (Fiddler, MockServer usage)
+Knowledge for 3G& LTE & 5G systems is preferable
+Good command of English is essential
+
+Benefits:
+Discount at MSc/PhD programs from several top universities;
+Employee Gift Packs for special events;
+Online training platforms (Udemy, O’Reilly, Raywenderlich, Packt);
+External certification support;
+A culture of continuous development: conferences, in-house events & Tech Talks to stay up-to-date on current research and technology.

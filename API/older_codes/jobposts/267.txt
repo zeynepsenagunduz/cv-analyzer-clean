@@ -1,0 +1,25 @@
+About the job
+Experience, Education and Skills Required:
+
+BSc or higher degree in Engineering: Computer, Electronics, Software, Game & Development
+Experience in C# & C++, Python programming
+Good Unity3D & Unreal Engine skills
+Having experience in VR & AR & MR Software & Hardware
+Good at game development and architecture
+Able to create/maintain data structure, material and color definitions
+Having experience in script testing, GUI & Gaming Animations
+Able to communicate & work well with a team of similarly passionate & skilled individuals
+Open to learn and develop new methods & disciplines
+Strong analytical and problem-solving skills
+Excellent written and verbal communication skills in English
+No restriction to travel abroad
+
+Responsibilities:
+
+Enhancing and maintaining VR&AR Software and models while scripting new features
+Creating/Updating new scripts for required needs
+Motion and animation creations in software for showcases and specific topics/issues/events
+Identify and communicate technical requirements and risks for new features and systems
+Building and integrating connections between VR software and hardware
+Collaborate across multiple disciplines to shepherd features from initial concept to completion
+Keeping the knowledge up-to date on current techniques, research, graphics data, hardware, etc.

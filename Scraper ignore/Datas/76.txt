@@ -1,0 +1,27 @@
+About the job
+
+·  Temel devops süreçlerini Azure DevOps Server platformunda geliþtirmek,
+· Ýç yazýlým uzmanlarý ya da tedarikçiler tarafýndan iletilen talepleri anlayarak gerekli dokümanlarý hazýrlamak (wiki platform üzerinde)
+· Mevcut CI/CD süreçlerini incelemek,
+· Geliþtirdiði veya deðiþtirdiði CI/CD süreçlerinin dokümante etmek,
+· Azure DevOps platformunda ihtiyaç olan entegrasyonlarý tasarlamak,
+· DevOps ekosisteminde yer alan sunucu ve uygulamalarýn güncelliðini takip ederek bakýmýný yapmak,
+
+
+· Üniversitelerin mühendislik bölümlerinden mezun,
+· En az 1 sene, ölçeklenebilir son kullanýcý platformlarýnda deneyim sahibi,
+· DevOps süreçlerine hakim, geliþime açýk ve yeni öneriler sunacak motivasyona sahip,
+· Yazýlým geliþtirme ekiplerinden gelen geri bildirimleri iþleyebilme deneyimine sahip,
+· Tercihen container altyapý saðlayýcýlarý ve servisleri hakkýnda bilgi sahibi,
+· CI/CD süreçlerini tasarlayabilen,
+· Git-Flow hakkýnda bilgi sahibi,
+· Linux sistem yönetimi hakkýnda geri bildirim yapabilecek seviyede bilgi sahibi,
+· Windows Server ile rahat çalýþabilen,
+· IIS uygulama sunucularý hakkýnda bilgi/deneyim sahibi
+
+ · Azure DevOps Server, Jenkins v.b. bir continuous integration sürecine hakim,
+· (Tercihen) Repository ürünleri deneyimi olan (Nexus RM)
+· (Tercihen) SAST, DAST,IAST güvenlik araçlarýnýn DevOps pipeline entegre edilmesinde bilgi/tecrübe sahibi (Sonarqube,OWASP/ZAP,NetSparker,Seeker vb . araçlar)
+· (Tercihen) Git versiyon kontrol sisteminde tecrübe/ bilgi sahibi
+· (Tercihen) Powershell, linux ve python script dillerinde bilgi sahibi
+· (Tercihen) Docker container,k8s, Openshift/okd konularýnda bilgi /tecrübe sahibi

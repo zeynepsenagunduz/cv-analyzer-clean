@@ -1,0 +1,67 @@
+About the job
+Job Title - Backend Software Engineer - Data Team
+
+Reports Into - Senior Data Science Core Developer
+
+Job Close Date  - 30/03/2023
+
+Location - Remote
+
+A Little Bit about Kwalee….
+Kwalee is one of the world’s leading multiplatform game developers and publishers, with well over 900 million downloads worldwide for mobile hits such as Draw It, Teacher Simulator, Let’s Be Cops 3D, Airport Security and Makeover Studio 3D. We also have a growing PC and Console team of incredible pedigree that is on the hunt for great new titles to join TENS!, Eternal Hope, Die by the Blade and Scathe.
+
+What’s In It For You?
+Profit sharing scheme - we win, you win
+
+Quarterly Team Building days
+
+Pitch and make your own games on Creative Wednesdays!
+
+Flexible working hours - we trust you to choose how and when you work best
+
+All the equipment that you need to be properly set up
+
+Are You Up To The Challenge?
+As a Software Engineer in the Data Science Team, you will build tools and develop technology that deliver data products to a team of strategists, marketing experts and game developers. You will design, build, test and deploy products which serve a company fuelled by data.
+
+Your Team Mates
+The Data Science team is central in developing the technology behind the growth and monetisation of our games. We are a cross functional team that consists of analysts, engineers and data scientists, and work closely with the larger engineering team to deliver products spanning our modern, cloud first, tech stack.
+
+What Does The Job Actually Involve?
+As a Software Engineer in the Data Science Team, you will:
+
+Build tools and develop technology that deliver data products to a team of strategists, marketing experts and game developers.
+
+You will design, build, test and deploy products which serve a company fueled by data.
+
+Develop the essential components of Kwalee data products. Including automated bidding software and our gameplay optimisation engine
+
+Work at the core of a talented and growing Data and Engineering department
+
+Unlock value by collaborating with marketing and development teams across the company
+
+Manipulate vast databases of player interaction and performance marketing data to power new products
+
+Your Hard Skills
+A proven track record of writing high quality program code in Python
+
+Experience dealing with data pipelines and ETL processes
+
+Desire to learn new technology and solve hard problems
+
+Ability to work in a fast paced environment
+
+An avid interest in the development, marketing and monetisation of mobile games
+
+Your Soft Skills
+Kwalee has grown fast in recent years but we’re very much a family of colleagues. We welcome people of all genders, races and backgrounds - and all we ask is that you collaborate, work hard, ask questions and have fun with your team and colleagues. We don’t like egos or arrogance and we love playing games and celebrating success together.
+If that sounds like you, then please apply.
+
+A Little More About Kwalee
+Founded in 2011 by David Darling CBE, a key architect of the UK games industry who previously co-founded and led Codemasters, our team also includes legends such as Andrew Graham (creator of Micro Machines series) and Jason Falcus (programmer of classics including NBA Jam) alongside a growing and diverse team of global gaming experts.
+
+Everyone contributes creatively to Kwalee’s success, with all employees eligible to pitch their own game ideas on Creative Wednesdays, and we’re proud to have built our success on this inclusive principle.
+
+We have an amazing team of experts collaborating daily between our studios in Leamington Spa, Lisbon, Bangalore and Beijing, or on a remote basis from Turkey, Brazil, Cyprus, the Philippines and many more places around the world. We’ve recently acquired our first external studio, TicTales, which is based in France.
+
+We have a truly global team making games for a global audience, and it’s paying off: - Kwalee has been voted the Best Large Studio and Best Leadership Team at the TIGA Awards (Independent Game Developers’ Association) and our games have been downloaded in every country on earth - including Antarctica!

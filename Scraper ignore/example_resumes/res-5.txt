@@ -1,0 +1,142 @@
+Diogo Rodrigues
+Frontend Developer with UI/UX design skills
+Mobile: +353 83 093 2951 Email: diogorodrigues.dev@gmail.com
+LinkedIn: https://linkedin.com/in/diogorodrigues02
+Portfolio: https://www.diogorodrigues.dev/
+Summary
+Enthusiastic front-end developer with 10 years of experience in building and maintaining modern and
+user-focused interfaces. I had many opportunities in my previous jobs to develop strong UI / UX design
+skills and I also participated in the process of developing large and successfully launched applications.
+Proficient in HTML, CSS, JS and principles of UI Design - as well as modern libraries, frameworks and
+tools (such as React, Storybook and Jest) - I have experience in organising meetings with the team to
+ensure functional and visually attractive interfaces.
+• Modern and solid web development stack, including: React, Next.js, Storybook, Typescript, unit test
+tool with Jest, ES6 features, CSS-in-JS and CSS preprocessors;
+• Visual design process: participation in user tests, creation of prototypes and UI guidelines using Adobe
+XD, Figma and Photoshop;
+• Strong knowledge of UI Design principles and UX patterns;
+• Familiarity with APIs (GraphQL and REST) and Git/version control workflows;
+• Experience of working in Agile environments;
+Experience
+Principal UX Engineer
+Company: Fidelity Investments (Dublin / Ireland)
+Jan 2021 – Dez 2021
+Fidelity Investments hired me to work on a specific project focused on artificial intelligence to create better
+and faster content, allowing computers to do the monotonous tasks while humans focus on the creative and
+interesting details.
+Main responsibilities:
+• Help the team think about the best UX and UI strategies.
+• Creating prototypes with Figma and Adobe XD for web and mobile;
+• Creating and maintaining features using front-end modern stack: React with Typescript and integration test
+automation;
+Achievements:
+• Design a system that is easy to understand and use.
+• Creation of components using Storybook in order to make the project consistent and easy to maintain.
+Frontend Developer
+Company: DYD CREATIVE SOLUTIONS, INC.
+Oct 2018 – Oct 2020
+At DYD I worked with web and mobile development for clients like HP, HCSS and CallSource. The most
+challenging project was to help redesign the online learning platform called HP Life built in 7 different
+languages (including Arabic) and for people from all over the world.
+Main responsibilities:
+• Creating prototypes with Adobe XD for web and mobile;
+• Creating and maintaining features using front-end modern stack: React with Typescript and integration test
+automation;
+• Developing themes for WordPress using the Genesis WP framework, WooCommerce and the Gulp task
+runner to generate the final assets;
+Achievements:
+• Managed the team to create consistent UI components through the Storybook;
+• Developed modern applications using new and solid technologies, specially React and WooCommerce.
+Front-end developer
+Company: Via Varejo SA
+Aug 2016 – Sep 2018
+In this company I worked with major Brazilian e-commerce brands, mainly Nike Brasil. I had the
+opportunity to immerse myself in many discussions based on the user's needs together with the team at
+the Nike and Google offices.
+Main responsibilities:
+• Conducting A/B testing to identify bugs and UI improvements;
+• Optimizing websites to improve performance;
+• Creating the UI components for Angular 2+ using Sass as CSS preprocessor;
+• Creating new features for e-commerces using modern technologies;
+• Presenting updated front-end designs for final approval;
+Achievements:
+• Refactored Nike's Brazilian e-commerce to increase performance by 80%;
+• Managed UI components of the new checkout process from scratch;
+Front-End Developer
+Company: Trend-i
+Jan 2015 – Jun 2016
+At Trendi, I assisted the team in UI decisions and in developing solutions to improve production based on
+Agile methodologies.
+Main responsibilities:
+• Planning and developing tools to improve the production of front-end development, such as boilerplates built
+on Gulp task runner;
+• Making decisions about which technology to use in projects;
+• Participating in meetings with clients to understand the needs of the project to discuss with the team;
+• Developing HTML, CSS and JS focusing on performance and accessibility;
+Achievements:
+- Prototyped and presented the interface of a system to the government of Brazil using front-end technologies
+and the proposal was successfully accepted;
+- Improved front-end production time with the creation of boilerplates;
+Web Designer
+Company: ORKEO
+Oct 2013 – Dec 2014
+I helped this startup to create the new design system for its product and to define digital marketing using
+Hubspot, SEO techniques and Google Ads.
+Main responsibilities:
+• Creating the Design System of the company: logo, style guide and UI components;
+• Implementing interfaces using Angular and CSS preprocessors;
+• Planning digital marketing strategies;
+• Creating and maintaining the website of the startup using WordPress;
+Achievements:
+• Developed a Design System consistent from the ground up;
+• Obtained leads and kept users engaged with the flow;
+Web Designer
+Company: Mixd Internet
+Dec 2012 – Jul 2013
+I planned and created friendly interfaces through graphic software and front-end development with a
+focus on marketing, usability and accessibility.
+Main responsibilities:
+• Planning and creating interfaces using Photoshop;
+• Developing the front-end using HTML/CSS and JS (mainly jQuery);
+• Implementing accessibility according to W3C recommendations;
+• Implementing On-page SEO techniques;
+Achievements:
+• Developed award-winning accessibility projects at events organized by W3C;
+• Implemented landing pages that attracted many leads and helped companies to leverage their
+business;
+Web Designer
+Company: OCTO TI
+Apr 2009 – Nov 2012
+OCTO was my first professional experience as a web designer and I was able to learn a lot in this
+company at a time when the world of web development was changing a lot.
+Main responsibilities:
+• Researching new front-end technologies and conducting tests;
+• Ensure front-end development between browsers (with support for IE6);
+• Implementation of websites using WordPress;
+• Development of websites with Responsive Web Design and SEO techniques;
+Achievements:
+• I implemented new technologies like tableless, responsive web design and jQuery and, consequently,
+helped to improve the flow of projects.
+Education
+Multimedia Production Degree
+University Center Senac - Santo Amaro
+Design Thinking and Usability Courses
+The Interaction Design Foundation (IDF)
+User Experience Workshop
+FIAP
+Skills
+• High Organization
+• Attention to details
+• Clear communication and problem-solving person
+• Years of experience with HTML, CSS and JS, including new features and tools such as: ES6, CSS
+Grids, CSS preprocessors, React, Next.js, Gatsby.js, Storybook, Styled Components, Rest APIs,
+GraphQL and Test Automation.
+• Solid UI / UX design skills: main design principles, user-centered design, accessibility and usability,
+W3C recommendations, emotional design and prototyping tools (Adobe UX and Photoshop).
+• Knowledge about marketing digital: SEO techniques, email marketing, lead generation.
+• Other skills: React native, mobile patterns, wordpress, task runners, webpack, docker, git and github.
+References
+Diullei Gomes +47 919 00 350
+Software Developer at Resoptima - Oslo, Norway
+Kaleb Chang +55 11 98353-5195
+Team Leader at DYD - São Paulo, Brazil

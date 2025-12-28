@@ -1,0 +1,44 @@
+About the job
+Job Description
+
+This is a software development opportunity at one of the most successful Internet-based businesses in the world. With 62 million monthly visitors, more than 5 million listings, and over 15 billion monthly page views, we are in the top five largest classifieds platforms in the world and one of the top 300 largest Internet platforms globally. sahibinden.com is the first ever in Turkey to have been selected as one of top “20 best places to work in Europe” (2020).
+
+
+What You Bring
+
+As a sahibinden.com developer, generally speaking, you will be
+developing new platform features within your business roadmap
+working on technical features and participating in the technology transition projects
+working to reduce overall bugs in your domain
+
+We respect differences in personalities and varying approaches to getting your work done.
+Having said that, we look for individuals who are
+
+team players
+resilient, result-oriented people
+optimistic individuals
+strong in analytical skills
+Smart, analytical, and creative problem solver
+
+An intricate code base, a large set of platform features and heavy performance numbers require individuals who can cope with the resulting software challenges. Technical qualifications we look for include:
+
+4 year bachelor degree in CS or relevant field
+Experience in the Java programming language
+Minimum 2 year of software development experience in a hands on coding role with Java
+Preferably experienced in data structures, algorithms, and performance analysis
+Experienced with good software engineering practices, including the application of patterns and unit testing
+Practical experience of SQL and NoSQL databases including data modelling
+Core XP practices of TDD, Pair Programming, and Continuous Integration
+Advocate for the best practices in software engineering
+
+
+Bonus Points For:
+
+Experience in the implementation of microservice architectures
+Experience in building large-scale web applications
+Containerization technologies such as Kubernetes and Docker
+Experience with cloud technologies
+
+
+
+"Your personal data to be collected within the scope of the applications you will make through this job posting, will be carried out and processed for the purposes of conducting job application processes and evaluating your job application by Sahibinden Bilgi Teknolojileri Pazarlama ve Ticaret Anonim Þirketi (“Sahibinden”) as a data controller in accordance with the Law on the Protection of Personal Data No. 6698 (“KVKK”) and the relevant legislation.”

@@ -1,0 +1,20 @@
+About the job
+Project Description
+One of the world's largest providers of products and services to the energy industry has a need to develop, support and integrate software system in Oil & Gas domain. It's a web application for drilling engineers, which is based on microservices architecture. System's capabilities include data acquisition from other hardware/software systems, machine control, cloud connectivity, process control and user interaction.
+You will be a member of a cross functional team: fullstack developers (Kiev/Dnipro, Ukraine), QA and Product Owners (Houston, USA).
+Our project is stable, long-term and constantly adopts new technologies. Key project stakeholders are open for innovative ideas.
+Project is based on SCRUM methodology.
+Technologies used: Angular7+, NodeJS (Express JS), Typescript, Docker, MongoDB (Mongoose ODM), RabbitMQ, Socket.io, Consul, MQTT, Jenkins
+This is a great opportunity to work in an international team, apply and learn modern IT technologies like IoT, cloud platforms, microservices environment and other.
+Responsibilities
+Create, maintain and deploy front-end and back-end services, create PoC (proof-of-concept) solutions.
+Skills
+Must have
+JavaScript, MongoDB, Node.js, Angular, TypeScript, HTML, CSS, C#/Net
+Nice to have
+DevOps (Linux) experience, UI/UX, HTML canvas, e-charts, one of strongly typed languages is a big plus.
+Languages
+English: B2 Upper Intermediate
+
+Seniority
+Senior

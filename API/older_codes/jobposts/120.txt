@@ -1,0 +1,29 @@
+About the job
+We are looking for Mobile Developer – Android/ iOS experienced in mobile- based application development in banking projects. The candidate should be proficient in android/iOS platforms, Objective C, Swift, Cocoa Touch along with the knowledge of Android/iOS frameworks and design principles.
+
+If you are interested in deep diving into the technology that you have chosen and develop a cutting edge expertise, then you will definitely enjoy working with us.
+
+
+Developing code for Android using Java and Kotlin,
+Developing code for iOS Applications using Objective C and Swift,
+Experience in consuming JSON/REST-based web services,
+
+
+Min. 3 years of experience of experience with mobile development for Android or iOS or both,
+Solid coding practices including good design documentation and unit testing with good optimization and debugging skills,
+Experience in integrating mobile applications with backend services (HTTP, REST, JSON, XML, OAuth, SQL technologies knowledge),
+Experience in consuming JSON/REST-based web services,
+Knowledge of user experience (UX),
+Experience in any of these technologies: Java, Kotlin, Objective C, Swift, Flutter, React Native, etc.
+
+
+Work in new and exciting projects and products team, using latest technologies,
+Obtain and enhance banking/insurance experience,
+Highly competitive compensation & benefits package,
+Performance linked bonus,
+Work remotely,
+Tremendous learning opportunities,
+A thriving and energetic culture that celebrates diversity and puts people at the heart of what we do
+
+VeriPark (https://www.veripark.com/) is a global software company with 24 years of expertise in the Financial Services industry. Our mission is to enable financial institutions to become digital leaders by delivering world class customer journeys in digital and assisted channels. We develop omni-channel delivery, customer engagement (CRM), branch automation and loan origination solutions based on Microsoft technology (Azure, Dynamics 365, Power Platform) for banks and insurance companies worldwide.
+With offices in 15 countries from Canada over Europe and the Middle East to Kuala Lumpur, our 900+ colleagues are serving customers in more than 30 countries worldwide. We’re proud to say we’re Passionate, Progressive and Professional and are looking forward to welcome candidates who share the same values to our VeriPark family.

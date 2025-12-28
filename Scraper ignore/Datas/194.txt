@@ -1,0 +1,24 @@
+About the job
+We are looking for a Senior Java Developer to be employed in our Istanbul office.
+
+The ideal candidate should;
+
+Be passionate, curious & eager to learn,
+Be a good team player & be flexible in aligning personal goals with team objectives,
+Have strong communicational and interpersonal skills,
+Have knowledge on Java, GWT, GXT, HTML, Http, Ajax, JavaScript, MVC frameworks, React.js
+Have knowledge on Object-Oriented design and Design patterns, Hibernate, Web services, JUnit or any unit testing tool, Linux/Unix, SVN, Git, Java project management tools such as Maven/Gradle and reactive programming are strong assets,
+Have knowledge of database systems,
+Adapt to changing circumstances and demands, whilst maintaining standards,
+Have the ability to analyze, monitor and improve stability & performance of Java Applications,
+
+
+The Senior Developer is expected to;
+
+Provide Software Development best practices to projects, ensuring that all meet with Kron and relevant industry standards,
+Implement the requirements according to the analysis of the projects,
+Implement the unit tests for the implementations,
+Participate in the detailed technical design for the requirements,
+Fix the bugs reported during system testing period,
+Be open for improving &using new Technologies
+Give support for production issues.

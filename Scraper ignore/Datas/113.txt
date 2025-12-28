@@ -1,0 +1,18 @@
+About the job
+An emerging company building a participant recruitment and engagement platform for clinical research is looking for a Full-Stack Front-End-Heavy Developer. The selected candidate will be assisting cross-functional teams to build efficient products while developing scalable, responsive, and well-documented stacks. The platform helps sites provide a connected experience for participants, study teams, and administrators by eliminating obstacles. This will be a long-term, full-time position requiring some overlap with the PST time zone.
+
+Job Responsibilities:
+
+Work as part of a team to develop engaging user experiences by writing fast, well-tested, and performant code for the web and mobile applications using Vue.js
+Collaborate with a cross-functional, fast-paced engineering team
+Collaborate with the quality engineer, data analyst, product manager, designer, and delivery manager regularly
+Create a system that is dependable, scalable, secure, observable, and fast
+
+Job Requirements:
+
+Bachelor’s/Master’s degree in Engineering, Computer Science (or equivalent experience)
+At least 3+ years of relevant experience as a full-stack or front-end developer
+Must have an experience with VueJS, JavaScript, and HTML/CSS
+Familiarity with Python and Flutter is nice to have
+Healthcare industry experience is preferred
+Great communication skills

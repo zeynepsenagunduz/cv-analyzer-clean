@@ -1,0 +1,27 @@
+About the job
+InterProbe olarak, geliþtirmekte olduðumuz büyük veri çözümleri ile kurumlarýn karar alma mekanizmalarýnýn merkezinde yer alýyoruz. 
+Sizi, büyük veri sistemleri alanýndaki tecrübemize ortak olmaya ve faaliyet gösterdiðimiz niþ alanlarda yeteneklerinizi geliþtirmeye davet ediyoruz.
+Verinin, endüstri standardý büyük veri teknolojileri ile iþlenmesinden görselleþtirilmesine varan yolculuðuna eþlik etmek istiyorsanýz, baþvurularýnýzý bekliyoruz.
+ Gereksinimler
+
+En az 5 yýl yazýlým geliþtirme deneyimine sahip,
+Önyüz geliþtirme teknolojilerinde (JavaScript/Typescript & Angular) en az 2 yýl aktif yazýlým geliþtirme deneyimi olan,
+HTML ve CSS alanýnda en az 2 yýl deneyime sahip,
+Web servis teknolojileri (RESTful, SOAP vb.) konusunda tecrübe sahibi,
+CI/CD ve versiyon kontrol süreçleri (Gitlab CI-CD/Jenkins/CircleCI) ile ilgili bilgi sahibi,
+Tercihen görselleþtirme kütüphanelerinden (AngularTS, Leaflet, Openlayers, Apache ECharts, YFiles) bir ya da daha fazlasý üzerinde deneyim sahibi olan,
+Tercihen mikroservis mimarileri hakkýnda bilgi sahibi,
+Kod incelemesi ve kod kalite takibi gerçekleþtirebilen,
+Çevik Yazýlým Geliþtirme metodolojilerine uyum saðlayabilen,
+Analiz ve tasarým faaliyetlerinde katkýda bulunabilen, 
+Ýngilizce teknik doküman okuma/anlama yeteneði olan,
+Sürekli öðrenerek kendini yenileyen, problem çözmekten zevk alan, sonuç odaklý, araþtýrmacý, yeniliklere açýk, inisiyatif alma becerisine sahip, proaktif ve yaratýcý yaklaþým sergileyebilen,
+Ýletiþim yetenekleri yüksek, takým çalýþmasýna uyumlu,
+Himayesinde yer alacak genç mühendislere yol gösterebilecek, kýdemli takým arkadaþlarý arýyoruz.
+
+Birlikte neler yapacaðýz?
+
+Daðýtýk veri iþleme, saklama ve analitik süreçlerinin görselleþtirilmesini saðlayacak,
+Link analizi tabanlý sorgulama süreçlerini tecrübe edecek,
+Yeni teknolojileri araþtýracak, deneyimleyecek ve entegrasyonunu saðlayacak,
+Çok katmanlý yazýlým geliþtirme mimarilerinin tasarým ve uygulamasýný gerçekleþtireceðiz.

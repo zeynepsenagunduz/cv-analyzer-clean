@@ -1,0 +1,26 @@
+About the job
+Argela’s mission isn’t simply to provide solutions for the present; it’s to generate innovative technologies for the future of communication. We do this through applying our extensive telecom experience to a rigorous, dynamic research and development process. Our goal is to continue our standing as a leader in the information technologies through focusing on actual market needs like Network & Customer Analytics, Subscriber & Service Analytics, Deep Packet Inspection Solutions (DPI), Secure Network Infrastructures, software-defined networking (SDN) with network functions virtualization (NFV).
+
+To reach our goal, we are looking for the best talent within the scope of the job description below;
+
+ Job Description:
+Develop, Design applications and products.
+Responsible for Design, Construction & Unit Testing of assigned components/modules.
+Responsible for participating in requirements and analysis
+Support implementation & deployment
+Writing technical documentation of provided solution
+Interact with customer and work in customer site if needed
+
+Qualifications:
+At least 4-6 years of experience in C programming language
+Advanced C/C++ knowledge and experience in multithreaded applications is a must
+Linux (kernel) and/or embedded software development experience is preferred
+Experience on development of real time IP traffic detecting &analysis solutions or Networking Applications with DPDK is a big plus
+IP based protocol implementation experience on, UDP, TCP, HTTP, is mandatory
+Experience in reactive systems and reactive programming is a big plus
+Very good knowledge of software development methodologies and processes
+
+
+
+Bu ilana yapacaðýnýz baþvurular aracýlýðýyla toplanacak kiþisel verileriniz hakkýndaki aydýnlatma metnine, þu linkten ulaþabilirsiniz:
+https://www.argela.com.tr/tr/kvkk

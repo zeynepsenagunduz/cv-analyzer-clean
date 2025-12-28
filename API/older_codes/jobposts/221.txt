@@ -1,0 +1,24 @@
+About the job
+Founded in 1979, today Aras Kargo serves its customers through a network of 14 regional directorates, 27 hubs, nearly 1.000 branches, a fleet of over 5.000 vehicles and 16.000 employees completing 1 million deliveries per day on average, making it the leading parcel delivery company in Turkey with the broadest network. The company took its innovative vision in the industry one step further with its 2020 merger with Austrian Post, leading to global and innovative projects. With its dedication to promoting happiness and making a difference with its range of services, Aras Kargo continues to operate as the top brand in industry using its innovative business model, combining technology with highly-skilled workforce. (Headquarters in Kavacik-Beykoz, Istanbul)
+
+The “Frontend Developer” will work in SME Platform team to develop a Saas platform for SME’s from scratch. Cloud native applications will be designed and developed with trend technologies.
+
+Key Skills and Qualifications:
+Bachelor’s degree in Computer Sciences
+Minimum 5 years experience required
+Knowledge on UI and UX design
+Experience in HTML/CSS and Javascript
+Experienced in Angular framework at enterprise level
+Experienced in Restfull services
+Knowledge on secure software development principles
+Strong Communication and team working skills
+
+Main Responsibilities:
+Design and develop frontend applications for SME platform
+Work with backend team to design and implement with backend services
+Producing high quality project deliverables within planned time and effort
+Designing and implementing enterprise-scale web applications
+Build reusable code and components for future use
+Ensure the technical feasibility and responsiveness of UI/UX designs
+
+"We care about your data privacy and take compliance with data protection legislation seriously. You can reach detailed information on rights arising from the processing of your personal data under Law on the Protection of Personal Data numbered 6698 from "https://www.araskargo.com.tr/tr/kvkk.aspx?type=1670"

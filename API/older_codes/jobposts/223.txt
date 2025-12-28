@@ -1,0 +1,20 @@
+About the job
+Founded in 1979, today Aras Kargo serves its customers through a network of 14 regional directorates, 27 hubs, nearly 1.000 branches, a fleet of over 5.000 vehicles and 16.000 employees completing 1 million deliveries per day on average, making it the leading parcel delivery company in Turkey with the broadest network. The company took its innovative vision in the industry one step further with its 2020 merger with Austrian Post, leading to global and innovative projects. With its dedication to promoting happiness and making a difference with its range of services, Aras Kargo continues to operate as the top brand in industry using its innovative business model, combining technology with highly-skilled workforce. (Headquarters in Kavacik-Beykoz, Istanbul)
+
+We are looking for “Senior Android Developers” for our global/local projects to support and develop workplace android application processes, with technical design mindset to support decision systems and stakeholders.
+
+Key Skills & Qualifications:
+Bachelor's degree from Computer Sciences
+5+ years experience in Java, C#, Python, Node Js, GoLang (1+ year of proven experience in Android Studio IDE and Java development)
+Experience in mobile application development with REST APIs
+Experience in using version control tools such as GIT/TFS and Firebase services
+Experience in hand terminal processes and having an active role in at least one Android handheld terminal Project
+Strong analytical and problem solving skills, willingness and openness to learn and develop,
+Ability to build strong internal and external relationships; a strong team player with communication skills
+
+Main Responsibilities:
+Work as part of a team to develop mobile enterprise solutions on Android platforms
+Participate in technical design process by analyzing technical application requirements
+Assist in integration of technical and application components to meet the business requirements
+Collaborate with cross-functional teams to define, design, and ship new features
+Work with outside data sources and APIs

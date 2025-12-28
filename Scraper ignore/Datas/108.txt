@@ -1,0 +1,19 @@
+About the job
+An emerging pet health management startup is looking for a Cross-platform Mobile Engineer. The engineer will be responsible for transforming mocks in Flutter and implementing specific platform features. The selected candidate will join the team as one of the early hires and contribute to integrating new features from customer's feedback as the beta application launch draws close. This is a full-time position that requires some time overlap with the Central time zone.
+
+Job Responsibilities:
+
+Develop and test the platform for new features to deliver an exceptional user experience for customers
+Share your knowledge and zeel for user-centric design with the team
+Collaborate closely with the CTO to deliver adequately on user and business requirements
+Utilize Github/pull requests for source control and management
+
+Job Requirements:
+
+Bachelor’s/Master’s degree in Engineering, Computer Science (or equivalent experience)
+At least 4+ years of relevant experience as a mobile engineer (Flutter)
+Must be proficient with top front-end frameworks (React Native or Flutter)
+Solid mobile experience and strong CSS skills
+Nice to have some experience with Flutter/Dart and native iOS/Android development experience
+Proficiency or willingness to learn Dart/Flutter and work on mobile applications
+Be a team player with a collaborative, empathetic attitude to thrive with the ever-changing nature of a startup

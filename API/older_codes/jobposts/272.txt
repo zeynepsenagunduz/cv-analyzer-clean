@@ -1,0 +1,34 @@
+About the job
+The story of Yýldýz Holding, which started with biscuit production in Istanbul in 1944, continues today with our food-snack products that we have reached 4 billion people in 5 continents with more than 300 brands and with our retail companies all over Turkey. With our 72 thousand employees, the majority of whom are located in Turkey, we aim to reach the better without stopping, and we produce a wide range of products from biscuits to chocolate, from frozen food to packaging in a total of 46 factories, 25 of which are abroad. We always raise the bar in economic contribution, employment, exports, social solidarity and sustainability. We give priority to social contribution with the principle of "Make Happy Be Happy" and we have been producing happiness for more than 75 years with our products, services and sustainable social responsibility understanding.
+If you want to be a part of this global world with us, apply for the position of Business Solutions & Integrations - Developer Lead and join us.
+
+What Awaits You, What Will Be Your Responsibilities? 
+
+
+Manage the Corporate Portal & Collaboration Applications that enable future of manufacturing in Yýldýz Holding factories.
+Plan and coordinate the execution of project plan with IT teams, in-house low code no code junior developers , vendors and the holding business & IT teams.
+Manage communications with top management via steering committee meetings, weekly updates, quarterly reports for alignment on project status, time& budget management
+Guide the holding management for adapting Low Code No Code platform
+Assess all software and deliverables produced by the vendors in terms of compliance to industry standards, future expandability, maintainability
+Assess the site readiness, roll-out check list, prepare training materials or any additional template documents and conduct training sessions.
+
+What will be the qualifications we expect from you?
+
+
+Bachelor's degree on Computer Engineering, Software Engineering
+5 years mobile or web development experience, back-end experience is plus ( 7 years experience for other engineering graduates )
+Familiar with Angular, Swift, Kotlin, JavaScript, TypeScript, CSS, Xpath, SOAP, REST API ,SQL
+Ability to negotiate with suppliers
+Extra ordinary documentation skills
+Software development sustainability and handling fast turn over rates of developers and
+Exceptional interpersonal skills and rapport building
+Strong problem-solving skills are a must, and also delivering quick solutions
+
+What Will Happen to Those Who Feature You?
+
+
+Strong verbal and written communication skills in Turkish & English are must
+Teamwork oriented and mentoring
+Assisting your manager and director in case of need
+Self-motivated and open-minded
+Ability to adapt fast-changing requirements and priorities

@@ -1,0 +1,25 @@
+About the job
+Established in 2006 and growing apace every year with its millions of subscribers, 'Turkey's Online Betting Site' Nesine.com is looking for players to be an integral part of its squad.
+
+Are you ready to join the league of champions at Nesine.com, the official online dealer of Turkey's Sports Lottery Organization Presidency (Spor Toto) and National Lottery (Milli Piyango) ? Come and get your jersey if you seek a career replete with exciting moments in a pioneering and innovative betting site, where you will kick goals with your creative projects, showcase your talents on the pitch and not the substitutes' bench, dribble past your rivals with strategic moves, know to pass the ball to your teammates, and always play an offensive-minded game.
+
+What else are you waiting for to enter the game in Turkey's most recommended betting site?
+
+Qualifications:
+Bachelor Degree in Computer Science, Information, Engineering Technologies other related fields from a reputable university.
+2+ years’ experience with deep skills in Android Development including bringing apps to fruition and on-store in the Google Play Store to a large user base audience.
+Java & Kotlin skills including being familiar with new language features, object oriented design patterns and also how to optimize code in Android.
+Strong ability and knowledge in Android Development tools and methods including: Gradle, Android Studio, UI Layout, Intents, Services, Fragment usage, and lifecycle.
+Extensive knowledge of Android platform SDK as well as commonly applied 3rd party and open sourced libraries.
+Understanding of the following technologies: XML, Web Services, HTTP(S), REST API, JSON.
+Expert understanding of common software engineering practices (git, code documentation, continuous integration, dependency management, monitoring, version management).
+Familiarity with design/analysis of algorithms and data structures.
+Experience with multithreaded programming.
+Experience writing unit tests and testable code.
+Excellent problem solving, critical thinking and communication skills.
+
+Your role:
+Develop and maintain native Android Application,
+You proactively drive technical direction such as implementing new features, preventing issues, improving performance, reducing app size / battery consumption /data usage, refactoring the codebase.
+
+Bu ilan sebebiyle yapacaðýnýz baþvurular aracýlýðýyla toplanacak kiþisel verileriniz veri sorumlusu D Elektronik Þans Oyunlarý ve Yayýncýlýk A.Þ. (“Nesine”) tarafýndan 6698 sayýlý Kiþisel Verilerin Korunmasý Kanunu (“KVKK”) ve ilgili mevzuat kapsamýnda iþ baþvuru süreçlerinin yürütülmesi amacýyla otomatik yollarla iþlenecektir. Ýþlenen kiþisel verilerinize ve haklarýnýz ile ilgili baþvuru yöntemlerine iliþkin daha detaylý bilgi için lütfen https://www.nesine.com/kisisel-verileri-koruma/aydinlatma-metni linkini ziyaret ederek "Çalýþan Adayý" kategorisini inceleyiniz.

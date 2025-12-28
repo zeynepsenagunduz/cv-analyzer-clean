@@ -1,0 +1,27 @@
+About the job
+
+Litum established in 2004, by a group of visionary engineers, Litum® helps businesses transform their operations with a single goal in mind: increased safety & efficiency. Through extensive research and development, Litum designs and manufactures its entire solution portfolio, with main divisions being Industrial IoT, Healthcare RTLS, Passive RFID, and Software Applications.  Today, through its large network of partners, Litum provides solutions across the globe in diverse environments. Litum solutions are utilized by industry leading firms such as Fortune 500 companies as well as governmental establishments and agencies in more than 45 countries around the world.
+
+We are looking for ‘to maintain our systems after delivery and improve overall customer satisfaction.
+
+RESPONSIBILITIES
+Responsible for Deployment, Configuration and Calibration of RTLS based IoT Solutions.
+RTLS Solution includes several technology stacks as RF (UWB), Networking, Cloud Services, .NET applications, SQL, JS and other components.
+Train on and gain holistic undestanding of this multi layered solution and provide technical services around them.
+Provide on-site professional services for project deployments.
+Work with end customers and internal development teams on solution validation and UAT cycles.
+Follow and generate reports on solution UATs and resolve high level problems.
+Work closely with Solution Delivery managers, SW and FW RnD teams to investigate, escalate and resolve issues.
+EDUCATION AND EXPERIENCE
+BS Degree in Engineering fields.
+Proven work experience as an Application, Support, Project, Deployment Engineer for minimum 2-3 years.
+Knowledge and experience in networking and multi-stack application systems.
+Fluent in English both verbal and written.
+Excellent trouble shooting, problem-solving and communication skills.
+Ability to break down, prioritize problems and remain calm facing customer issues.
+No international travel restrictions.
+SQL Support / Development experience is a major plus.
+.NET Support / Development experience is a major plus.
+AWS, Azure knowledge / certification is a plus.
+RF based IoT solution delivery experience is a plus.
+Having US, Canada visa is a plus

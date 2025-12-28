@@ -1,0 +1,87 @@
+About the job
+Siemens Gebze factory is the lead factory for Air Insulated Switchgear production in Siemens World and exporting to more than 80 countries worldwide! We are searching for a “Full Stack Developer” at our Gebze AIS Lead Factory. You will join an exciting team and develop world-class solutions in a manufacturing facility. A great opportunity to experiment the harmony of code and real life!
+
+What part will you play?
+
+ Software development for the global factory network, including design, implementation, documentation and testing
+ Active contribution to solve complex business problems, requirements elicitation and develop processes improvement
+ Implementation of change requests on existing systems
+ Conforming to Siemens processes, quality standards and guidelines
+ Producing high quality project deliverables within planned time and effort
+
+What You Need To Make Real What Matters.
+
+ Bachelor's degree or equivalent experience in Computer Science or related field.
+ Minimum 3+ years experience in software development projects.
+ Available to work hybrid at least 2-3 days.
+ Strong Knowledge of HTML5, CSS3.
+ Development Experience (at least one) : JavaScript, Python, Web API, .Net Technologies.
+ Familiarity with cross-platform and responsive design.
+ Experience with user experience and user interface design principles.
+ Creating data pipelines and integrating them into the applications and cloud-based target systems.
+ Continuous integration: You regularly merge your programming progress / code changes to (web) front-end applications in our central repositories.
+ Excellent command of English to work in a global network.
+
+Reason For Preference
+
+ Experience in Angular 7+.
+ Experience in developing software applications for Cloud/IoT Platforms is a plus.
+ Experience in Agile Development is a plus.
+ Portfolio on GitHub or similar platforms.
+ Knowledge in database technologies (MySQL/MSSQL).
+ Knowledge of using Adobe XD, Figma, Illustrator.
+ Previous experience in one of the frameworks/libraries: Vue.js and React.
+
+What We Offer
+
+Speak up Culture
+Respectful Workplace
+Being part of a global work environment 
+Remote working and remote living flexibility
+Attractive remuneration package
+Excellent recognition tools providing spot awards
+Learning & Development opportunities for both personal and professional growth 
+Leave days for parents and a variety of flexible working models that allow time off for yourself and your family 
+Creche allowance for mothers
+Share matching programs to become a shareholder of Siemens AG
+Find more benefits here 
+
+Individual benefits are adapted to meet local legal regulations, the requirements of different job profiles, locations, and individual preferences. 
+
+“At Siemens we are always challenging ourselves to build a better future. We need the most innovative and diverse Digital Minds to develop tomorrow‘s reality. Find out more about the Digital world of Siemens here: www.siemens.com/careers/digitalminds”
+
+As Siemens we believe physical barriers are not related to potential. Only the potential matters to us. Therefore, we look forward to receive applications of candidates with physical barriers and chronic illnesses. We support healthy relationships between candidates with barriers and their colleagues because we believe we can create differences together.
+
+Siemens is dedicated to quality, equality, and valuating diversity and we welcome applications that reflect the diversity of the communities within which we work.
+
+We are looking forward to receiving your online application. Please ensure you complete all areas of the application form to the best of you ability as we will use the data to review your suitability to the role.
+
+Please find more information from our web site:
+
+https://new.siemens.com/tr/tr.html
+
+Contact
+
+If you need more information please don't hesitate to contact us.
+
++90 216 459 20 00
+
+https://new.siemens.com/tr/tr/genel/iletisim.html
+
+insanorganizasyon.tr@siemens.com
+
+www.instagram.com/siemensturkiye
+
+https://m.youtube.com/user/Siemens
+
+http://www.twitter.com/siemensturkiye
+
+http://www.facebook.com/siemensturkiye
+
+Organization: Smart Infrastructure
+
+Company: Siemens Sanayi ve Ticaret Anonim Sirketi
+
+Experience Level: Mid-level Professional
+
+Full / Part time: Full-time

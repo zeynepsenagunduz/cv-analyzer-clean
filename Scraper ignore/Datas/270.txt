@@ -1,0 +1,81 @@
+About the job
+Merhaba!
+
+Biz; anlam dolu ve çalýþmaktan gurur duyduðumuz bir iþ yapýyoruz. ATAK’ý, HÜRJET’i, MÝLLÝ MUHARÝP UÇAK’ý, GÖKTÜRK'ü ve daha nicelerini üretiyoruz!
+
+Birbirimize saygý duyduðumuz, geliþim fýrsatlarýyla dolu iþ ortamýmýzda hem kendimizi hem de havacýlýk ve uzay geleceðini þekillendiriyoruz.
+
+Aramýza katýlarak, keþif tutkunu ve merak duygunu, gurur ve cesur hamlelerle tamamlayacak; son teknolojiyle alanýnda öncü ürünler geliþtirirken anlam ve geliþim dolu bir geleceðe adým atacaksýn.
+
+Bitmek tükenmek bilmeyen keþif tutkusu, merak, azim ve cesaretle yüksekleri hedefliyorsan, seninle #GÖZÜMÜZYÜKSEKLERDE!
+
+Sen? 
+
+Elektronik, Elektrik-Elektronik, Bilgisayar, Yazýlým Mühendisliklerinden Lisans derecesine sahipsen,
+IEEE 12207, CMMI, ECSS-E-ST-40C, DO178B, MIL-STD-498 gibi Yazýlým mühendisliði süreç modelleri/standartlarý/metodolojileri/rehberleri hakkýnda bilgi sahibiysen,
+Yazýlým geliþtirme tecrübesine sahipsen,
+Ýyi derecede Ýngilizce biliyorsan, (TOEFL IBT 84+, IELTS 6.5+, TOMER 79+)
+Yoðun iþ temposunda çalýþabiliyorsan,
+Ýliþki ve stres yönetiminde baþarýlýysan,
+Meraklý, sorgulayýcý, araþtýrmacý, teknolojik yenilikleri takip eden bir yapýya sahipsen,
+Yurt içi ve yurt dýþýnda seyahat ve çalýþma engelin bulunmuyorsa,
+
+
+Aþaðýdaki konularda tecrübe sahibiysen,
+
+Java programlama dili
+Mikroservis Mimari
+Tasarým Kalýplarý
+ReactJs
+Spring Framework
+Yazýlým Geliþtirme Ortamý (IDE) (IntelliJ Idea, VS Code)
+Maven, Gradle gibi derleme araçlarý
+Gereksinim yönetimi, tasarým, versiyon kontrol, iþ takibi araçlarý (DOORS, Jira, Enterprise Architect, SVN, GIT, Confluence vb.)
+
+aradýðýmýz yetenek SENSÝN!
+
+
+Bize Ne Katacaksýn?
+
+Çalýþtýðýn projelerin tüm aþamalarý boyunca yazýlým geliþtirme ve entegrasyon faaliyetlerinin proje takvimine uygun bir biçimde planlanmasý ve yürütülmesini saðlayacak,
+Yazýlým geliþtirme ve entegrasyon sürecinin gerektirdiði dokümantasyon ve iþ takip faaliyetlerini yapacak,
+Yazýlým gereksinimlerinin geliþtirilmesi, tasarýmý, kodlanmasý, gözden geçirilmesi, entegrasyonu ve hata ayýklamasýný saðlayacak,
+Yazýlým geliþtirme süreçlerinin devamlýlýðýný ve olgunlaþmasýna katký saðlayacak,
+Yazýlým geliþtirme ortamý, CI/CD ve gerekli altyapýlarýn geliþtirilmesini ve idamesini saðlayacak
+
+bu katkýlarýnla havacýlýk ve uzay geleceðini þekillendireceksin.
+
+ Seni Ne Güçlendirir?
+
+Ýlgili mühendislik bölümlerinde yüksek lisans eðitimi,
+Uzay ve Uydu Sistemleri hakkýnda bilgili, deneyimli ve/veya meraklý olman,
+Emniyet-kritik yazýlým bilgisi,
+Javascript, Python, Groovy gibi betik programlama dillerini kullanmýþ olmak
+DevOps tecrübesi,
+Containerization ve Orchestration tecrübesi,
+Linux iþletim sistemi tecrübesi,
+Analitik düþünme yapýsý ve problem çözme yeteneði,
+Öðrenmeye açýk, yazýlý/sözlü iletiþimi güçlü ve ekip çalýþmasýna yatkýnlýk,
+Sorumluluk alabilme,
+
+
+Kariyerine Ne Katacaðýz? 
+
+Türkiye’nin en kapsamlý ve baþarýlý kurumsal akademilerinden biri olan Akademi’miz ile sürekli eðitim ve geliþim,
+Çalýþýrken yüksek lisans veya doktoraya yarým asýrlýk Türk Havacýlýk Uzay Sanayii’nin desteðiyle devam edebilme,
+Global bir ekosistemde uluslararasý stratejik pozisyonu olan projelerde deneyim,
+Türkiye’nin havacýlýk ve uzay alanýnda en iyi yetiþmiþ ve en baþarýlý mühendisleriyle birlikte çalýþma,
+Keþif tutkunu, merak duygunu ve baþarý hazzýný sürekli besleyen çalýþma ortamý,
+Havacýlýk ve uzay geleceðini þekillendirmenin itibarý.
+
+Yaþamýna Ne Katacaðýz? 
+  Piyasa þartlarýnda rekabetçi kazanç paketi,
+Seni ve aileni kapsayan avantajlý saðlýk paketi,
+Sevdiklerinle birlikte istifade edebileceðin kurumsal anlaþmalar,
+Ýlgi alanýna göre katýlabileceðin topluluklarýmýzla aktif bir sosyal yaþam,
+Spor takýmlarýmýz ve tesislerimiz ile enerji ve saðlýk,
+Kurum içi etkinliklerimiz ve sürprizlerimizle keyif ve motivasyon,
+
+
+Nasýl?
+Baþvuru, Ön Deðerlendirme, Online Deðerlendirme, Ýnsan Kaynaklarý Deðerlendirmesi, Teknik Deðerlendirme, Teklif

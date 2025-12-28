@@ -1,0 +1,34 @@
+About the job
+One of the world's largest providers of products and services to the energy industry has a need to develop and support enterprise information system in Oil & Gas domain.
+Project is related to collection, visualization and analysis (including real-time) of the data received from production and test wells evaluation.
+
+Responsibilities:
+Design and implementation of new features
+Update/maintenance of existing code base
+Design and development of software in C++
+Daily professional communication with customers.
+Requirements elicitation or clarification if needed
+
+Mandatory Skills Description:
+Minimum 3 years of experience as a backend developer
+C++ 11 or newer
+SOA
+Microservices
+REST API
+Unit testing
+Multithreading
+Design Patterns
+Strong knowledge of Algorithms and Data Structures
+
+Nice-to-Have Skills:
+C++17
+C# .Net Core
+Python
+gRPC
+Linux experience
+Kubernetes
+Docker
+Oil&Gas domain
+
+Languages:
+English: C1 Advanced

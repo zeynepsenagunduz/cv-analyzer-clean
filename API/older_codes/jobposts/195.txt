@@ -1,0 +1,55 @@
+About the job
+We are looking for a Senior Frontend Developer to join our fast-paced and self-accountable team that delivers enterprise-level products for local and global markets. You will work with IT consultants, delivery managers, QA teams, BE, UI/UX designers and mobile developers to deliver best-in-class digital products.
+
+Let’s develop your future together,
+where you can code, grow, and inspire others.
+
+What will you do?
+
+· Translating product requirements and user stories/epics into maintainable, testable, and performant software in collaboration with the team
+· Collaborating with project members to determine technical specifications and API design details
+· Contributing to our agile ceremonies
+· Participating in code review and performing extensive testing to ensure high-quality software
+· Feeling responsible for the quality of the project you are working on and taking action to fix bugs or errors noticed
+· Continually migrating solutions to newer technologies/frameworks to stay up-to-date with industry best practices
+· Researching new technology and sharing the findings with the team at our regular Tech Talks
+
+What we are looking for?
+
+· Proficiency in Javascript || Typescript,
+· Experience with CSS pre-processors
+· Experience with Angular min 5 years,
+· Experience with responsive design
+· Experience with RESTful APIs and Services
+· Unit test knowledge (Jest, Jasmine, Karma…)
+· Solid grasp of cross-platform cross-browser compatibility issues and code optimization
+· Proficiency in English is a must
+Knowledge of these will be a bonus!
+· Node.js
+· Proffesional working proficiency in German
+· Working with remote teams
+
+Experience in these topics/technologies will be a bonus!
+· Unit testing, mocking frameworks, TDD
+· CI/CD pipelines
+· Clean code
+· Cloud technologies (AWS, Google Cloud, Azure, etc.)
+
+Our commitment to you:
+
+· A well-established, next-generation organization
+· Working hubs spread out in different locations in Turkey
+· An agile & lean organization and optimized work processes
+· Living locally (100% digital) and working globally in international projects
+· Competitive salary, private health insurance, and comprehensive benefits
+· A bonus system based on company performance and individual contributions
+· Structured individual development plan covering both soft and technical training programs, certifications, and language learning
+· Graduate school tuition support at the master’s or doctorate level (please ask for details)
+· Life-long learning with unlimited Udemy access
+· Social clubs, team activities, and regular company-wide events
+· Volunteering opportunities (when you join the adesso “Good 4 Future” community)
+
+About adesso Turkey
+
+adesso Turkey empowers enterprises through custom software development and IT consultancy. We deliver the finest-caliber digital solutions — transforming businesses, people, and technology.
+Our group headquarters is based in Dortmund, Germany, and we have over 7,500 colleagues working at 57 different sites around the globe. Check out www.adesso.com.tr to find out more.

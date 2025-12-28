@@ -1,0 +1,31 @@
+About the job
+InterProbe olarak, geliþtirmekte olduðumuz büyük veri çözümleri ile kurumlarýn karar alma mekanizmalarýnýn merkezinde yer alýyoruz. 
+Sizi, büyük veri sistemleri alanýndaki tecrübemize ortak olmaya ve faaliyet gösterdiðimiz niþ alanlarda yeteneklerinizi geliþtirmeye davet ediyoruz.
+Verinin, endüstri standardý büyük veri teknolojileri ile iþlenmesinden görselleþtirilmesine varan yolculuðuna eþlik etmek istiyorsanýz, baþvurularýnýzý bekliyoruz.
+
+Gereksinimler
+
+En az 5 yýl yazýlým geliþtirme deneyimine sahip,
+JAVA platformlarýnda (JEE, Spring, vb.) en az 2 yýl aktif yazýlým geliþtirme deneyimi olan,
+Geliþtirdiði projelerde mikroservis ve konteyner mimarilerini (Spring Boot/Spring Data JPA, Docker vb.) tecrübe etmiþ,
+Web servis teknolojileri (RESTful, SOAP vb.) konusunda tecrübe sahibi,
+Ýliþkisel veritabaný sistemleri ile çalýþmýþ,
+CI/CD ve versiyon kontrol süreçleri (Gitlab CI-CD/Jenkins/CircleCI) ile ilgili bilgi sahibi,
+Tercihen Apache Spark hakkýnda bilgi/tecrübe sahibi,
+Tercihen Apache Kafka/RabbitMQ gibi olay akýþ platformlarý hakkýnda bilgi/tecrübe sahibi,
+Tercihen önyüz geliþtirme teknolojilerini (Angular/Typescript) deneyimlemiþ,
+Kod incelemesi ve kod kalite takibi gerçekleþtirebilen,
+Çevik Yazýlým Geliþtirme metodolojilerine uyum saðlayabilen,
+Analiz ve tasarým faaliyetlerinde katkýda bulunabilen, 
+Ýngilizce teknik doküman okuma/anlama yeteneði olan,
+Sürekli öðrenerek kendini yenileyen, problem çözmekten zevk alan, sonuç odaklý, araþtýrmacý, yeniliklere açýk, inisiyatif alma becerisine sahip, proaktif ve yaratýcý yaklaþým sergileyebilen,
+Ýletiþim yetenekleri yüksek, takým çalýþmasýna uyumlu,
+Himayesinde yer alacak genç mühendislere yol gösterebilecek, kýdemli takým arkadaþlarý arýyoruz.
+
+Birlikte neler yapacaðýz?
+
+Büyük veri sistemleri üzerinde yazýlým geliþtirecek,
+Daðýtýk veri iþleme ve veri saklama teknolojileri alanýnda beceri kazanacak,
+Yeni teknolojileri araþtýracak, deneyimleyecek ve entegrasyonunu saðlayacak,
+ETL/ELT süreçleri, veri analitiði ve görselleþtirilmesi alanlarýnda uzmanlaþacak,
+Çok katmanlý yazýlým geliþtirme mimarilerinin tasarým ve uygulamasýný gerçekleþtireceðiz.

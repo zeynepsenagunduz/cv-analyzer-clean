@@ -1,0 +1,35 @@
+About the job
+Bupa Acýbadem Sigorta is the fastest growing company in insurance industry with the power of being the only institution which is focused on health insurance. We are part of the world's second largest integrated healthcare chain under the Bupa brand with our strong shareholder structure and pioneering practices that drive the industry. Our company; is getting stronger every year with effective financial management policies, offers valuable experiences that make a difference to its stakeholders in all operations. On the other hand, we as Bupa Acýbadem Sigorta aim to develop the industry we serve, to add value and lead strategic approaches in the area of health insurance. Bupa Acýbadem Sigorta aims to expand its operations in other fields of healthcare sector by investing in hospital, clinics, dental clinics and related sectors through M&A activities to serve its clients with an integrated understanding.
+
+If you have high motivation and experience on responsibilities below:
+
+Administration and maintenance of Windows/Linux based servers and services,
+Administration and maintenance of virtual server infrastructure,
+Administration and maintenance of backup architecture,
+Monitors event logs, systems resource utilization, perform server/application audits and health checks and takes action accordingly,
+Tunes the operating system and applications to ensure optimum performance,
+Hardens the operating systems and services to meet the security standards,
+Determines services and standards, executing periodical maintenance of the servers and services,
+Design, implement and test strategies for backup and recovery, security and disaster recovery of server environment,
+Designs and implements load-balanced, fail-over architecture for systems,
+Prepares reports, documentations, policies and procedures,
+Researches, proposes and implements new solutions, features, and improvements.
+
+
+QUALIFICATIONS
+  Advanced level knowledge and experience on Microsoft Windows Server Systems and services,
+Knowledge and experience on Linux systems and services,
+Advanced level knowledge and experience on Virtual server environments,
+Knowledge and experience on server hardware,
+Knowledge and experience of storage and backup technologies,
+Proficiency in Windows/Linux scripting is also desired,
+Knowledge and experience on TCP/IP Networking,
+Hands on experience in networking, routing and switching,
+Experience and knowledge of Cloud Architecture is preferred,
+Knowledge of DevOps technologies and tools (Source Control, CI/CD, Infrastructur Automation, Deployment Automation & Orchestration, Container Concepts) are preferred,
+Minimum 5 years of experience in a similar position,
+Relevant educational background such as engineering degree from a leading university,
+Willing to take ownership of area and follow assigned tasks through to successful completion,
+Must have relevant certifications (MCSA, MCSE, RHCE, ITIL),
+Strong communication and problem-solving skills,
+Good command of English.

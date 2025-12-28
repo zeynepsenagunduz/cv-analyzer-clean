@@ -1,0 +1,33 @@
+About the job
+Yazara is a new software development company from the PayCore family, a leader in SoftPOS and the payment acceptance industry. Yazara, headquartered in New York, builds on PayCore's 20+ years of leadership and serves over 50 clients worldwide. Yazara is a state-of-the-art SoftPOS solution and payment acceptance suite designed to transform all smartphones and tablets into POS terminals. It allows merchants of all sizes to securely accept EMV payments of any amount with contactless cards, mobile wallets, and wearables on their own mobile devices.
+
+Job Description
+To carry out software design, application development and integration activities as a member of the software development team in SoftPos projects.
+Designing and implementing flexible payment solutions,
+
+Necessary Skills and Experiences
+Experienced in Spring, Spring Integration, JPA/Hibernate frameworks and Maven,
+Knowledge of Object Oriented programming architecture,
+Preferably knowledgeable in MongoDB, Redis, ElasticSearc, ActiveMQ technologies,
+Preferably have knowledge of modern Javascript frameworks (Angular2+, VueJS, ReactJS, Typescript, NodeJs),
+Experienced in enterprise software development management environments (Jira, Git, TFS)
+Preferably experienced in EMV and payment systems,
+Analytical mindset and problem solving ability,
+Having knowledge/experience about Agile/Scrum methodologies,
+Hands-on experience on software development using Java, Microservice, Spring framework tools.
+Know-how in web service integration.
+min. 5 years of experience
+Familiarity with payment system, POS machines, Payment Card Industry Data Security Standards (PCIDSS), EMV, 
+
+Nice to Have
+Bachelor’s Degree in Computer, Electrical & Electronics or Industry Engineering, MIS or other relevant departments of universities
+Familiarity Linux and/or Windows server and shell scripting languages.
+Database (Oracle, Postgre SQL, SQL Server or others) knowhow.
+Familiarity with ITSM ticketing tools (Jira or others).
+Able to work under pressure and meet tight deadlines.
+Strong analytical mindset, problem solving and strong communication skills.
+Strong responsibility and ownership attitude, customer(service) oriented mindset is a must.
+No military duty for male candidates
+Credit card and payment system knowledge is a big plus.
+Experience working in DevOps and Agile culture.
+Experience in working with global customers or working in a global organization.

@@ -1,0 +1,22 @@
+About the job
+Job purpose:
+We are looking for a skilled Digital Solution Engineer to join our team. You will be responsible for designing, building, and maintaining large-scale data systems that support our company's data-driven decision making. You will work closely with our data scientists, analysts and business teams to ensure the platform is scalable, efficient, and reliable. In this role, you should be able to work independently with little supervision.
+
+
+Essential Duties And Responsibilities:
+Design, implement, and maintain data processing and analytics systems
+Design and implement solutions for data visualization and dashboards
+Collaborate with data scientists, analysts and business teams to understand their data needs and design solutions that meet those needs
+Collaborate with internal teams from different countries and vendors to fix and improve products
+Troubleshoot and debug application and data issues
+Continuously monitor and optimize platform performance and scalability
+Stay up-to-date with the latest technologies and best practices in data engineering
+
+Your Profile:
+Understanding of data modelling, database design and data pipelines
+Knowledge of databases like Oracle PL/SQL, Postgres and CrateDB
+Experience with distributed computing frameworks (PySpark, Delta Lake, Apache Airflow, Apache Kafka)
+Experience with hybrid cloud platforms (e.g., Kubernetes, Docker, CI/CD, Ansible)
+Knowledge of selected programming languages and frameworks, e.g., Python, Angular, Java, Spring, Quarkus, Jakarta EE platform
+Familiarity with Linux operating systems
+Experience with data governance, security, and compliance

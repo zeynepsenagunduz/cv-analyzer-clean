@@ -1,0 +1,37 @@
+About the job
+Luxoft is one of the major software services companies world-wide. We deliver professional software services in multiple business verticals such as finance, automotive, and digital transformation. Supporting large vehicle manufacturers in the area of development, production and aftersales is Luxoft's ambition.
+
+The software inside a vehicle was traditionally expected to be a very controlled and self-contained environment. Equipping cars with perception and machine intelligence changes a lot in the overall picture of the vehicle manufacturer. Luxoft's goal is to empower our customers, with deep domain knowledge and smart solutions, to develop cars of the future. Great mechanical engineering is not the only criteria anymore for delivering the best cars in the world. Using state of the art software technologies are key to provide the requested user experience.
+
+For the development of the next generation of ADAS (Advanced Driver Assistance Systems) and HAD (Highly Automated Driving) functions for a major German OEM, we are looking for talented C++ and DevOps engineers.
+
+Join our team of enthusiastic and experienced software developers and develop software for an entire driver assistance area of future vehicles of German automotive manufacturer. Develop challenging features that will be used on a daily basis by millions of drivers once the next generation of vehicles hits the roads starting 2025.
+
+Responsibilities:
+- You will integrate and port features in C/C++ (e.g. Perception application, Planning application, etc.) to next generation platform
+- You will contribute to the software architecture and clarify requirements in cooperation with the client and the team
+- You will support with the enhancement of CI/CD pipelines as well as map releases
+- You will support with performance optimization of CI/CD pipelines
+- You will support with development, and testing of software in C++
+- You will support with development, and testing of software in Python
+
+Mandatory Skills Description:
+C++ 14+ standard, including understanding of build process
+SW systems understanding
+Build systems knowledge: Bazel, Zuul, CMake or similar
+CI/CD knowledge
+Debugging, reading logs
+Basic knowledge of Python
+Customer communication
+Proactivity
+
+Nice-to-Have Skills:
+Real experience with Bazel
+FRANCA language knowledge
+CMake
+ELK stack including Kibana tool
+Azure
+HIL/SIL understanding
+
+Languages:
+English: B2 Upper Intermediate

@@ -1,0 +1,47 @@
+About the job
+Odeon Technology is a Coral Travel Group Company. Coral Travel Group has been carrying out its operations in the tourism sector since 1992 in 18 countries with its 28 companies and 3500 professionals and now serves more than 3 million tourists every year.
+
+Odeon Technology was established in 2012 to create effective and technological solutions for the group affiliates in tourism industry.
+
+With the strategies that it has developed and will develop in the future, the company carries out the necessary infrastructure works especially in the world tourism industry so that its customers can respond to both the market and their own needs.
+
+For more information; you can visit https://www.odeontechnology.com
+
+As Odeon Technology, we are looking for a “Senior Software Developer” for our Core Tourism & Destinations team!
+
+We are working remotely under the extraordinary pandemic circumstances. Newcomers work wherever they are and eventually they may plan to move Ýstanbul in a flexible time-period.
+
+Act as a key member of the CRM team that designs, develops, manages and enhances the existing Dynamics CRM platform,
+Develop and customize Dynamics 365 CE software for our clients,
+Develop integration between CRM & ERP applications,
+Work on the implementation of D365 on-premise, build out the core applications of the organization, continuously enhance your D365 CE skillset,
+Participate in requirement gathering and analysis, provide insight on Dynamics solutions and best practices, develop customizations and enhancements to the system,
+Collaborate with end-user clients and put forward your expert views,
+Work with project managers, business solutions specialist, business analyst and a technical team,
+Support D365 CE systems at all phases of the project lifecycle.
+
+Bachelor degree in Computer/Electronics/Mathematics Engineering or related fields,
+Develops, manages and enhances the existing Dynamics CRM platform,
+Minimum 2 years' Experience with Dynamics CRM On-premise/Online systems,
+Experience in creating custom plugin, custom workflow activity and actions,
+Very good knowledge of JavaScript, HTML,
+Experience in writing T-SQL queries in Dynamics CRM On-Premise databases,
+Confidence in Customization, Configuration and implementing D365,
+Experience in creating and writing technical specifications / documentations,
+At least 3 years of experience in .Net technologies,
+Hands on experience with C#, ASP.NET MVC and Web API, .Net Core, MS SQL,
+Knowledge and experience in Elastic Search, Redis, RabbitMQ , PostgreSQL,
+Good Knowledge of T-SQL (stored procedure ,views etc..),
+Have experience in one of source control systems (TFS, Bitbucket),
+Experience in real world web/enterprise applications and web service integrations,
+Proven experience in Agile and Scrum Models.
+
+Remote working conditions,
+Private health insurance,
+Competitive salary and food ticket benefits,
+A great working environment where there is no hierarchy with servant leadership methods,
+Weekly Tech Talks,
+Udemy access for all employees,
+Discounts for your hotel reservations.
+
+Odeon Yazýlým ve Teknoloji A.Þ. olarak 6698 sayýlý Kiþisel Verilerin Korunmasý Kanunu ile ilgili Aydýnlatma Metni ve Gizlilik Politikasý'nýn detaylarýna web sitemiz üzerinden ulaþým saðlayabilirsiniz.

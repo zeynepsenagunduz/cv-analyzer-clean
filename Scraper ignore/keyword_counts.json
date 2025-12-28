@@ -1,0 +1,612 @@
+{
+    "0": {
+        "agile": 1
+    },
+    "1": {
+        "git": 1,
+        "agile": 1
+    },
+    "2": {
+        "communication": 1,
+        "microservices": 1
+    },
+    "3": {
+        "communication": 3,
+        "agile": 1,
+        "flexibility": 1
+    },
+    "4": {},
+    "5": {
+        "microservices": 2,
+        "scrum": 1,
+        "mongodb": 1,
+        "html": 1
+    },
+    "6": {
+        "microservices": 3,
+        "node.js": 1,
+        "mongodb": 1,
+        "postgresql": 1,
+        "git": 1,
+        "eslint": 1,
+        "typescript": 1
+    },
+    "7": {
+        "node.js": 1,
+        "agile": 1,
+        "microservices": 1,
+        "mongodb": 1,
+        "git": 1
+    },
+    "8": {
+        "agile": 3,
+        "github": 1,
+        "kanban": 1,
+        "scrum": 1,
+        "microservices": 1,
+        "communication": 1
+    },
+    "9": {
+        "agile": 1,
+        "git": 1,
+        "javascript": 1,
+        "css": 2,
+        "webpack": 1,
+        "typescript": 1,
+        "node.js": 1
+    },
+    "10": {
+        "html": 1,
+        "css": 1
+    },
+    "11": {
+        "flexibility": 1,
+        "git": 1,
+        "agile": 1
+    },
+    "12": {
+        "mysql": 1
+    },
+    "13": {
+        "collaboration": 1,
+        "communication": 1,
+        "git": 1
+    },
+    "14": {
+        "postgresql": 1
+    },
+    "15": {
+        "react": 2,
+        "node.js": 2,
+        "typescript": 2,
+        "angular": 1,
+        "agile": 1,
+        "flexibility": 1
+    },
+    "16": {
+        "react": 1
+    },
+    "17": {
+        "react": 1,
+        "agile": 1,
+        "communication": 1
+    },
+    "18": {},
+    "19": {
+        "vue.js": 1,
+        "communication": 1
+    },
+    "20": {
+        "agile": 2,
+        "mentoring": 1,
+        "communication": 1
+    },
+    "21": {
+        "react": 1,
+        "communication": 1,
+        "collaboration": 1
+    },
+    "22": {
+        "containerization": 1,
+        "git": 1,
+        "communication": 1
+    },
+    "23": {
+        "microservices": 1,
+        "communication": 2,
+        "agile": 1,
+        "scrum": 1,
+        "leadership": 1
+    },
+    "24": {
+        "javascript": 1
+    },
+    "25": {
+        "react": 1
+    },
+    "26": {},
+    "27": {
+        "agile": 1,
+        "mongodb": 1,
+        "git": 1
+    },
+    "28": {
+        "agile": 1,
+        "mongodb": 1,
+        "git": 1
+    },
+    "29": {},
+    "30": {
+        "typescript": 1,
+        "react": 1,
+        "graphql": 1,
+        "communication": 1,
+        "flexibility": 1
+    },
+    "31": {
+        "communication": 1
+    },
+    "32": {},
+    "33": {},
+    "34": {
+        "accessibility": 1,
+        "jquery": 1,
+        "leadership": 1
+    },
+    "35": {
+        "communication": 1
+    },
+    "36": {
+        "collaboration": 1
+    },
+    "37": {
+        "react": 1
+    },
+    "38": {
+        "marketing": 1
+    },
+    "39": {
+        "communication": 1
+    },
+    "40": {},
+    "41": {
+        "agile": 2,
+        "collaboration": 2,
+        "communication": 1
+    },
+    "42": {
+        "mysql": 1,
+        "accessibility": 1,
+        "agile": 1,
+        "communication": 1
+    },
+    "43": {
+        "node.js": 1,
+        "communication": 1
+    },
+    "44": {
+        "javascript": 1,
+        "git": 1,
+        "communication": 1
+    },
+    "45": {
+        "agile": 1
+    },
+    "46": {
+        "react": 1,
+        "git": 1
+    },
+    "47": {
+        "vue.js": 1,
+        "communication": 1
+    },
+    "48": {},
+    "49": {
+        "postgresql": 1,
+        "communication": 1,
+        "agile": 1
+    },
+    "50": {
+        "microservices": 1,
+        "agile": 1
+    },
+    "51": {
+        "collaboration": 1,
+        "communication": 1,
+        "teamwork": 1,
+        "mentoring": 1
+    },
+    "52": {
+        "agile": 1,
+        "innovation": 1
+    },
+    "53": {
+        "communication": 1
+    },
+    "54": {
+        "authentication": 1,
+        "authorization": 1,
+        "agile": 2,
+        "react": 1,
+        "git": 1,
+        "github": 1,
+        "gitlab": 1,
+        "microservices": 1
+    },
+    "55": {
+        "communication": 1
+    },
+    "56": {
+        "collaboration": 1,
+        "agile": 2,
+        "git": 2,
+        "containerization": 1
+    },
+    "57": {
+        "react": 1
+    },
+    "58": {},
+    "59": {
+        "collaboration": 1,
+        "agile": 2,
+        "javascript": 1,
+        "css": 1,
+        "angular": 1,
+        "node.js": 1
+    },
+    "60": {
+        "javascript": 3,
+        "git": 3,
+        "communication": 8,
+        "css": 2,
+        "innovation": 2,
+        "agile": 9,
+        "node.js": 1,
+        "typescript": 3,
+        "angular": 5,
+        "postgresql": 1,
+        "leadership": 1,
+        "marketing": 2,
+        "html": 1,
+        "react": 2,
+        "curiosity": 6,
+        "sketch": 6,
+        "collaboration": 6,
+        "mongodb": 1
+    },
+    "61": {},
+    "62": {
+        "git": 1,
+        "agile": 1
+    },
+    "63": {
+        "innovation": 1,
+        "agile": 2,
+        "git": 1
+    },
+    "64": {
+        "agile": 1,
+        "scrum": 1,
+        "leadership": 1
+    },
+    "65": {},
+    "66": {
+        "collaboration": 1,
+        "integrity": 2,
+        "javascript": 1,
+        "agile": 2,
+        "communication": 1
+    },
+    "67": {
+        "javascript": 1
+    },
+    "68": {
+        "react": 2,
+        "jest": 1,
+        "github": 1,
+        "microservices": 2,
+        "typescript": 1
+    },
+    "69": {
+        "leadership": 1,
+        "javascript": 1,
+        "communication": 1,
+        "agile": 1
+    },
+    "70": {
+        "javascript": 2,
+        "react": 1,
+        "typescript": 1,
+        "communication": 2
+    },
+    "71": {
+        "agile": 1,
+        "communication": 1
+    },
+    "72": {
+        "agile": 1,
+        "innovation": 1
+    },
+    "73": {
+        "leadership": 1,
+        "react": 1,
+        "node.js": 1,
+        "javascript": 1,
+        "css": 1,
+        "blockchain": 1
+    },
+    "74": {
+        "node.js": 2,
+        "mysql": 1,
+        "communication": 1
+    },
+    "75": {
+        "communication": 1
+    },
+    "76": {
+        "marketing": 1
+    },
+    "77": {
+        "accessibility": 1,
+        "react": 2,
+        "graphql": 1,
+        "agile": 1
+    },
+    "78": {},
+    "79": {},
+    "80": {
+        "communication": 1,
+        "javascript": 1,
+        "jquery": 1,
+        "css": 1
+    },
+    "81": {
+        "css": 1
+    },
+    "82": {
+        "marketing": 1,
+        "react": 6,
+        "typescript": 1,
+        "jest": 1
+    },
+    "83": {
+        "firebase": 1,
+        "communication": 1
+    },
+    "84": {
+        "marketing": 1,
+        "agile": 1,
+        "communication": 2,
+        "innovation": 1,
+        "mentoring": 1
+    },
+    "85": {
+        "react": 2,
+        "javascript": 1,
+        "css": 2,
+        "typescript": 1,
+        "jest": 1
+    },
+    "86": {
+        "agile": 2,
+        "angular": 2,
+        "react": 1,
+        "javascript": 1
+    },
+    "87": {
+        "agile": 2,
+        "angular": 2,
+        "react": 1,
+        "javascript": 1
+    },
+    "88": {
+        "react": 1,
+        "git": 1,
+        "communication": 1
+    },
+    "89": {
+        "typescript": 1,
+        "react": 1,
+        "javascript": 1
+    },
+    "90": {},
+    "91": {},
+    "92": {
+        "communication": 1
+    },
+    "93": {
+        "communication": 1
+    },
+    "94": {},
+    "95": {
+        "marketing": 5,
+        "leadership": 1
+    },
+    "96": {
+        "css": 3,
+        "html": 2,
+        "javascript": 1,
+        "node.js": 1
+    },
+    "97": {
+        "javascript": 1,
+        "innovation": 1
+    },
+    "98": {
+        "agile": 1,
+        "communication": 1,
+        "leadership": 1
+    },
+    "99": {
+        "empathy": 1,
+        "microservices": 1,
+        "javascript": 1,
+        "typescript": 1,
+        "communication": 1,
+        "collaboration": 1,
+        "react": 1
+    },
+    "100": {
+        "marketing": 1
+    },
+    "101": {
+        "git": 1
+    },
+    "102": {},
+    "103": {
+        "agile": 3,
+        "flexibility": 1,
+        "mentoring": 1
+    },
+    "104": {
+        "agile": 1,
+        "communication": 2,
+        "flexibility": 1
+    },
+    "105": {
+        "communication": 1
+    },
+    "106": {},
+    "107": {
+        "microservices": 1,
+        "typescript": 1,
+        "agile": 1,
+        "containerization": 1,
+        "communication": 1
+    },
+    "108": {
+        "agile": 4,
+        "innovation": 1,
+        "angular": 1,
+        "communication": 1
+    },
+    "109": {
+        "agile": 1
+    },
+    "110": {
+        "communication": 1
+    },
+    "111": {},
+    "112": {
+        "communication": 1,
+        "mysql": 1,
+        "git": 1
+    },
+    "113": {
+        "containerization": 1
+    },
+    "114": {},
+    "115": {
+        "angular": 1,
+        "agile": 1,
+        "collaboration": 1
+    },
+    "116": {
+        "javascript": 1,
+        "typescript": 1,
+        "css": 1,
+        "teamwork": 1
+    },
+    "117": {},
+    "118": {
+        "css": 1,
+        "communication": 1
+    },
+    "119": {
+        "agile": 1,
+        "javascript": 1,
+        "git": 1,
+        "communication": 1
+    },
+    "120": {},
+    "121": {
+        "containerization": 1
+    },
+    "122": {},
+    "123": {
+        "innovation": 1,
+        "authentication": 1,
+        "communication": 1
+    },
+    "124": {
+        "javascript": 1,
+        "communication": 1
+    },
+    "125": {
+        "css": 1,
+        "react": 1,
+        "communication": 1
+    },
+    "126": {
+        "postgresql": 1,
+        "javascript": 1
+    },
+    "127": {
+        "javascript": 1,
+        "angular": 1,
+        "communication": 1
+    },
+    "128": {
+        "accessibility": 1,
+        "leadership": 1
+    },
+    "129": {
+        "github": 1,
+        "html": 1,
+        "css": 1
+    },
+    "130": {
+        "microservices": 2,
+        "scrum": 1,
+        "mongodb": 1,
+        "html": 1
+    },
+    "131": {
+        "node.js": 2,
+        "javascript": 1,
+        "typescript": 1,
+        "git": 1,
+        "graphql": 1
+    },
+    "132": {
+        "angular": 1,
+        "agile": 1,
+        "github": 1,
+        "vue.js": 1,
+        "flexibility": 1
+    },
+    "133": {
+        "figma": 1,
+        "react": 2,
+        "blockchain": 1,
+        "communication": 1
+    },
+    "134": {
+        "microservices": 1,
+        "typescript": 1,
+        "agile": 1,
+        "containerization": 1,
+        "communication": 1
+    },
+    "135": {
+        "communication": 3
+    },
+    "136": {
+        "css": 2,
+        "html": 2,
+        "javascript": 1,
+        "node.js": 1
+    },
+    "137": {
+        "agile": 2,
+        "angular": 2,
+        "react": 1,
+        "javascript": 1
+    },
+    "138": {
+        "javascript": 2,
+        "typescript": 1,
+        "css": 1,
+        "communication": 1
+    }
+}

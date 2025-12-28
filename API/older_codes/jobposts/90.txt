@@ -1,0 +1,21 @@
+About the job
+Hedeflerini Türkiye’nin global markasý LC Waikiki’de gerçekleþtirebilirsin! +900 kiþilik Dijital Dönüþüm ve Bilgi Teknolojileri Departmanýmýzda yerini almaya yeni projeler geliþtirmeye, yaratýcýlýðýný göstermeye hazýr mýsýn?
+
+GENEL NÝTELÝKLER
+
+· Üniversitelerin Mühendislik bölümlerinden (Tercihen Bilgisayar, Matematik, Elektrik Elektronik Mühendisliði) veya iliþkili bölümlerinden mezun,
+· Microsof SQL Server üzerinde aktif çalýþmýþ, T-SQL, SQL kodlamasýna hakim ve query optimizasyonu konusunda deneyimli (stored procedure, function). Kompleks SQL sorgular ve büyük veri ile çalýþmýþ.
+· En az 3 yýl tecrübeli,
+· Python ve tercihen diðer scripting dillerinde (Scala, R vb.) tecrübe sahibi,
+· Bigdata, Veri Ambarý, veri madenciliði ve veri analizi teknolojilerini ve gündemi takip eden,
+· Bigdata ile ilgili teknolojiler hakkýnda bilgi ve tecrübe sahibi(Cloudera, Spark, Hive, YARN, Kafka, Kudu, Hbase, Storm vb.)
+· ETL aracý kullanmýþ (SSIS vb.),
+· Performans/Optimizasyon konusunda deneyimli,
+· Veri Modelleme konusunda deneyimli.
+
+GÖREV TANIMI
+
+· LCWakiki bünyesinde maðazalara ürün sevkiyat yönetiminde kullanýlan alokasyon (replenishment) sistemlerinin ve uygulamalarýn tasarlanmasý, geliþtirilmesi, bakým ve desteðinin verilmesi, optimizasyonunun yapýlmasý.
+· Bu amaçla MS-SQL, Bigdata, NoSQL ve diðer analitik veri altyapýlarýnýn tasarlanmasý, geliþtirilmesi, iþletilmesi ve optimizasyon çalýþmalarýnýn yapýlmasý.
+·  Alokasyon(replenishment) sistemleri için ihtiyaç duyulan kural tabanlý ya da makine öðrenmesi tabanlý algoritmalarýn geliþtirilmesi, test edilerek optimize edilmesi ve operasyonel hale getirilmesi
+· Alokasyon alanýndaki raporlama ihtiyaçlarýnýn karþýlanmasý.

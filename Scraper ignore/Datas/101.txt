@@ -1,0 +1,19 @@
+About the job
+A software development company offering a hosting and development platform for high-performance web apps is looking for a Full-stack Developer (Front-End Heavy). The developer will be responsible for building highly performant applications. The company is focused on delivering perfect solutions to improve developer velocity and simplify the web. They are backed by leading investors like Icon ventures, Trinity ventures, etc. The candidate will have the opportunity to collaborate within a small, talented team of developers and grow rapidly.
+
+Job Responsibilities:
+
+Design, develop, and deliver fully functional products, provide a high-quality user experience, and overcome scalability issues 
+Work with a wide range of systems and solve problems from end-to-end
+Use a holistic, test-oriented approach to troubleshoot, debug and upgrade applications
+Write clean, readable codes, perform unit and integration tests, troubleshoot and fix bugs
+Collaborate with the team to ensure the application conforms to user specifications
+Convert product requirements into functionality
+
+Job Requirements:
+
+Bachelor’s/Master’s degree in Computer Science (or equivalent experience)
+Must be skilled in Node.js, Typescript, React, or Vue.js and all the relevant frameworks
+Excellent communication and problem-solving skills 
+Must be detail-oriented, and able to work on multiple tasks at once
+Ability to collaborate and work well with others

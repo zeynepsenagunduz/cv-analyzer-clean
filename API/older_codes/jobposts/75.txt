@@ -1,0 +1,62 @@
+About the job
+Interested in building products that impact millions of gamers? Want to tackle complex large-scale technical problems using the latest technologies? If you said yes, then read on!
+
+We’re hiring exceptional people to help, build and grow our products— and to dream up new ideas that will reach millions. In this role, you will be working in a fast-paced world with some of the smartest minds in the industry.
+
+What is waiting for you?
+
+Keeping our tens of millions of happy players in mind;
+
+Strong monitoring and maintaining services for keeping games stable Improve the whole lifecycle of system services from planning to go live strategy 
+Optimize current CI/CD process and streamline automation effort for server provisioning and deployment 
+Developing creative/exciting features with other hardworking developers, artists, and product managers! 
+Researching, designing and implementing solutions which will improve services 
+The chance to improve yourself inside Zynga engineering culture 
+
+What You Need?
+
+BS/MS degree in Computer Science or related field 
+Excellent Analytical, Problem-solving, and Debugging skills 
+Excellent communication skills 
+Proficiency with Infrastructure as Code (Terraform is a plus) 
+Proficiency with a configuration management tool (Ansible is a plus) 
+Proficient with Linux operating system environments 
+Experience with Amazon Web Services 
+Experience with CI/CD tools (bonus points for Jenkins) 
+Experience with Groovy/Jenkinsfile 
+Experience with MySQL (RDS is a plus) 
+Experience with RabbitMQ, Redis, Memcache, Vault, Consul 
+Strong alerting, monitoring and logging experience 
+Process-oriented with great documentation skills 
+Comfortable learn/discuss/work with new technologies 
+Comfortable working with Git 
+Strong verbal/written skills in English 
+Experience with at least one programming language is a plus 
+Experience in understanding and designing complex distributed event-driven, large volume, highly scalable and available services is a plus 
+
+Who we are?
+
+We are a game studio;
+
+In Zynga family located in Istanbul 
+Responsible for biggest board and card games in Turkey and USA 
+Believe in team spirit/collaboration 
+Having passionate, ambitious and eager to learn/experience mates 
+
+Zynga is an equal opportunity employer. We are proud of our broad community; we do not discriminate on the basis of race, sex, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, medical condition, disability, or any other class or characteristic protected by applicable law. We welcome job-seekers, players, employees, and partners from all backgrounds. Join us!
+
+We will consider all qualified job-seekers with criminal histories in a manner consistent with applicable law.
+
+Zynga is committed to providing reasonable accommodation to applicants with disabilities. If you need an accommodation during the interview process, please let us know.
+
+Zynga does not engage in financial exchanges during the recruitment or onboarding process. We do not conduct job interviews over third-party messaging apps such as Telegram, WhatsApp or others. We will never ask you for your personal or financial information over unofficial chat channels. Our in-house recruitment team only contacts individuals via official company email addresses (i.e., via a zynga.com or naturalmotion.com email domain).
+
+If you believe you have been the victim of a scam, you may wish to contact the authorities. In the United States, you may file a complaint with the FBI. More information is available here: https://www.ic3.gov.
+
+Careers Category: Engineering
+
+Careers location: Ýstanbul, Turkey
+
+Connected Worker Type: Connected
+
+Requisition Id: P212134

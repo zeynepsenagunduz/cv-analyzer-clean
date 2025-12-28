@@ -1,0 +1,147 @@
+RIKIN PATEL
+Frontend Web Developer, Philadelphia, PA
+484-685-6486 | contact@patelrikin.com | www.patelrikin.com
+Summary:
+● Front-End Web Developer with more than 18 years of progressive experience and measurable
+accomplishments in providing technical direction, team and project leadership, and client-facing
+support for high-profile global clients.
+● Professional, detail-oriented and result-driven web developer with extensive experience in all
+aspects of client-side web development using web-rich JavaScript frameworks like ReactJS.
+● Recognized for the ability to provide hands-on support while managing, developing, and engaging
+global teams to deliver excellence in client services.
+● Experience in all phases of Software Development Life Cycle (SDLC) including Analysis, Design,
+Development, Documentation, Testing, Deployment, Version Control and production support.
+● Payment gateway Integration using PayPal, ApplePay, Stripe, PayPal Express, Paypal Credit
+(BML), ShopRunner, PayRunner, Amazon and Google Checkout.
+● Experience with administering and tailoring content management systems like Wordpress,
+Drupal, Joomla, Alfresco, and other proprietary tools to perfectly suit the client’s requirements.
+● Proficient in maintaining W3C web standards, setting standards for best practices, and ensuring
+UI standards for enterprise/consumer applications are met.
+● Extensive experience in creating style guides, best practices, and setting UI coding standards for
+enterprise/consumer applications.
+● Quick learner, adaptable to new technologies, individual performer as well as a contributing team
+player with good communication skills and ability to work independently as well as in a team
+environment.
+Professional Experience:
+Frontend Developer Consultant December 2020 - Present
+Clear Secure Inc, New York, NY
+● Contributed to Javascript based tech stack using React, Next.js, Typescript, and Open API.
+● Contributed to web based online portal codebase, Electron JS based platform codebase and UI
+Design system using CSS, SASS, Styled components and Rebass.
+● Work with Product team and Backend developers to implement new features and contribute in
+designing API endpoint’s request/response payloads.
+Frontend Developer Consultant December 2018 - March 2021
+Vertex, King of Prussia PA
+● Worked as Front-end developer utilizing Javascript based tech stack that includes React, React
+Router, Redux, Saga, Formik, Ag-Grid, lodash, Typescript running/served on Webpack 4, Single
+SPA Micro frontend applications and Cypress/Jest test framework.
+● Worked on a platform product team to implement micro-frontend architecture using Single-SPA to
+incorporate various company products into a unified cloud based application.
+● Write performant code dealing with large data sets to render components on UI and optimize calls
+to API either to minimize http requests or make parallel http calls to reduce loading latency.
+● Work with Automation QA to help implement regression automation test cases for new features.
+Web Developer Consultant (Freelance) December 2019 - March 2021
+The Judge Group, Wayne PA
+● Worked for many isolated projects for pharmaceutical clients which were used for interactive
+marketing on touch enabled devices like mobile, tablet and TV screens.
+● Worked on Javascript based tech stack using React, Ionic, React Router, Ionic React, lodash,
+Typescript, Ionic running/served on Webpack 4 to develop mobile and web applications.
+Frontend Developer Consultant August 2018 – December 2018
+IQVIA, Plymouth Meeting PA
+● Worked as Full stack web developer using Angular 1.x, lodash, CSS3, HTML5 and Scala code on
+Play framework as middleware wired to backend API in Agile/Scrum based project.
+● Worked on implementing micro frontend architecture to break down current monolithic AngularJS
+based app utilizing React/Redux, lodash, Webpack, Jest, ESLint, HTML5, SASS, and cross-app
+authentication using JWT over Scala to communicate with backend REST APIs.
+Frontend Developer Consultant November 2016 – August 2018
+Comcast Interactive Media, Philadelphia PA
+● Worked as Frontend developer with set of JS technologies that includes Angular 1.x, ES6,
+lodash, Jasmine/Karma, and Gulp on NGINX server, CSS3, SASS, ESLint, HTML5 and Ruby on
+Rails as middleware wired to backend API in Agile/Scrum based project.
+● Worked on parallel micro frontend application architecture to breakdown monolithic legacy
+Angular based app utilizing React/Redux, lodash, Webpack, Jest, ESLint, HTML5, SASS, and
+Ruby on Rails as Middleware wired to backend REST API.
+● Served as billing team lead with involvement in all billing area related initiatives that includes
+introduction of new payment method (ApplePay) and re-factor/refresh Autopay experience,
+refactor/refresh Payment/Checkout page and Billing page.
+● Work with production support tickets to resolve customer issues to minimize user experience
+impact utilizing debugging tools using Splunk longs and monitor New Relic based reports.
+● Work with product team, cross functional teams and QA for planning and refining and completion
+of user stories.
+Senior Developer Consultant June 2016 – November 2016
+Express Scripts Inc, Somerset NJ
+● Involved in development of legacy application projects that includes technology stack of XSLT,
+XHTML, Javascript, Dojo, jQuery, JSP, IBM DataPower, BroadVision IM, Unix, WebServices,
+XML, JSON and Alfresco CMS.
+● Worked on Frontend full stack set of JS technologies using ES6, ReactJS, Redux, Bootstrap 3,
+SASS, Jasmine/Karma, Webpack in Agile/Scrum based project.
+● Implemented plug-in using Javascript (vanilla) for IBM DataPower console to clear XSLT cache
+on the server reducing each transaction cost by 97% of the time.
+● Create architectural design, high/detailed level design document for projects, participate in team
+meetings and assist cross-functional teams in clarifying system architecture in order to come up
+with the best approach to meet project timeline and requirements.
+User Interface Tech Manager March 2011 – April 2016
+ebay Inc, King of Prussia, PA
+● Lead front-end web development team with more than 15 onshore and offshore team members
+for global Toys “R” Us and Sports Authority online stores with sales of more than $1.2 billion.
+● Worked on several other clients that includes NFL, MLB, NBA, NHL, Dicks Sporting Goods,
+eToys, FAO, Aeropostale, Quicksilver, Bath & Body Works, GNC, Timberland, Ace Hardware,
+Levis, Dockers, RadioShack, Calvin Klein, Tumi, Nascar, Petsmart, Spanx, Pagoda, Zales, etc.
+● Achieved 100% on time and in budget project completions, boosting satisfaction rate (NPS) of
+clients and oversaw resource management, development, estimations, requirements reviews,
+discovery, QA, client reviews, launches, and post-launch support.
+● Advanced SteinMart’s mobile commerce site through the application of Node.js, Grunt, AngularJS
+1.2, SCSS and Bootstrap.
+● Conduct learning sessions for developers to introduce them with new tools and technologies and
+provide technical support for Responsive Web Design conversion on platform level for all clients.
+● Responsible for development of cross-browser, tablet and mobile device compatible
+performance-oriented frontend development utilizing best available technology and tools.
+● Facilitated higher sales conversion rate through integration of third party social network tracker
+and market research plugins/snippets/pixels integration on web pages.
+Senior Web Developer March 2010 – February 2011
+TrueAction Inc, King of Prussia, PA
+● Managed performance tuning for e-commerce retail websites for multiple clients using minification
+of CSS and JS files along with Image Sprites.
+● Identified and conducted performance tuning of code by utilizing specialized tools such as
+Dynatrace, YSlow, HTTPTrace and other proxy tools such as Fiddler and Charles Proxy.
+● Provided project estimates, support escalations and production issues, deployed projects to
+internal and production environments and achieved 95% delivery of SMPs that met SLAs.
+● Responsible for working on frontend development using HTML, CSS, Javascript along with
+backend technologies such as Java and apache tiles during launch of new multilingual webstore
+for large client (Timberland) along with designing and developing email templates.
+Lead Front-End Web Developer June 2009 – Feb 2010
+Anagh Technologies Inc, Piscataway, NJ
+● Managed team of five developers and created several dynamically generated ecommerce
+websites for small business clients using HTML, CSS, JavaScript, jQuery, YUI, AJAX, XML using
+PHP and MySQL hosted on Apache HTTP webserver.
+● Integration of PayPal and Google Checkout for user’s convenience and security in checkout.
+Senior Front End/Web Developer December 07 – June 2009
+Respironis Inc, Morrisville, PA
+● Interacted with clients to analyze business needs, provided software product design and
+developed technical roadmap for the solution through the project lifecycle and beyond.
+● Contribute to scrum/agile team developing online tools for the travel & tourism industry using the
+PHP/MySQL web application framework and Prototype JavaScript library.
+Senior Web Developer May 05 – December 2007
+Priya Web Solutions Pvt. Ltd., Ahmedabad, India
+● Involved in performing Technical Analysis and writing Functional Specifications based on the
+Business Requirement documents and application.
+● Developed GUI using PHP, HTML, AJAX, CSS, Flash, ActionScript, Photoshop and JavaScript
+(Prototype, Scriptaculous, Dojo, jQuery) on a LAMP architecture.
+● Involved in unit/integration/volume/regression testing and writing test scripts and compilation of
+project status reports.
+Software Engineer June 2003 – May 2005
+Indian Oil Corporation Ltd., Baroda, India
+● Lead the team of three to develop an application that enabled company employees to securely
+log into personal accounts, claim medical expenses, and view the updated status of their claims.
+● Used PHP, HTML and JavaScript along with MySQL using Apache HTTP server to create the
+application with proper input validations to eliminate any user generated errors.
+Technical Skills:
+● Web Development: React, Redux, JavaScript, Typescript, AngularJS, JSP, JSTL, HTML 4/5,
+CSS 2/3, jQuery, Prototype, Dojo, JSON, PHP, Ajax, XSLT, XHTML and XML.
+Education:
+● Bachelor of Science, in Computer Science Temple University – Philadelphia, PA
+● Bachelor of Science, in Computer Application and Programming Dharmsinh Desai
+University – Gujarat, India
+● Oracle Certified Java Programmer (formerly SCJP) – Apr 2010
+● Scrum Master Certified – Oct 2013
+● MongoDB Certified Developer – July 2014

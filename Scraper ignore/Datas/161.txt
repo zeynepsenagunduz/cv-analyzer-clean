@@ -1,0 +1,30 @@
+About the job
+Explore your next opportunity at a Fortune Global 500 organization. Envision innovative possibilities, experience our rewarding culture, and work with talented teams that help you become better every day. We know what it takes to lead UPS into tomorrow—people with a unique combination of skill + passion. If you have the qualities and drive to lead yourself or teams, there are roles ready to cultivate your skills and take you to the next level.
+
+Job Description:
+
+Having bachelors degree in engineering departments
+Having a minimum of 8 years of experience in software development
+Having C#, ASP.NET MVC, ASP.NET Web API, and .NET Core Experience
+Having knowledge and experience in REST and SOAP Web service technologies
+Having experience with MSSQL and TSQL and preferably knowledge of stored procedures, triggers, etc
+Having knowledge of frontend technologies and libraries (HTML/CSS/Javascript/JQuery, Bootstrap)
+Experience in Git version control system
+Experience in using Azure DevOps (TFS)
+Software development team member in an agile environment
+
+The following skills are preferred:
+
+Fluency in English
+Unit Testing
+Familiar with CI/CD tools
+Microservice-based software principles knowledge
+Mobile app development (Flutter, Xamarin)
+Linux (Red Hat) knowledge
+Docker and cloud knowledge
+
+Employee Type:
+
+Permanent
+
+UPS is committed to providing a workplace free of discrimination, harassment, and retaliation.

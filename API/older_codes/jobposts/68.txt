@@ -1,0 +1,31 @@
+About the job
+Information about our main organizational structure, which includes Týkla Gelsin, is as follows;
+
+TFI is the holding responsible for the food field of our TAB Food Investments group.
+There is an ecosystem structure consisting of our subsidiary companies under it, we have factories on the production leg; We produce our own red meat, potato, burger and pizza dough. In summary, it can be thought that we produce almost all of the products we use in our restaurants ourselves. Apart from this, we have a company that supports our logistics, procurement and vegetable processing processes, in addition, we have a digital marketing agency.
+
+
+Týkla Gelsin, our online ordering channel for our own brands Burger King, Popeyes, Arby's, Sbarro, Usta Dönerci and Usta Pideci. An in-house team was established from scratch with a strategic decision made by the senior management during the pandemic process, for Týkla Gelsin, an application that was previously created and developed by the 3rd party. The team is divided into two main functions as Engineering and Product, it consists of approximately 30+ people in total; but in the short term, we want to double our team here. We are building a team with the spirit of start-up, but there is a holding investment support behind it. One of the valuable projects of our group is followed very closely at the CEO level. We have very big goals for the future; such as transforming the application into a market place by including different brands and integrating it into our overseas operations (China). In this context, we are rapidly advancing our recruitment processes.
+
+We are looking for React Native Developer for our engineering team!
+
+
+Qualifications:
+  3+ years experience with React Native is required. 
+Good knowledge of mobile application guidelines and their ecosystem. 
+Good understanding of React ecosystem and React Native 
+Knowledge of native modules (bridge) is a plus. 
+Experience with native Android and IOS Development is plus.
+Strong Redux knowledge 
+Experience with Redux, Hooks API, Typescript, ES6+ ,Xcode, Gradle 
+Firm grasp in React Native, modern React (hooks), react-navigation 
+Good knowledge of typing and tools such as TypeScript and Flow 
+Having at least 2 reference mobile applications on App Store or Google Play 
+Understanding of REST APIs, the document request model, and offline storage 
+Experienced with mobile analytics tools (Firebase, Appsflyer/Adjust) 
+Experience with automated testing suites, like Jest or Mocha 
+Backend experience, especially Node.js, is a plus.
+
+
+
+" 6698 saylý Kiþisel Verilerin Korunmasý Kanunu kapsamýnda kiþisel verilerinizin iþlenmesinden doðan haklarýnýza ve bu konudaki detaylý bilgiye https://www.atp.com.tr/kvkk/ adresinde yer alan aydýnlatma metnimizden ulaþabilirsiniz."

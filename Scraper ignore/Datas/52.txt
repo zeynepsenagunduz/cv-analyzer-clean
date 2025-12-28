@@ -1,0 +1,37 @@
+About the job
+Nextray AI is globally recognized innovator and industry leader!
+Nextray AI is rapidly growing company founded in 2021.
+NextRay AI provides visibility and actionable insights across networks, clouds, endpoints, and applications to help Security Operation Center (SOC) teams to hunt, investigate, and remediate threats.
+The Silicon Valley-based company is on a mission to bring the best security solution to our customers through its early-stage threat detection, advanced response capabilities, and proactive services. By the network security solution capabilities Nextray AI took its place in Gartner NDR market guide report of 2022 in a short time!
+
+Nextray AI team is growing!
+Would you like to be a part of our company, which is based in the USA and operating in 5 countries (USA, Turkey, Azerbaijan, Qatar, Kazakhstan) and growing with taking firm steps in the framework of its vision?
+Nextray AI will give you the opportunity to grow professionally, learn and experience with cutting-edge technologies, work on cyber security business and contribute to the domain by developing best solutions to our customers.
+If you are ready to take charge of your career and join us on our quest for the endeavor to relieve the globe of cyber disruption, follow us to get the insider scoop on our business, culture, and tips on how to join us to shape the future of the network threat detection&response. Join our team!
+
+QUALIFICATIONS AND JOB DESCRIPTION
+ Requirements
+3rd or 4th year Undergraduate in the field of Computer Science, Computer Engineering, Mathematics, Statistics (or equivalent)
+Flexible schedule to work at least 3 days in a week at school period
+Ambitious, confident and able to take initiative
+Familiarity with Python and object-oriented programming
+Familiarity with SQL or NoSQL variants
+Strong sense of analytical thinking and problem-solving skills
+Basic understanding of networking and security fundamentals 
+High communications skills and a good team player
+Great documentation skills.
+ Responsibilities
+Be a part of the data science team as candidate engineer
+Leverage large datasets to develop machine-learning and statistical models that can differentiate between normal and attack behavior
+Creating flexible code that can be easily updated as the product evolves
+Analyze detection algorithm performance and present key findings to business leaders
+Evaluate and identify the correct approaches or technologies to use to solve problems
+Discovering, learning, and implementing new technologies
+Collaborate with SOC and Software Engineering teammates.
+ Expected Attitude
+Satisfied only with a beautiful solution,
+Create beautiful, high quality, easily readable code,
+Deliver workaround/persistent solutions to the problems,
+Generate and pursue innovative ideas about his/her daily activities pushes himself, and also the team at each and every iteration to produce zero defects,
+Develop not only the expected, but also the untold for the sake of the user experience and comfort,
+Energetic and Self-Motivated

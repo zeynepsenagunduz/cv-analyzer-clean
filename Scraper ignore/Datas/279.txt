@@ -1,0 +1,38 @@
+About the job
+This is an opportunity for being part of a fast growing startup technology company. We are looking for a XR Developer to join our team in Istanbul. The role is responsible for VR/AR game development by using Blueprint, Visual scripting and C++ development in the Unreal Engine.
+
+This is a full-time and on-site job.
+
+Job Description
+
+Prototype and program gameplay features (player/world interaction, gameplay, AI rules, etc.) based on the R&D.
+Take a role in the technical design of the gameplay elements.
+Coordinate with other departments, including art, design, and production, to achieve project objectives.
+Deliver well-designed software in a timely manner and create consistently high-quality code with solid documentation.
+Create core gameplay systems and editor tools for game and level designers to work on.
+Create immersive and compelling gameplay experiences.
+Ensure well-designed and bug-free game scripts and optimized CPU, GPU, and memory performance.
+Cooperate closely with the game and level designers as well as other production teams and actively participate in the QA process.
+Prepare detailed development documentation and retrospective reports of sprints.
+
+Required Skills and Qualifications
+
+Bachelor’s degree in Computer Science, Math, Software Engineering, or equivalent training/experience.
+2+ years of experience in professional software development.
+Experience with modern game engines (such as Unreal Engine or Unity) and game production pipelines.
+Debugging and optimization skills.
+Strong mathematical, analytical, and problem-solving skills.
+Adopt existing development processes and look for improvements.
+Being organized, proactive and self-disciplined, ability to work without direct supervision.
+Strong time management and prioritization skills.
+Ability to work as a team player, maintaining a positive attitude.
+Excellent verbal communication and writing skills.
+Fluent in English, both written and spoken.
+Living in Istanbul (or willing to move). Being able to commute to Altunizade.
+
+Nice-to-have Qualifications
+
+Having worked on at least one shipped product in video game or simulation industries from beginning to end.
+Knowledge of C++ programming for game development and familiarity with the Visual Studio environment.
+Expertise with version control systems (such as Git) and issue and project tracking tools (Jira) for workflow management
+Experience in developing for mobile (Android/iOS) and VR platforms (Oculus, SteamVR, standalone VR)

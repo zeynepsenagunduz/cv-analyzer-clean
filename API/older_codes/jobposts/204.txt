@@ -1,0 +1,43 @@
+About the job
+Analog Devices (NASDAQ: ADI) designs and manufactures semiconductor products and solutions. We enable our customers to interpret the world around us by intelligently bridging the physical and digital worlds with unmatched technologies that sense, measure and connect.
+
+The Position:
+
+ADI is seeking a Senior Embedded Software Developer with broad domain knowledge in bare-metal programming, low-power system design and wireless communication technologies. As Embedded Software Engineer you will work on enhancing ADI’s microprocessor product line, product definition, developing firmware delivered within IC, running simulation & FPGA verification tests, and operating silicon road test plan.
+
+The Team:
+
+This position is in Ýstanbul R&D Center, which is under the Türkiye Processors team. This team plays a key role in PBU as a fast-growing engineering organization that focuses on microprocessor SDKs, development tools, firmware and reference designs while using latest software development tools and methodologies. With deep focus on both developer and customer user experience, our Türkiye team works very closely with multiple worldwide locations across ADI to deliver world class products solutions around ultra-low power general purpose and AI microprocessors.
+
+Responsibilities:
+
+Senior Embedded Software Development Engineer shall:
+
+Autonomously develop the assigned projects,
+Participate as main contributor or responsible for the development and implementation of the projects,
+Ensure proper software development, testing, debugging, integration and documentation
+Work in coordination with the teams of development and quality assurance engineers to make sure that the product passes and sustains all the validation standards,
+Be able to independently operate in a global, diverse software development community across many geographical locations,
+Perform other duties as may be determined by management.
+
+Qualifications & Experience:
+
+BS in Computer Science, Computer or Electronics Engineering, or related field with 4+ years of industry experience.
+Strong organization skills, and ability to work independently and in teams
+Hands on experience with C language
+Hands on experience in embedded software development
+Familiarity with digital communication interfaces (UART, SPI, I2C, etc.)
+Hands on experience with lab equipment for debug, analysis and characterization
+Excellent interpersonal, verbal, and written communication skills across all levels, both in English and Turkish
+Preferred: Proficiency with software development, test and verification flow, version control systems (such as SVN or GIT) and change control tools.
+Preferred: Familiarity with Python and automated test tools such as, pyTest etc.
+
+For positions requiring access to technical data, Analog Devices, Inc. may have to obtain export licensing approval from the U.S. Department of Commerce - Bureau of Industry and Security and/or the U.S. Department of State - Directorate of Defense Trade Controls. As such, applicants for this position – except US Citizens, US Permanent Residents, and protected individuals as defined by 8 U.S.C. 1324b(a)(3) – may have to go through an export licensing review process.
+
+Analog Devices is an equal opportunity employer. We foster a culture where everyone has an opportunity to succeed regardless of their race, color, religion, age, ancestry, national origin, social or ethnic origin, sex, sexual orientation, gender, gender identity, gender expression, marital status, pregnancy, parental status, disability, medical condition, genetic information, military or veteran status, union membership, and political affiliation, or any other legally protected group.
+
+Job Req Type: Experienced
+
+Required Travel: Yes, 10% of the time
+
+Shift Type: 1st Shift/Days

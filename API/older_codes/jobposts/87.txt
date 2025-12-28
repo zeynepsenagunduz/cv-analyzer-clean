@@ -1,0 +1,25 @@
+About the job
+We are seeking for a "Software Developer(Mid/Sr)" for our client operating in SaaS projects.
+
+Job Description
+Work in an agile development environment and create new versions of the software,
+Conduct impact analysis and technical design according to the specifications developed by business analysts,
+Develop & test product features & functionality,
+Collaborate with the front-end team to develop desired product features,
+Support production systems, improve performance and quality,
+Follow outlined standards of quality related to code and systems,
+Develop integrations with cloud and enterprise applications.
+Qualifications
+Five or more years of professional experience in software development,
+Deep understanding of Object Oriented Design and Programming,
+Experience with C#, .net core, asp.net,
+Experience with ORM tools as well as Ado.Net and SQL,
+Knowledge about restful web services,
+Familiarity with service oriented architectures,
+Good interpersonal skills along with effective communication (both written and verbal) skills,
+Ability to organize and plan work independently as well as in a team environment,
+Bachelor degree in Computer Science or related Information Technology fields.
+
+
+Please note that only the candidates that fulfill these requirements will be considered and shortlisted candidates will be contacted.
+ LinkedIN üzerinden elektronik olarak ileteceðiniz kiþisel bilgileriniz, 6698 sayýlý Kiþisel Verilerin Korunmasý Kanunu ve ilgili mevzuat çerçevesinde, Experis Türkiye (Manpower Group Türkiye) tarafýndan yalnýzca Þirketimizden talep ettiðiniz hizmetlerin sunulabilmesi ve bu hizmetlerin sürekliliðinin saðlanmasý amaçlarýyla saklanabilecek, iþlenebilecek ve verilen servisin gerektirdiði hallerde yurtiçinde ve yurtdýþýnda yerleþik 3. kiþilerle paylaþýlabilecek olup, kiþisel verileriniz hiçbir þekilde hukuka ve dürüstlük kuralýna aykýrý þekilde baþkalarý ile paylaþýlmayacak ve iþleme sebebi dýþýnda baþka amaçlarla kullanýlmayacaktýr. Kiþisel verileriniz yalnýzca iþleme amacýnýn gerekli kýldýðý süre boyunca saklanacak olup talebiniz üzerine silinecek veya imha edilecektir. Detaylý bilgiye https://www.experis.com.tr/site/kisisel-verilerin-korunmasi/39 linkinden ulaþabilirsiniz. Bu iþe baþvurarak, özgeçmiþinizin veritabanýmýzda yer almasýný kabul etmiþ olduðunuzu bildirmek isteriz.

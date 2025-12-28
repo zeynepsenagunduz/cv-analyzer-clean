@@ -1,0 +1,54 @@
+About the job
+About Atos
+
+Atos is a global leader in digital transformation with 107,000 employees and annual revenue of over € 11 billion. European number one in cybersecurity, cloud and high performance computing, the Group provides tailored end-to-end solutions for all industries in 71 countries. A pioneer in decarbonization services and products, Atos is committed to a secure and decarbonized digital for its clients. Atos is a SE (Societas Europaea), listed on Euronext Paris and included in the CAC 40 ESG and Next 20 Paris Stock indexes.
+
+The purpose of Atos is to help design the future of the information space. Its expertise and services support the development of knowledge, education, and research in a multicultural approach and contribute to the development of scientific and technological excellence. Across the world, the Group enables its customers and employees, and members of societies at large to live, work and develop sustainably, in a safe and secure information space.
+
+We are looking for self-motivated and energetic team member who will join us as a full-time Software Engineer and work on-site as a part of our Ýzmir team for our energy sector projects.
+
+Technical Requirements
+Has B.SC. degree in Computer Engineering, Computer Science, Mathematics Eng. or in a related area
+Proven 2+ years of work experience in software development
+Microsoft Development Technologies
+.NET Framework, .NET Core
+Angular 2+
+Proven experience in Object-Oriented Programming paradigm and SQL & PL/SQL
+Experience and knowledge in
+Web Application Development, Web Services, Relational & Non-relational Databases
+ORACLE Stored Procedure/Package/Function
+Configuration Management Systems (e.g. SVN, Git, ClearCase etc.)
+Agile Development practices
+General knowledge of Continuous Integration
+
+Desirable areas of experience
+
+Oracle ADF experience
+Oracle OAF experience
+.NET Core
+
+Nice to have areas of experience
+
+Continuous Integration tools (e.g. Jenkins, Maven, etc.)
+Test Automation like Selenium etc.
+
+General Skills And Attributes
+
+Experience in energy sector
+Strong problem solving and analytical skills
+Strong collaboration skills, responsive to project needs and demands in fast changing environment
+Passion of learning and personal qualification improvement
+Ability to work in a team environment as a reliable, responsible and self-motivated team player
+Excellent communication, and documentation skills, sense of urgency, accountability, and ownership
+Military service should be completed for candidates (min 2 year extended military obligation)
+
+Responsibilities
+
+Developing and maintaining software application(s) in accordance to Atos processes, quality standards and guidelines
+Analysing requirements and designing solutions accordingly
+Coding according to coding standards, unit-testing, reviewing and refactoring code
+Supporting relevant teams on production deployment & post-production issues
+Responding to customer needs regarding analysed, designed or developed software in a timely fashion, troubleshooting issues and providing solutions when needed
+Writing detailed technical documentation, presenting complex technical information in a clear and concise manner to a wide variety of audiences
+
+Here at Atos, we want all of our employees to feel valued, appreciated, and free to be who they are at work. Our employee lifecycle processes are designed to prevent discrimination against our people regardless of gender identity or expression, sexual orientation, religion, ethnicity, age, neurodiversity, disability status, citizenship, or any other aspect which makes them unique. Across the globe, we have created a variety of programs to embed our Atos culture of inclusivity, and work hard to ensure that all of our employees have an equal opportunity to contribute and feel that they are exactly where they belong.

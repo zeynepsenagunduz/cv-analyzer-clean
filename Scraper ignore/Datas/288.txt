@@ -1,0 +1,39 @@
+About the job
+TUSAÞ Motor Sanayii A.Þ. (TEI), 1985 yýlýnda, Türk Havacýlýk ve Uzay Sanayii A.Þ. (TAI), General Electric (GE), Türk Silahlý Kuvvetlerini Güçlendirme Vakfý (TSKGV) ve Türk Hava Kurumu (THK) arasýnda kurulmuþ olan bir anonim þirkettir. Havacýlýk sanayisine yüksek kaliteli ürünler ve hizmetler sunarak, uluslararasý düzeyde bir üretici ve dünya çapýnda bir tasarým merkezi konumunda olan TEI, her gün bir adým daha ileri giderek hedeflerine ulaþmaktadýr. 1987 yýlýnda ilk motor ve motor parçalarýnýn üretim ve sevkiyatýný gerçekleþtiren TEI, aradan geçen yýllar içerisinde uçak motor parça ve modül üretimi, montaj ve test teknolojisinin ülkemize transferini gerçekleþtirmiþ; ayrýca uluslararasý standartta, güvenilir, yüksek kaliteli üretimiyle kendini global pazarlarda kanýtlamýþtýr. TEI, üstlenmiþ olduðu, küresel ölçekte lider bir motor þirketi olma misyonu doðrultusunda, sahip olduðu yüksek imalat teknolojilerine paralel olarak, özgün tasarýma sahip yerli motor hedefi için planlý çalýþmalar sürdürmektedir.
+
+Sivil ve askeri havacýlýk motorlarýnda ülkemizin lider ismi olan TEI, heyecan verici teknolojik hedeflerine giden yolda, teknik ve profesyonel mükemmelliði ideal edinmiþ, iþine baðlý, güvenilir, üretken, sorumluluk sahibi ve yaratýcý iþgücü ile önümüzdeki yýllardaki hedeflerine saðlam adýmlarla ulaþacaðýný bilmektedir. Çaðdaþ ve memnuniyet yaratan çalýþma koþullarý ile çalýþanlarýný fark yaratan iþler üretmeleri için teþvik etmektedir.
+
+TEI’de çalýþmak;
+Heyecan verici ve gelecek vaat eden bir sektörde,
+Yaratýcý ürünler ve hizmetler sunan bir kurumda,
+Yüksek teknolojinin uygulandýðý ve geliþtirildiði bir ortamda,
+Uluslararasý kapsamda mühendislik, uzmanlýk ve teknisyenlik yapmak demektir.
+
+Pozisyonumuza baþvurarak kariyeriniz boyunca bilgi ve yeteneklerinizi gökyüzüne çýkarmak ister misiniz? Pozisyon ile ilgili iþ tanýmý ve adaylardan beklenen genel nitelikler/ yetkinlikler aþaðýda yer almaktadýr.
+
+Genel Nitelikler:
+Üniversitelerin Elektrik, Elektronik, Elektrik-Elektronik, Elektronik ve Haberleþme, Mekatronik, Kontrol ve Haberleþme Mühendisliði bölümlerinden mezun olmak,
+Savunma, havacýlýk veya otomotiv sektörlerinde çalýþmýþ minimum 2 yýl tecrübeli adaylar,
+Sensör teknolojileri konusunda bilgi ve tecrübe sahibi,
+Aviyonik sistem, donaným tasarým, motor kontrol ve mekanik tasarým ekipleri ile multidisipliner çalýþabilen,
+MS Office programlarýný etkin kullanabilen,
+Tercihen çevresel testler (MIL-STD-461, MIL-STD-810, MIL-STD-704 ve DO160 standartlarý) hakkýnda bilgi ve tecrübe sahibi,
+Tercihen konfigürasyon yönetimi, deðiþiklik yönetimi, gereksinim yönetimi araçlarý (SVN, DOORS, JIRA, TEAMCENTER gibi) hakkýnda deneyim ve bilgiye sahip,
+Tercihen sistem mühendisliði tasarým ve dokümantasyon süreç ve içerikleri hakkýnda bilgiye sahip,
+Takým çalýþmasýna uygun ve iletiþim yeteneði yüksek,
+Ýyi derecede Ýngilizce bilen,
+Analitik düþünebilen ve problem çözme yeteneðine sahip,
+Seyahat engeli olmayan,
+Eskiþehir'de ikamet eden/edebilecek.
+
+Ýþ Tanýmý:
+Özgün pistonlu/gaz türbinli motorlar üzerinde motor kontrolünün gerçekleþtirilmesi için kullanýlan sensörlerin tasarým/tedarik/test süreçlerinde aþaðýdaki konularda görev almak;
+Aviyonik, donaným, kontrol, mekanik, performans, emniyet-güvenilirlik ve ilgili modül tasarýmcýlarý ile koordine bir çalýþma gerçekleþtirerek özel tasarým sensörlerin teknik þartnamelerini hazýrlamak,
+Sensör üst seviye gereksinimlerini referans alarak alt seviye sensör gereksinimlerini yazmak ve türetmek,
+Hazýrlanan teknik þartnamelerin gözden geçirme sürecini yönetmek,
+Rafta hazýr ürün olarak tedarik edilen sensörlerin araþtýrmasýný yaparak seçmek ve tedariðinin yapýlabilmesi için ilgili ekiplerle koordineli çalýþmak,
+Yerli ve yabancý sensör tedarik firmalarý ile teknik toplantýlar gerçekleþtirmek,
+Sensörlerin laboratuvar ortamýnda test edilmesi için laboratuvar test altyapý kurulum çalýþmalarýnda yer almak ve test faaliyetlerini gerçekleþtirmek,
+Sensörlerin motora entegrasyonu sürecinde destek olmak,
+Sensörlerin motor üzerinde yapýlan test sonuçlarýný incelemek,
+Motorda yaþanan sensör hatalarýnda/arýzalarýnda hata analizi gerçekleþtirmek ve düzeltici aksiyon almak.

@@ -1,0 +1,43 @@
+About the job
+About BtcTurk
+BtcTurk’s brand and value
+• BtcTurk, which introduced Turkey to Bitcoin on 1 July 2013, operates at international standards in order protect the assets of its users using its expert team, infrastructure and financial power. It has done so for nine years in a 13-year-old industry.
+• BtcTurk is the head of Brink, an international organisation that supports software developers working to develop the Bitcoin protocol, in turn contributing to the development of Bitcoin.
+• With nearly 5 million users and more than 800 employees, it aims to take its leading position in the sector one step further with future projects.
+
+Flexible and inclusive working conditions
+• At BtcTurk, you become part of a strong team, made up of the best.
+• BtcTurk provides monthly contributions to improve Employee’s working space. It also provides private health insurance and a large meal card.
+• BtcTurk operates with a decentralised model. You may work from anywhere, not only at a specific and single point.
+• BtcTurk is powered by diversity. The BtcTurk team consists of professionals with different experiences, perspectives and skills.
+• BtcTurk is proud to be an employer of equal opportunity. It welcomes all applicants regardless of race, colour, religion, gender, sexual orientation, gender identity, national origin, disability or past military service.
+
+Next generation self-service financial services
+• Initiated by Bitcoin, the first and largest cryptocurrency, crypto assets and next generation finance are a rapidly developing sector and industry.
+• BtcTurk is growing rapidly. It invites you to be a part of the new financial system, rooted in Bitcoin’s philosophy.
+• Being part of the BtcTurk team provides a brilliant career opportunity. The company’s role in pioneering the sector, its paid-in capital, number of users and employees, agreements with institutions make it a recognised brand that is well known and influential.
+
+What Responsibilities Tech Lead Takes?
+
+Develop and deliver world-class modern digital solutions for our global operations leveraging latest technologies and design patterns
+Help translating our internal clients' business requirements into digital solutions to realize our digitalization strategy
+Experienced in software design and application architectures
+Perform coding, code review and code optimization for maximizing system performance
+Maintain project code quality and ensure coding standards compliance
+Collaborate and work closely with architects and delivery teams
+Troubleshoots on technical problems, provides technical solutions and leads the teams in development
+To design robust and reliable architectures and mentor/guide less experienced developers
+Assist with the maintenance and support of new as well as existing solutions
+Research new technologies and develop potential scenarios that build on and enhance the existing landscape
+
+What BtcTurk Expects from You?
+
+Bachelor's degree in a related discipline or 7+ years of technical experience in related fields
+Experience with .NET framework, .NET Core, C#, Restful Architecture, Microservices Architecture, Event Driven Architecture, Unit Testing, EF, EF Core and any of the following SQLServer, PostgreSql, RabbitMq, Kafka, Elasticsearch
+Angular, Javascript, TypeScript knowledge nice to have
+Good understanding of system/software development lifecycle (SDLC) techniques and various industry standard agile practices (DevOps, Continuous Delivery, Continuous Integration, Scrum, Kanban)
+Working knowledge of one or more of the following containerization and cloud technologies are also highly desirable: Docker, Kubernetes, Azure
+Excellent written and verbal communication skills in English
+
+https://cdn.btcturk.com/BtcTurk_Acik_Riza_Metni.pdf
+https://cdn.btcturk.com/BtcTurk_Aydinlatma_Metni.pdf

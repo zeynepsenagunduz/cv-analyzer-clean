@@ -1,0 +1,100 @@
+About the job
+We are the catalyst for the industrial world’s digital transformation.
+
+For more than 35 years, ground breaking technologies and business models engineered and developed by Siemens Turkey R&D department contributes to the global success of Siemens
+
+Our R&D activities focused on the fields of electrification, automation and digitalization, provides end-to-end support to our global customers on their unique digital transformation journey.
+
+We aim to increase our strength on solution and product development with world class SW development experts, with the vision to be the digitalization partner for our global customers.
+
+We need game changers like you, to bring the next level of smart manufacturing and infrastructure from mere concept to reality, develop tomorrow’s smart cities, and address the most critical digitalization challenges across a comprehensive range of industries.
+
+Siemens Advanta (ADV) is the central R&D department within the Siemens Group. Siemens ADV's main mission is to secure the future technology base for Siemens and to develop breakthrough products of the Siemens Group. Siemens ADV in Türkiye is mainly focused on software development in the areas of industrial automation and digitalization products and solutions. We are looking for software engineers who are willing to shape the future with us.
+
+What part will you play? 
+
+ Software design and development activities for Industrial Communication projects
+ Software design and documentation
+ Participating in code-review process
+ Taking part in the complete product life-cycle
+ Software design, implementation, documentation, unit tests, module tests, debugging and release tasks in a multi-site, international software development environment
+ Contribution to solutions architectures, requirements elicitation and development processes improvement
+ Producing high quality project deliverables within planned time and effort
+ Conforming to Siemens processes, quality standards, and guidelines
+What you need to make real what matters.
+
+ BSc., MSc. Or PhD in Computer Science, Electronics, Control Engineering or related areas
+ Proven 3+ years of experience in software development
+ Strong knowledge in C / C++
+ Strong knowledge in object-oriented programming, analysis, and design
+ Development experience in Linux environment is a must
+ Experience with source control systems (GIT, ClearCase etc.)
+ Experience with creating and building custom Linux OS (Yocto, Windriver, Isar, etc.)
+ Experience in Linux kernel driver development and U-boot
+ Experience in development of telecom or industrial communication network protocols, tools, and libraries (Switching & Routing Protocols, Netlink, Netfilter, Iproute2, Quagga, ConfD, Netconf, SNMP, etc.)
+ Knowledge and experience in computer architecture is a plus
+ Knowledge and experience in Real-time concepts and RTOS are a plus
+ Knowledge in TI Sitara Processors is a plus
+ Knowledge in Switching ASICs (Marvell, Broadcom, Mellanox, etc.) is a plus
+ Knowledge and experience in virtualization technologies (Linux KVM, Libvirt, VMware, VirtualBox, Vagrant, etc.) is a plus
+ Being familiar with using git-based repositories (Azure DevOps, GitHub, Gitlab, etc.) and CI/CD systems is a plus
+ Very good command of English
+ Knowledge in software life cycle and agile methodologies is appreciated
+ Excellent interpersonal communication skills
+ Strong problem solving and analytical skills
+ Open minded and highly collaborative
+What else do I need to know?
+
+No restriction for travelling
+What We Offer
+
+ Speak up Culture
+ Respectful Workplace
+ Being part of a global work environment
+ Remote working and remote living flexibility
+ Attractive remuneration package
+ Excellent recognition tools providing spot awards
+ Learning & Development opportunities for both personal and professional growth
+ Leave days for parents and a variety of flexible working models that allow time off for yourself and your family
+ Creche allowance for mothers
+ Share matching programs to become a shareholder of Siemens AG
+ Find more benefits here
+Individual benefits are adapted to meet local legal regulations, the requirements of different job profiles, locations, and individual preferences. 
+
+“At Siemens we are always challenging ourselves to build a better future. We need the most innovative and diverse Digital Minds to develop tomorrow‘s reality. Find out more about the Digital world of Siemens here: www.siemens.com/careers/digitalminds”
+
+As Siemens we believe physical barriers are not related to potential. Only the potential matters to us. Therefore, we look forward to receive applications of candidates with physical barriers and chronic illnesses. We support healthy relationships between candidates with barriers and their colleagues because we believe we can create differences together.
+
+Siemens is dedicated to quality, equality, and valuating diversity and we welcome applications that reflect the diversity of the communities within which we work.
+
+We are looking forward to receiving your online application. Please ensure you complete all areas of the application form to the best of you ability as we will use the data to review your suitability to the role.
+
+Please find more information from our web site:
+
+https://new.siemens.com/tr/tr.html
+
+Contact
+
+If you need more information please don't hesitate to contact us.
+
++90 216 459 20 00 
+
+https://new.siemens.com/tr/tr/genel/iletisim.html
+
+insanorganizasyon.tr@siemens.com
+
+www.instagram.com/siemensturkiye
+
+https://m.youtube.com/user/Siemens
+
+http://www.twitter.com/siemensturkiye
+
+http://www.facebook.com/siemensturkiye
+
+Organization: Advanta
+
+Company: Siemens Sanayi ve Ticaret Anonim Sirketi
+
+Experience Level: Experienced Professional
+
+Full / Part time: Full-time

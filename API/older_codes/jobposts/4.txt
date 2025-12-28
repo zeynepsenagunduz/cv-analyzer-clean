@@ -1,0 +1,19 @@
+About the job
+GENEL N TEL KLER VE    TANIMI: 
+ niversitelerin ilgili m hendislik fak ltelerinden mezun, 
+Android ve/veya IOS i in uygulama geli tirme konusunda en az 2 y l deneyimli, 
+Source Control sistemlerinden en az birisi ile  al  m   (TFS, Git, SVN) 
+ lgili uygulama marketinde yay nlanm   en az 2 uygulamas  bulunan 
+IOS ve Android tabanl  farkl  cihazlar, ekran b y kl kleri ve farkl  i letim sistemi versiyonlar yla  al  m   
+Eclipse / Android Studio / Xcode geli tirme ara lar ndan en az birine h kim,, 
+Web Services, SOAP, REST, JSON, XML konular nda bilgi ve tecr be sahibi, 
+REST/JSON, SOAP, WS teknolojileriyle  al  m  , 
+React Native ve Xamarin platformlar nda da geli tirme yapm   
+
+
+G REV YETK  VE SORUMLULUKLAR: 
+Geli tirilen yaz l mlar n d zenli ve anla  l r dok mantasyonlar n n olu turulmas  
+Geli tirilen  r nlerin deste ini vermek, gerekti inde e itimlerini vermek 
+Uygulamalarda ki hata ve sorunlar  gidermek 
+Geli tirilen yaz l mlar n bak mlar n n ve s r m g ncellemelerinin yap lmas  
+Olas  teknik ve kullan c  deneyimi sorunlar n  tespit etmek ve ekip ile ileti imini sa lamak,

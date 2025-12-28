@@ -1,0 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.loginImage {
+  background-image: url(../public/login.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

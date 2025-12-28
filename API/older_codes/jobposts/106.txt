@@ -1,0 +1,39 @@
+About the job
+Want to be a Hero? Join the #1 GLOBAL LEADER in Online Food Delivery! Delivery Hero is present in around 50 countries across four continents and is on a mission to deliver anything, straight to customers’ doors. Delivery Hero has just opened a new tech hub in Turkey, with the goal of accelerating local and global innovation. Our Tech hub is based in Istanbul, adding to our global footprint of 10+ hubs across 4 continents! Would you like to work at our Istanbul tech hub? Then apply for our Senior System Engineer position!
+
+Your mission
+
+Join the FinTech tribe and build worldwide innovative Wallet, Payment and Anti-Fraud solutions with strong focus on quality and scalability
+As a skilled Senior Systems Engineer, you will design highly scalable infrastructure, automate continuous integration and deployments, and collaborate closely with engineering teams to build resilient and performant solutions
+Advocate Delivery Hero system design principles and a general DevOps mindset in our engineering teams
+Conduct root cause analysis and propose solutions to fix underlying problems at their core
+Review database queries and storage strategies
+Create proof of concepts with new technologies and drive innovation in the FinTech infrastructure
+Support engineering teams to design highly available distributed systems
+Perform on-going reviews of our application and infrastructure code improve software performance
+Propose viable, informed solutions to fix performance problems and drive them
+Be an active partner for Product management in order to provide the best value for stakeholders and our customers
+
+Your heroic skills
+
+5+ years of experience with system engineering roles, especially on-prem environment management.
+High experience in virtualization, operating system, datacenter environment management.
+Good knowledge with the Active Directory, email management, DNS, certification management, MDM, monitoring and APM tools,
+You understand distributed systems concepts of a microservice architecture, Kubernetes and Cloud (AWS preferred)
+Strong understanding of network and application security and authentication mechanisms
+Strong skills with problem solving in critical times
+Excited to learn & try out new things
+Knowledge of DevOps processes is a plus
+Knowledge of the automation systems like Ansible is a plus
+Payment, banking or financial background is a plus
+Familiarity with data privacy regulations such as GDPR or ISO 27001 is a plus
+
+What you should expect
+
+Work from anywhere; office or home is your choice
+Flexible working hours for you to plan your day as you wish – you can start the day between 08:00 - 10:00 am
+Various online education platforms for you to sustain your professional development
+A much comprehensive private health insurance
+Colleagues with warm smiles and good communication skills
+An orientation program for you to capture Delivery Hero spirit to full extent and always feel like home – along with an assigned Buddy to assist you on anything you might need
+A paid birthday leave to use on the day after, for you to have fun and party without any worries

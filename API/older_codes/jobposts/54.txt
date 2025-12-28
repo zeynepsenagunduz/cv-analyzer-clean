@@ -1,0 +1,30 @@
+About the job
+We are looking for a creative, proactive and innovative IT developer to work on digital transformation activities using the Outsystems LowCode platform
+
+You will have the opportunity to work with clients around the world on digitization projects for diverse business needs.
+
+In this role, you will be responsible for:
+
+Analyzing current and future business needs and contribution on conceptual design of LowCode developments
+Understanding, evaluating, consulting and documenting customer requirements
+Developing the applications based on customer needs by considering Bosch internal software development and IT security regulations
+Participation on international projects and roll-out activities.
+
+Qualifications
+
+University degree in Computer Engineering, Software Engineering, Management Information Systems or similar disciplines
+3+ years of experience in SW programming languages and databases like C#, C++, Java, .Net, Python, Vue, React
+Proficiency in software development, preferably LowCode platforms or web development
+Knowledge on big data environments: Apache Platform (Hadoop, Kafka, Spark, etc.), SQL/ NoSQL
+SAP experience would be preferred
+Proficiency in requirements engineering techniques (Interview, Prototyping, Requirements Workshops, Reverse Engineering, Brainstorming, Survey/Questionnaire, Document Analysis, Interface Analysis, etc.)
+Experience of problem-solving including code correction
+Knowledge on Bosch Central Directives and Guidelines regarding Software Development and IT Infrastructure is an asset
+Strong communication and collaboration skills to breakdown technical terms and wording into understandable daily language proper for target group
+Advanced Turkish and English is required, German in addition would be an asset
+
+Additional Information
+
+Your future job location offers you: Flexible benefits and services, medical services, employee discounts, on-site parking, catering facilities, access to local public transport, room for improvements.
+
+Only positive candidates will be replied via a video interview invitation.

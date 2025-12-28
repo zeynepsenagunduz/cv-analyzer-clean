@@ -1,0 +1,47 @@
+About the job
+A custom development company, MentorMate is a design and software powerhouse with mature and established practices in Enterprise Web & Mobile Development, Technical Architecture, Human-Centered Design, Cloud & DevOps, Advanced Data Management & Analytics.
+
+We are looking to hire a Senior Cloud & DevOps Engineer with Azure.
+As part of our Professional Services Cloud Center of Excellence (PS CCoE) team, you will have the opportunity to build up expertise in cloud services through a wide range of internal technical training and Azure certification programs.
+
+As an Engineer in PS CCoE, you will work in a team to architect and build public cloud-based solutions in a secure, scalable, resilient, and cost-efficient manner, pursuant to the highest standards. This position requires a strong hands-on systems thinker that will fully participate in the systems architecture and software development process.
+
+Job Description
+
+Provide technology consulting to our clients on their system architecture and infrastructure
+Collaborate with development team members to ensure the scalability, resilience, security, and availability of the software products
+Create and configure cloud-based environments and services
+Create and implement security practices and policies
+Develop CI/CD processes
+Strive for maximum system administration efficiency by utilizing the latest technologies and tools
+Solve mission-critical problems in production or development environments
+Configure and administer various Linux and/or Windows environments
+
+Desired skills
+
+5+ years of experience with Azure
+Knowledge of Linux operating systems, services, daemons, and Bash scripting
+Understanding of virtualization and containerization platforms and tools such as Docker, Hyper-V/VMware
+Familiarity with networking and OS administration practices
+Knowledge of networking configuration and troubleshooting
+Knowledge about routing and switching protocols
+Experience with monitoring tools
+Ability and desire to quickly ramp up on new concepts and technologies
+Fluent command of English, both written and verbal
+
+A significant advantage would be
+
+Any Azure Certification
+Knowledge of infrastructure provisioning software such as Azure Resource Manager templates and/or Terraform
+Experience with one or more build management tools such as Azure DevOps
+Experience with Git and Kubernetes
+Experience with Microsoft Windows Server/AD administration
+
+We offer
+
+Remote Work Model: Freedom to be based anywhere in the world
+Global Tech Community: Work in a global team using the latest technologies 
+Exciting Career Prospects: Enterprise projects that set standards and save lives
+Competitive Pay: Feel satisfied with the negotiated terms
+No Intermediaries: Direct communication with our teams
+Personal Assistance: Support with administrative, financial, etc. issues

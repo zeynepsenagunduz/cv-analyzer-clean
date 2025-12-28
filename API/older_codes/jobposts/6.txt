@@ -1,0 +1,52 @@
+About the job
+refine is an open-source, React-based framework for building CRUD applications rapidly. Being headless by design, it gives developers the power of a low-code framework without compromising their freedom.
+
+The open source project is backed by the U.S. based company, Refine Dev Corp, raised $1M in Seed Funding recently.
+
+In addition to contributors from all over the world, Refine has a world-class core team. We are looking for the right people to grow the team and achieve our vision.
+
+See our GitHub repository here for more information about the project:
+https://github.com/refinedev/refine
+
+What do we value?
+
+Above all, we value a growth mindset. As a team of learners, we read, talk to people and listen to feedback constantly. We love working with people who have strong opinions weakly held.
+Self-starters and ambitious people form the backbone of our team. Do you want to work on bigger projects? Are you comfortable setting big goals and then accomplishing them?
+We value consistency and reliability. For example, sticking to committed deadlines, showing up on time, etc. We believe that predictability makes teams run a lot smoother.
+Its the little things that matter. Attention to detail shows that we empathize with our users, our colleagues, and anyone else that we interact with.
+Are you a practical optimist? Our founding team strongly believes in a better future. We believe in playing our part to make that future a reality.
+
+Must-Have Skills
+3+yrs of experience working on a product
+A strong grasp of client-side frameworks such as React.js/Svelte will be integral to your success.
+Strong working knowledge of HTML & CSS will ensure that you can create those pixel-perfect pages with ease.
+Being able to understand & design REST APIs is critical to ensure any reasonably complex functionality on the front-end.
+
+Nice to Have Skills
+Knowledge of Node.js. Itll help you work seamlessly across the stack and also understand the complexities of a platform better.
+Knowledge of relational database systems (MySQL/PostgreSQL) or NoSQL databases such as MongoDB.
+Open-source contributions to any project are a bonus.
+Bonus points for working knowledge of container technologies (Docker, Rkt)
+
+What is the recruitment process?
+
+As a small team, its imperative that all of us get to know each other before taking the leap. We want to ensure you succeed in your role within our team. Each conversation (video conference) with us will last about 45 mins. Typically the whole process takes between 2 - 10 business days, depending on your and our schedules.
+
+Introductory call: A zoom call that gives us a chance to introduce our company & product to you and get to know you. If you find our product vision interesting & exciting for you to work on, we will move to the next steps.
+
+Technical conversation: Another round of video interviews is a technical deep-dive with a founder/senior engineer on the team that will focus heavily on your technical chops. Expect some problem-solving to take place.
+
+Culture fit conversation: Conversations with the founders and quick meetings with our team members to ensure that there is a culture fit.
+
+Extending an offer: If all goes well, we will extend an offer that includes financial benefits, equity stock grants, and any other benefits.
+
+Benefits:
+
+Budget to set up your home office
+Self-education budget for books and courses
+Flexible holiday schedule
+
+GitHub: https://github.com/refinedev/refine
+Twitter: https://twitter.com/refine_dev
+
+To learn more, visit refine.dev.

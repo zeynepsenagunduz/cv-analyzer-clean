@@ -1,0 +1,43 @@
+About the job
+About the Company
+
+We believe the most significant advantage of the firms is the employees. Our biggest goal is to increase the standards of life of our employees.
+We owe ourselves to evolve and constantly improve so that we would provide our family whom we consider themselves making the biggest sacrifice. In the heart of this story, we have the true employees of "Sodexo" whom could take this company further ahead and achieve breakthrough. We have been working for an innovative and enjoyable environment where they can improve themselves, reach their career goals, with our motto "There Is You, There Is More".
+
+Now, let's talk about our global history. Sodexo employs 420,000 people over 62 countries over the globe which indirectly adds value to the lives of 100 million people. In Turkey, we stand by our 16,000 people with our 180 employees. With the expansion and believe of our company, we are coming closer to our goals. Therefore we are looking for new teammates who will share the same excitement with us on this journey.
+You become part of a global and extended family for sharing and making our dreams that will take Sodexo to the next level come true.
+
+Job Purpose:
+
+Senior Software Developer is basically expected to develop and maintain legacy applications. Coach and train other team members for higher quality output and for personal development.
+
+
+Scope of Responsibilities
+
+
+Writing clean, high-quality, high-performance, maintainable code
+Develop and support software including applications, database integration, interfaces, and new functionality enhancements
+Coordinate cross-functionally to insure project meets business objectives and compliance standards
+Support test and deployment of new products and features
+Participate in code reviews
+Coach and train other team members for higher quality output and for personal development.
+
+Profile
+
+Deep understanding of Web Development Technologies, Microsoft Development Technologies, .NET Framework, .NET Core, C#
+Experienced on OOP, SOLID Principles and Design Patterns
+Strong knowledge on SOAP and RESTful API design and consumption
+Experience with microservices and communication between them
+Good understanding of relational databases, especially Oracle, PL-SQL.
+Data modeling and database design experience (MS SQL, Oracle DB and NoSQL platforms), especially Oracle.
+Experience in Object-relational mapping techniques and ORM frameworks/tools
+Experience with agile and scrum software development lifecycle (SDLC) processes and DevOps
+Bachelor degree preferably in related disciplines
+Min. 8 years of professional experience in similar or adjacent roles
+Proficiency in English to feel comfortable in working in a multinational environment.
+Great multitasking skills
+Highly result-oriented with proven ability to work against ambitious timelines
+Time management, leadership and decision making in line with company strategies
+Strong teammate in multi-disciplinary teams.
+
+Our company will process the personal data you may submit within the scope of your application as a controller to evaluate your application for the position you have applied or further recruitment opportunities in association with your application. As a candidate, all communication between you and our company is protected according to Turkish Personal Data Protection Law No.6698 You can click on the link https://www.sodexoavantaj.com/calisan-adayi-aydinlatma-metni for details

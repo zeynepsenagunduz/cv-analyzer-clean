@@ -1,0 +1,66 @@
+About the job
+Come join the team at Zynga making an impact across all of the company’s games – Central Technology! On the ZDK team, we focus on shared client tech that drives the core gameplay experience under the hood. We’re looking for outstanding engineers with a passion for technology and the ability to work with a diverse team. The position will play a key role in helping to architect and build next-gen client frameworks for our games.
+
+Main Responsibilities
+
+Build, improve & maintain Zynga’s SDK for iOS, Android, Windows, OSX, Playstation, Switch, and Xbox for the Unity and Unreal engines.
+Take a hands-on approach in architecting, writing, and reviewing code.
+Proactively identify & recommend improvements to address systemic problems and tech debt.
+Follow engineering standard methodologies to ensure code quality, performance, and reliability.
+Collaborate effectively with teammates, contributing to an innovative environment of technical excellence.
+Review detailed tech plans from others, aligning with the team, and Zynga-wide technical vision.
+Provide production & integration support for shared technology across Zynga games.
+
+Desired Skills And Experience
+
+B.S. in Computer Science, or equivalent
+4+ years of hands-on software development experience
+Significant programming experience in C#
+Experience with Unity
+Experience in object-oriented design of applications/systems
+Experience with iOS and Android
+Experience with C++ and Unreal a plus
+Experience with Switch, Xbox, and Playstation is a plus
+Knowledge of the mobile landscape and emerging technologies is a plus
+Experience working with external groups/teams on technical implementations and procedures.
+
+What we offer you:
+
+Competitive salary, bonus plan, Take Two RSU’s (Restricted Stock Units), ESPP (Employee Stock Purchase Plan)
+401K Company Match Contribution (US Employees)
+RRSP Company Match Contribution
+Extended Health coverage, dental, disability, critical illness, EAP, and life insurance (Canadian Employees)
+Medical, dental, vision, EAP, life insurance, and disability benefits (US Employees)
+Virtual mental health and neurodiversity support programs
+Fitness benefits (offering varies by location)
+Financial wellness program with unlimited access to certified financial planners
+Discretionary Time Off policy for many employees
+Family planning support program
+Generous paid maternity/parental leave
+Subsidized Back-up child care
+Zynga happy hours and frequent employee events
+Flexible working hours on many teams
+Culture of diversity and inclusion including employee resource groups
+Work with cool people and impact millions of daily players
+
+We are an equal opportunity employer and we are committed to building a diverse and talented workforce. We do not discriminate on the basis of race, sex, religion, colour, national origin, gender, gender identity, sexual orientation, age, marital status, veteran status, medical condition, disability, or any other class or characteristic protected by applicable law. We welcome job-seekers, players, employees, and partners from all backgrounds to join us!
+
+We will consider all qualified job-seekers with criminal histories in a manner consistent with applicable law.
+
+We are committed to providing reasonable accommodations to qualified individuals with physical or mental disabilities in order to participate in the job application or interview process, to perform essential job functions, and to receive other benefits and privileges of employment. Please contact us at AccommodationRequest@zynga.com to request an accommodation associated with your application for an open position.
+
+The pay range for this position in California at the start of employment is expected to be between $105,000 and $190,000 per year. 
+
+However, base pay offered is based on market location, and may vary further depending on individualized factors for job candidates, such as job-related knowledge, skills, experience, and other objective business considerations. Subject to those same considerations, the total compensation package for this position may also include other elements, including a bonus and/or equity awards, in addition to a full range of medical, financial, and/or other benefits. Details of participation in these benefit plans will be provided if an employee receives an offer of employment. If hired, employee will be in an “at-will position” and the Company reserves the right to modify base salary (as well as any other discretionary payment or compensation or benefit program) at any time, including for reasons related to individual performance, Company or individual department/team performance, and market factors.
+
+Zynga does not engage in financial exchanges during the recruitment or onboarding process. We do not conduct job interviews over third-party messaging apps such as Telegram, WhatsApp or others. We will never ask you for your personal or financial information over unofficial chat channels. Our in-house recruitment team only contacts individuals via official company email addresses (i.e., via a zynga.com or naturalmotion.com email domain).
+
+If you believe you have been the victim of a scam, you may wish to contact the authorities. In the United States, you may file a complaint with the FBI. More information is available here: https://www.ic3.gov.
+
+Careers Category: Engineering
+
+Careers location: Ýstanbul, Turkey
+
+Connected Worker Type: Connected
+
+Requisition Id: P211452

@@ -1,0 +1,76 @@
+Junior Frontend Developer
+Objective:
+To obtain an entry-level position as a frontend developer where I can apply my skills in HTML, CSS, and JavaScript to create user-friendly web applications and learn from experienced developers.
+
+Education:
+Bachelor of Science in Computer Science, XYZ University, May 2022
+
+Relevant coursework: Web Development, Database Systems, Object-Oriented Programming
+Technical Skills:
+
+HTML5, CSS3, JavaScript
+React, Redux, jQuery, Bootstrap
+Git, GitHub, Command Line
+Visual Studio Code, Sublime Text
+Experience:
+Web Development Intern, ABC Company, June-August 2021
+
+Assisted senior developers in building and maintaining company websites using React and Redux
+Developed new features and fixed bugs on a daily basis
+Conducted user testing and gathered feedback to improve website usability
+Projects:
+
+Developed a responsive web page using HTML, CSS, and JavaScript as a part of a course project
+Built a simple React application that displays a list of books using a third-party API
+Mid-level Frontend Developer
+Objective:
+To secure a mid-level frontend developer position where I can leverage my extensive experience in designing and developing complex web applications, leading development teams, and implementing best practices for web development.
+
+Education:
+Bachelor of Computer Science, XYZ University, May 2015
+
+Technical Skills:
+
+HTML5, CSS3, JavaScript
+React, Angular, Vue.js, Ember.js
+Redux, MobX, RxJS
+Git, GitHub, GitLab, Bitbucket
+Visual Studio Code, WebStorm, IntelliJ IDEA
+Experience:
+Senior Frontend Developer, DEF Company, July 2018-Present
+
+Led a team of frontend developers in building and maintaining a large-scale web application using React and Redux
+Designed and implemented frontend architecture and developed reusable components
+Collaborated with UX designers to ensure website usability and accessibility
+Conducted code reviews and mentored junior developers
+Frontend Developer, GHI Company, March 2016-June 2018
+
+Developed and maintained company websites using Angular and Ember.js
+Improved website performance and user experience by optimizing code and implementing responsive design
+Conducted cross-browser and cross-device testing to ensure website compatibility
+Worked with backend developers to integrate frontend and backend systems
+Projects:
+
+Developed a dashboard web application using React and Redux that displays real-time data and provides various data analysis tools
+Built a mobile-responsive e-commerce website using Angular and Node.js that supports multiple payment gateways
+Senior Frontend Developer
+Objective:
+To obtain a challenging senior frontend developer position where I can utilize my strong technical skills, deep knowledge of web development, and proven experience in leading complex web projects.
+
+Education:
+Master of Computer Science, XYZ University, May 2010
+
+Technical Skills:
+
+HTML5, CSS3, JavaScript
+React, Angular, Vue.js, Ember.js
+Redux, MobX, RxJS
+TypeScript, ES6, Babel, Webpack
+Git, GitHub, GitLab, Bitbucket, Jenkins
+Visual Studio Code, WebStorm, IntelliJ IDEA
+Experience:
+Lead Frontend Developer, JKL Company, January 2015-Present
+
+Led a team of frontend developers and UX designers in building a web application platform using React, Redux, and TypeScript
+Designed and implemented frontend architecture and developed reusable components and libraries
+Worked closely with backend developers and DevOps engineers to ensure seamless integration and deployment

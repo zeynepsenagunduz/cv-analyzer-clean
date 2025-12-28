@@ -1,0 +1,77 @@
+About the job
+Job description:
+
+Every moment is a development opportunity. Our dreams are the starting point of the future. Our route is the future of the world.
+
+At Arçelik, a trusted lifestyle solutions provider to the digital household, we are all for changing the world for better. We treat life of nature with respect. The starting point of our technology is sustainable development. We believe the diversity of our people is the driving force of our innovative culture. Each of our employees are unique and the quality of our products and services begin with the quality of our people. Our more than 30.000 employees around the world give power to our future.
+
+Apply and let’s grow, respect, lead together.
+
+ 
+
+Hardware Design in a few word is  passion, optimization, reliablity, stability.  We are looking for teammates with continuous improvement awareness, ability to learn, curious for problem solving,
+
+ 
+
+What awaits you in this role? 
+
+We are looking for a Hardware Design Engineer who will join us at Cooking Appliances Plant.
+
+Developing electronics hardware for cooking appliances like hob, hood, and oven,
+Designing and developing Cooking Appliance HW including Schematics, Layout, component selection and bring up,
+Developing product requirement specifications and validation plans,
+Contributing to development of control algorithms and participate in the development of embedded software and control hardware,
+Working from prototype to production,
+Inventing and creating new technologies and solutions,
+Supporting transitioning newly developed products into the production phase,
+Providing technical support for existing products and/or product improvement projects,
+Defining critical-to-quality features of components and products,
+Reviewing technical and marketing literature associated with products developed,
+Participating actively in a cross-functional product development environment,
+Participating within Agile team through development tollgate process,
+Working with internal and external partners,
+Planning laboratory activities for product tests and approvals,
+Preparing test plans according to project schedules and test reports,
+Preparing test instruction according to related product group in terms of safety and performance standards,
+Evaluating of new design, design changing and preparing test plans according to changes,
+Following, searching and learning related safety and performance standards,
+Leading and participating in R&D project for improving and developing related products.
+The position is located in BOLU.
+
+ 
+
+How we describe the perfect match?
+
+Must requirements
+
+Bachelor’s degree in electrical or Electronics Engineering, Electronics & Communication Engineering or Computer Engineering
+Last year student or new graduated with master’s degree education is continuing,
+Understanding of different power electronics circuit topologies,
+Experience in research, design and testing of electronics design solutions e.g. User interface / SMPS / Power Board electronics products/ motor drives,
+UI board design with capacitive touch and Led display,
+Coding knowledge to bring up MCU based Board CPUs for HW testing,
+Having knowledge of schematics and PCB design software, preferably with Altium Designer,
+Having knowledge of designs for requirements and industry standards in terms of EMC, creepage and clearance, thermal management, and robustness,
+Having experienced in analog and digital electronic circuit design,
+General knowledge of FMEA, requirements management, project management, problem solving methodologies and tools,
+Excellent verbal and written skills in English,
+Strong knowledge of Microsoft Office programs,
+Strong problem-solving skills,
+Open to innovation culture,
+Flexible and open to new perspectives,
+Being open to communication is always our priority.
+ 
+
+We're an equal opportunity employer. All applicants will be considered for employment without attention to race, sex, color, national or social origin, ethnicity, religion, age, pregnancy, disability, sexual orientation, gender identity and expression, marital status or political opinion.
+
+ 
+
+By being one of the “People of Arçelik”;
+
+A friendly environment that is supported by endless coaching and mentoring of our senior team members.
+Start your journey on your first day and get the support throughout your whole Arçelik journey.
+A working environment where you can challenge yourself, take responsibilities and get the opportunity to be part of many projects.
+An open working environment in which you can share your ideas and bring them to life.
+While working remotely, we got your back! We support you with portable modem and internet connection.
+Chill out coffee places to pamper yourself at the office.
+Enjoy or high-quality home appliances with your employee discount.

@@ -1,0 +1,30 @@
+About the job
+The story of Yýldýz Holding, which started with biscuit production in Istanbul in 1944, continues today with our food-snack products that we have reached 4 billion people in 5 continents with more than 300 brands and with our retail companies all over Turkey. With our 72 thousand employees, the majority of whom are located in Turkey, we aim to reach the better without stopping, and we produce a wide range of products from biscuits to chocolate, from frozen food to packaging in a total of 46 factories, 25 of which are abroad. We always raise the bar in economic contribution, employment, exports, social solidarity and sustainability. We give priority to social contribution with the principle of "Make Happy Be Happy" and we have been producing happiness for more than 75 years with our products, services and sustainable social responsibility understanding.
+
+If you want to be a part of this global world with us, apply for the position of  Senior Data Engineer and join us.
+
+What Awaits You, What Will Be Your Responsibilities?
+Build highly scalable and resilient data pipelines using Python, PySpark, SparkSQL and/or Scala.
+Adopt AWS data lake and data related services to implement end-to-end solutions,
+Adopt Microsoft Snapse, Azure Data Lake and data related services to implement end-to-end solutions,
+Understand business capability needs and processes as they relate to IT solutions through partnering with Product Owners and business stakeholders, and apply this knowledge to influence business goals,
+Participate in Backlog grooming, Sprint Planning and effort estimation,
+Automate, optimize, migrate and enhance existing solutions,
+Contribute to the logical/physical design and development of new/existing data marts/models
+Perform data modeling, data analysis and providing insights using various tools,
+Follow and share data engineering best practices among data and analytics engineers,
+Guide adept Data Engineers in their data engineering journey.
+
+What will be the qualifications we expect from you?
+4+ years of professional experience in data engineering with a proven track record of delivering complex data solutions in a production environment,
+Strong programming skills in Python and/or Scala,
+Extensive experience with Apache Spark including working in PySpark and Spark SQL,
+Very good working knowledge of AWS Services like Glue, EMR, S3, SNS, SQS, Athena, Redshift, Lambda, and Step functions,
+Very good working knowledge of Microsoft Services like Azure Snapse,Azure Event Hub,Azure Cosmos Db,Blob Storage,
+Experience with performing data modeling, data analysis and providing insights using various tools.
+Experience in working as part of agile teams and using agile and collaboration tools like Jira, Confluence.
+
+What Will Happen to Those Who Feature You?
+Ability to work with the business to capture, groom, prioritize, plan and demo User Stories,
+Strong collaboration skills for effective communication across multiple teams and stakeholders, both internal and external,
+Data savvy individual with hands on experience in preparing, analyzing and deriving insights from data.

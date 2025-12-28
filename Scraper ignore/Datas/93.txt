@@ -1,0 +1,44 @@
+About the job
+
+A new area within Accenture Digital is Industry X, an advanced, digitally enabled, innovative, planning and investment approach for manufacturing and asset-intensive industries. In your role within our Industry X team, you’ll help clients take advantage of significant market opportunities as digital technology moves into the core of industry in product development and manufacturing environments. You’ll help them transform their product, manufacturing and product related services value chains in Products, Communications, Media, High Tech, Chemicals, Mining, Oil & Gas and Utilities. As part of Accenture Digital, you’ll benefit from tailored career management and specialist skills that will fuel your ambitions in the Industry X space.
+
+We are looking for Frontend Developers to extend our Industry X technical development team, who already enjoy working with high-end technologies on various exciting multinational projects!
+
+
+
+· You can either work hybrid or on-site,
+· Flexible hours
+· Life & Health insurance with wide coverage including spouse and children
+· Shuttle service with wide range coverage or fuel allowance
+· Meal allowance
+· Employee Referral Bonus Program
+· Performance rewarding bonus & promotion
+· Birthday day off
+· No dress code is needed
+· Personal ongoing learning budget
+· Accenture Recognition points that can be turned into gift cards, holiday offers, etc
+· Working on international projects with a globally diverse team
+· A fast-paced technology environment
+· An Employee Assistance & Wellness Program including access to telephone counseling, webinars, training, interactive tools, online and digital content
+· Personalized career development plan with People Leads
+· Buddy system to support your integration
+
+
+· At least 3 years of software engineering and hands-on programming experience in web applications
+· Strong knowledge of Web standards and protocols like HTML, CSS, HTTP, JavaScript with ES6 and Typescript
+· Experience in at least one of high-demand JavaScript frameworks (Angular, React, Vue etc.)
+· Experience in HTML5, CSS3 and Responsive Web Development
+· Familiarity with Frontend Dev Tools (Gulp.js, webpack, Chrome Dev Tools etc.) is a plus
+· Familiarity with DevOps (Continuous Integration, Continuous Testing and Continuous Delivery) is a plus
+· Familiarity with UI/UX concerns, Progressive Web Applications and CSS preprocessors (SASS, Less) is plus
+· Familiarity with one of the jss libraries and npm ecosystem is a plus
+· Strong written and verbal communication skills in English
+· Excellent problem solving skills and a high degree of intellectual horsepower
+· BS or higher degree in Computer Science or related discipline, or equivalent industry experience
+
+Key Responsibilities:
+· Build rich client web applications with a focus on performance and user experience
+· Eager to follow, learn and apply new technologies and innovations
+Pursue opportunities to improve delivery quality and efficiency within the organization
+
+Position will be based in Istanbul Teknopark/Kurtkoy.

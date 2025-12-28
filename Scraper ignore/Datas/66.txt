@@ -1,0 +1,58 @@
+About the job
+WE ARE LOOKING FOR A NEW GAMEMATE
+
+Actively operating in the Turkish information technology market for 20 years with high-performance gaming computers and accessories, and aiming to become a global technology brand; We are looking for "SENIOR FRONTEND DEVELOPER” for our IT Department to get even stronger. For application:
+
+
+Who are we?
+While we are basically a technology brand that operates in the field of high-performance laptops and gaming equipment, we ultimately provide hardware services for gamers so that they can enjoy the game, have a smooth experience and feel the joy of victory.
+
+
+What do we do?
+We manufacture high-performance laptops that can run all applications that require power and performance, especially games. We provide the latest technologies needed by gamers and professionals who work in architecture/graphic design with more affordable prices and stronger hardware configurations in comparison to global brands.
+
+
+Vision / Mission
+Our vision is to become a global technology brand that goes beyond the borders of Turkey and create excellent customer experience thanks to the solutions we provide for the gaming world. We consider everyone who walks alongside us with the same team spirit as an integral part of this story.
+Our top priority at all times is to offer innovative and technological gaming equipment that could be used in all gaming activities with perfect user experience.
+
+
+Where are we?
+We stand by everyone that wants to have a quality gaming and hardware experience. In addition to our stores in Istanbul, Ankara, and Izmir; we are all around Turkey with our online store and technical support channels. On top of our operations in Cyprus thanks to our store in Nicosia, we are on the verge of expanding to countries like Saudi Arabia, Kuwait, and Egypt with our operations in Dubai.
+
+Our operations in Europe, on the other hand, are carried out at our store in Alexanderplatz, a square in downtown Berlin. Our Berlin store provides services for all our customers as the largest gaming experience store in Europe.
+
+
+QUALIFICATIONS
+
+Having a Bachelor Degree from computer engineering, MIS or electrical-electronic engineering department of reputable Universities
+Having at least 5 years of experience in a similar job.
+Having reactive programming and software development experience
+Having at least six years of software development experience in JavaScript and/or TypeScript programming technologies
+Having React, Angular, Vue.Js, Flutter etc. Have software development experience in at least two of the front-end frameworks
+Having at least six years of software development experience with HTML, CSS
+Having knowledge and experience about micro frontend architecture
+Having experience in test terminology and processes
+Having experience in the use of continuous integration products
+Having knowledge and experience with Git, Docker
+Having knowledge and experience in project management
+Software development experience with DevOps and CI/CD pipeline
+Azure DevOps knowledge and experience added value
+Able to work in developing software projects with Agile/Scrum methodology
+Being able to communicate effectively with different units, being solution-oriented and prone to teamwork
+Analytical and creative thinker, problem solver.
+Advanced level of English both verbal and speaking
+Being ready and willing to follow trainings and events that will increase their knowledge and experience.
+
+
+
+JOB DESCRIPTION
+
+Works for maximizing the efficiency of the company by identifying the right technology.
+Takes necessary technical and legal precautions to provide information security
+Prepares needful softwares in line with user necesity for adding value to company strategies.
+Finds solutions with the team to ensure the regular operation of software failures.
+Tests the final software system, checks whether it works regularly and takes decisions on the maintenance of the software when necessary.
+Ensures that the prepared software works not only on computers, but also on digital devices such as tablets or smart phones.
+Prepares a detailed report about the software required by the company by following the technological developments.
+Contributes to corporate learning and corporate memory by recording all stages of software development studies and operations with documents.

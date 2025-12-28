@@ -1,0 +1,24 @@
+About the job
+
+We are looking for a colleague to join the development team of sophisticated software for the global leader in Innovative Orthodontics. The team develops APIs and other services to integrates all internal systems and applications around the process of orthodontic manufacturing.
+
+
+
+Design and develop complex web system
+Take part in code review
+Proactive work in distributed agile environment,
+Responsibility for project architecture decisions.
+Converting Angular Web SPA to React technical stack
+
+
+
+- 4+ years as a web-developer
+- Strong commercial experience with React, TypeScript, JavaScript
+
+
+
+- experience with Angular
+- scrum, Agile
+
+
+English: C1 Advanced

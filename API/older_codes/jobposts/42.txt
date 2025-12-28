@@ -1,0 +1,37 @@
+About the job
+Being a cutting-edge tech-driven business we pride ourselves on our highly optimized 3-phase hiring process. Simply click 'APPLY' (above) to begin Phase 1. Once you pass, we will immediately move to Phase 2 (Interview).
+
+Jungle is a peer-to-peer NFT marketplace for digital goods that range from conventional art to other collectibles; Jungle stands apart in our aim to be accessible to every type of buyer, from crypto novice to seasoned collector. Founded by multi-billion-dollar start-ups in the e-commerce space, we're a fast-growing team of crypto enthusiasts who believe in the potential of blockchain. We're currently on the lookout for experienced candidates who are ready to define success and be part of the NFT Revolution.
+
+The Role: 
+As Lead Fullstack Developer you will work closely with the development team, the Product Manager, Project Manager and the designers to build beautiful user interfaces that bring web3 and interactive products into the mainstream. You will manage a team of 5 developers. You’ll be contributing to the Jungle platform and be an integral part of driving Jungle’s success.
+
+
+Why join us?
+Prime Location: You'll work full time from our state-of-the-art, centrally-located office space in the heart of Dubai.
+Get a 30% increased salary + Bonuses: We will guarantee you a 30% increase on your current salary and we offer multiple monthly bonus opportunities for all team members.
+100% Tax-Free Income: Working in Dubai means that you get to keep ALL of your income.
+High-Growth Trajectory: We have a team of highly ambitious professionals with a strong desire to learn and develop their skills.
+
+
+What you will do:
+Build user flows across both web and backend
+Collaborate with the entire team to define, prioritize, and build Web3 features
+Liaise with our leadership team, designers, engineers, and product owners to design robust infrastructure and applications.
+Research and evaluate new methodologies, applications, and technologies that improve the quality, reliability, and performance of the product.
+Develop Node.JS/ Nest.JS/ Next.JS/ JavaScript/ React for the front-end and back-end applications
+Develop unit and integration tests for core business logic
+Participate in designing the architecture for new functionality and products
+
+
+What you’ll need to be successful:
+6+ years in a Fullstack Development role
+Proven people management experience
+Experience with Node.js and Rest api
+Experience building frontend applications using JavaScript and React. CSS would be beneficial.
+Confidence in writing secure and high-quality code.
+Excited to work in a fast-paced environment
+Eager to learn new technologies
+Familiarity with testing frameworks
+Ability to work cross-functionally with product, design, and development teams
+Desirable that you have a good understanding of different blockchain platforms and how to sync with them
