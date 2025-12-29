@@ -20,7 +20,7 @@ export default function Card({ job }) {
         <button
           onClick={(e) => {
             e.stopPropagation();
-            window.open('http://localhost:8000/static/jobposts/3.txt', '_blank');
+            window.open(`http://localhost:8000/static/jobposts/${job.userid}.txt`, '_blank');
           }}
           type="submit"
           className="flex items-center gap-2 text-white bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-semibold rounded-xl text-sm px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"

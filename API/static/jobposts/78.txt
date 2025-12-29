@@ -1,0 +1,8 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 About the job Requirements Strong understanding of Modern JavaScript, ES6+ Strong understanding of markup, including HTML5 and CSS3 Good understanding of ReactJS, NextJS, Typescript Good understanding of React Hooks, State Management Good understanding of asynchronous request handling Proficient understanding of Server-Side Rendering, Isomorphic Web Applications, PWA Proficient understanding of cross-browser compatibility issues Familiarity with JavaScript module loaders Familiarity with Webpack and Parcel Experience with Git Understanding browser rendering behavior and performance\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Job Definition Develop web projects Ensure UI/UX feasibility Optimize speed and scalability Collaborate with team members\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Company: Ruut\par}
+}

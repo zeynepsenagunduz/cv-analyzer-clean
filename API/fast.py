@@ -1,4 +1,4 @@
-from fastapi import FastAPI, File, UploadFile,HTTPException
+from fastapi import FastAPI, File, UploadFile,HTTPException, Query
 from pydantic import BaseModel
 from fastapi.staticfiles import StaticFiles
 from helper import allowed_file, handleCV, processJobText, create_point, pdf_to_text,remove_special_characters
@@ -7,6 +7,42 @@ from db import get_db_connection
 import json
 import os 
 import uuid
+import ast
+
+def safe_keywords(raw):
+    """
+    DB'den gelen keywords alanını güvenle listeye çevirir.
+    Kabul ettikleri:
+      - JSON: '["html","css"]'
+      - boş/None: '' / None
+      - python list string: "['html','css']"  (fallback)
+      - düz metin: 'html css react' (fallback)
+    """
+    if raw is None:
+        return []
+    s = str(raw).strip()
+    if not s:
+        return []
+
+    # 1) JSON dene
+    try:
+        data = json.loads(s)
+        if isinstance(data, list):
+            return [str(x).strip().lower() for x in data if str(x).strip()]
+    except Exception:
+        pass
+
+    # 2) Python list string (tek tırnaklı) dene
+    try:
+        data = ast.literal_eval(s)
+        if isinstance(data, list):
+            return [str(x).strip().lower() for x in data if str(x).strip()]
+    except Exception:
+        pass
+
+    # 3) düz metin fallback
+    return [w for w in remove_special_characters(s).lower().split() if w]
+
 
 
 class Login(BaseModel):
@@ -236,7 +272,7 @@ def recommenderFunction(jobKeywords, cvKeywords):
 
     return courses
     
-
+"""""
 @app.post("/best-job")
 async def getPoint(userid: BestJobs):
 
@@ -301,7 +337,72 @@ async def getPoint(userid: BestJobs):
     courses = recommenderFunction(best_job_keywords, cv_keywords)
     return {"top_five": new_list, "cv_keywords": cv_keywords, "best_job_keywords": best_job_keywords,"courses": courses}
 
+"""
+@app.post("/best-job")
+async def getPoint(userid: BestJobs):
+    cv_keywords = processJobText(pdf_to_text(userid.userid))
 
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT id, jobpost, jobpost_keywords,userid FROM jobposts")
+    jobs = cursor.fetchall()
+
+    if not jobs:
+        conn.close()
+        return {"top_five": [], "cv_keywords": cv_keywords, "best_job_keywords": [], "courses": []}
+
+    scores = {}
+    job_kw_map = {}   # id -> keywords list
+    job_text_map = {} # id -> jobpost text
+    job_user_map = {}  # id -> userid
+
+
+    for job in jobs:
+        job_id = job[0]
+        job_text = job[1]
+        raw_kw = job[2]
+        jobposts_userid = job[3]   # ✅ jobposts.userid
+
+
+        kw_list = safe_keywords(raw_kw)   # ✅ burada patlamaz
+        job_kw_map[job_id] = kw_list
+        job_text_map[job_id] = job_text
+        job_user_map[job_id] = jobposts_userid  # ✅
+
+
+        scores[job_id] = create_point(cv_keywords, kw_list)
+
+    # skora göre sırala
+    sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+
+    # en iyi job keywords
+    best_job_id = sorted_scores[0][0]
+    best_job_keywords = job_kw_map.get(best_job_id, [])
+
+    # top 5 response
+    top5 = sorted_scores[:5]
+    new_list = []
+    for job_id, point in top5:
+        new_list.append({
+            "userid": job_user_map.get(job_id),  # ✅ dosya adı
+            "text": job_text_map.get(job_id, ""),
+            "keywords": job_kw_map.get(job_id, []),
+            "point": int(point)
+        })
+
+    conn.close()
+
+    courses = recommenderFunction(best_job_keywords, cv_keywords)
+
+    return {
+        "top_five": new_list,
+        "cv_keywords": cv_keywords,
+        "best_job_keywords": best_job_keywords,
+        "courses": courses
+    }
+
+"""""
 @app.post("/best-applicant")
 async def getPoint(userid: str):
 
@@ -336,8 +437,73 @@ async def getPoint(userid: str):
 
     return {"top_five": new_list , "job_keywords": job_keywords, "best_cv_keywords":  best_cv_keywords  }
 
+"""
 
 
+@app.post("/best-applicant")
+async def best_applicant(userid: str = Query(...)):
+    path = f"./static/jobposts/{userid}.txt"
+    if not os.path.exists(path):
+        raise HTTPException(status_code=404, detail="Jobpost file not found")
+
+    with open(path, "r", encoding="utf-8", errors="ignore") as f:
+        jobtext = f.read()
+
+    job_keywords = processJobText(jobtext)
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    # ✅ CV'leri al
+    cursor.execute("SELECT id, userid, keywords FROM cvs")
+    cvs = cursor.fetchall()
+
+    if not cvs:
+        conn.close()
+        return {"top_five": [], "job_keywords": job_keywords, "best_cv_keywords": []}
+
+    # ✅ users tablosundan userid -> username map
+    cursor.execute("SELECT id, username FROM users")
+    users = cursor.fetchall()
+    user_map = {str(u[0]): u[1] for u in users}
+
+    scores = {}
+    cv_kw_map = {}
+
+    for row in cvs:
+        cv_userid = row[1]
+        raw_kw = row[2]
+
+        kw_list = safe_keywords(raw_kw)
+        cv_kw_map[cv_userid] = kw_list
+
+        scores[cv_userid] = create_point(kw_list, job_keywords)
+
+    sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+
+    best_cv_userid = sorted_scores[0][0]
+    best_cv_keywords = cv_kw_map.get(best_cv_userid, [])
+
+    top5 = sorted_scores[:5]
+
+    # ✅ username ekle
+    new_list = []
+    for u, p in top5:
+        new_list.append({
+            "userid": u,
+            "username": user_map.get(str(u), "Unknown"),
+            "point": int(p)
+        })
+
+    conn.close()
+
+    return {
+        "top_five": new_list,
+        "job_keywords": job_keywords,
+        "best_cv_keywords": best_cv_keywords
+    }
+
+  
 
 @app.get("/get-credit")
 async def getPoint(userid: str):

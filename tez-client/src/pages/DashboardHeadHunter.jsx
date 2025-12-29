@@ -181,6 +181,7 @@ export default function DashboardHeadHunter() {
               <span className="text-white font-bold text-lg">Kalan Krediniz: {credit}</span>
             </div>
           </div>
+          
           <div className="flex justify-center items-center gap-6">
           {JSON.parse(window.localStorage.getItem('userData')).has_jobpost && (
             <button
@@ -246,7 +247,7 @@ export default function DashboardHeadHunter() {
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
-                            Kullanıcı {item.userid}
+                            Kullanıcı {item.username}
                           </div>
                           <div className="bg-blue-600 text-white px-4 py-2 rounded-xl font-bold shadow-lg">SCORE: {item.point}</div>
                           <div className="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-2 rounded-xl text-xl font-bold shadow-lg flex items-center gap-2">
@@ -280,7 +281,7 @@ export default function DashboardHeadHunter() {
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
-                            Kullanıcı {item.userid}
+                            Kullanıcı {item.username}
                           </div>
                           <div className="bg-blue-600 text-white px-4 py-2 rounded-xl font-bold shadow-lg">SCORE: {item.point}</div>
                         </div>
