@@ -9,6 +9,8 @@ import json
 import os 
 import uuid
 import ast
+from fastapi.responses import FileResponse
+
 
 def safe_keywords(raw):
     """
@@ -803,3 +805,110 @@ def get_skill_trends():
             for s in trending
         ]
     }
+
+@app.get("/api/user/profile/{userid}")
+def get_user_profile(userid: str):
+    """
+    Kullanıcı profil bilgileri ve öneriler
+    """
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Kullanıcı bilgileri
+    cursor.execute("SELECT username, email, role, has_cv FROM users WHERE id = ?", (userid,))
+    user = cursor.fetchone()
+    
+    if not user:
+        conn.close()
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    user_data = {
+        "username": user[0],
+        "email": user[1],
+        "role": user[2],
+        "has_cv": user[3]
+    }
+    
+    # Kullanıcının skill'leri
+    user_skills = []
+    if user[3]:  # has_cv
+        cursor.execute("SELECT keywords FROM cvs WHERE userid = ?", (userid,))
+        cv = cursor.fetchone()
+        if cv and cv[0]:
+            user_skills = json.loads(cv[0])
+    
+    # En çok aranan skill'ler (job postings'ten)
+    cursor.execute("""
+        SELECT jobpost_keywords FROM jobposts 
+        WHERE jobpost_keywords IS NOT NULL AND jobpost_keywords != '[]'
+    """)
+    
+    all_job_skills = []
+    for row in cursor.fetchall():
+        try:
+            skills = json.loads(row[0])
+            all_job_skills.extend(skills)
+        except:
+            pass
+    
+    skill_counts = Counter(all_job_skills)
+    
+    # Kullanıcıda OLMAYAN ama çok aranan skill'ler
+    recommended_skills = []
+    for skill, count in skill_counts.most_common(50):
+        if skill not in user_skills:
+            recommended_skills.append({
+                "skill": skill,
+                "demand": count
+            })
+        if len(recommended_skills) >= 5:
+            break
+    
+    # Kullanıcının skill istatistikleri
+    total_user_skills = len(user_skills)
+    total_job_skills = len(set(all_job_skills))
+    
+    # Coverage hesapla
+    user_skills_in_demand = [s for s in user_skills if s in all_job_skills]
+    coverage = (len(user_skills_in_demand) / total_user_skills * 100) if total_user_skills > 0 else 0
+    
+    # Her skill için demand bilgisi ekle (YENİ!)
+    skills_with_demand = []
+    for skill in user_skills:
+        skills_with_demand.append({
+            "skill": skill,
+            "in_demand": skill in all_job_skills,
+            "demand_count": skill_counts.get(skill, 0)
+        })
+    
+    conn.close()
+    
+    return {
+        "user": user_data,
+        "skills": user_skills,
+        "skills_with_demand": skills_with_demand,  # YENİ!
+        "skill_count": total_user_skills,
+        "skills_in_demand": len(user_skills_in_demand),
+        "market_coverage": round(coverage, 1),
+        "recommended_skills": recommended_skills
+    }
+
+# ============================================================
+# CV FILE ENDPOINT
+# ============================================================
+
+@app.get("/api/user/cv/{userid}")
+def get_user_cv(userid: str):
+    """
+    Kullanıcının yüklediği CV PDF dosyasını döndür
+    """
+    cv_path = f"static/cvs/{userid}.pdf"  # ← DÜZELT
+    
+    if not os.path.exists(cv_path):
+        raise HTTPException(status_code=404, detail="CV dosyası bulunamadı")
+    
+    return FileResponse(
+        path=cv_path,
+        media_type="application/pdf",
+        filename=f"cv_{userid}.pdf"
+    )

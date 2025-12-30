@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import './index.css';
-import { Login, Register, DashboardUser, DashboardHeadHunter, AdminDashboard, AnalyticsDashboard } from './pages';
-
-const router = createBrowserRouter([
+import { Login, Register, DashboardUser, DashboardHeadHunter, AdminDashboard, AnalyticsDashboard, UserProfile, ViewCV } from './pages';const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
@@ -37,6 +35,14 @@ const router = createBrowserRouter([
   {
     path: '/analytics',
     element: <AnalyticsDashboard />,
+  },
+  {
+    path: '/profile',
+    element: <UserProfile />,
+  },
+  {
+    path: '/view-cv',
+    element: <ViewCV />,
   },
 ]);
 
