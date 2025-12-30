@@ -123,6 +123,18 @@ export default function DashboardUser() {
           </svg>
           <span className="font-bold">CV ANALYZER</span>
         </div>
+        {/* Analytics Butonu */}
+  <div className="flex flex-col gap-4 w-full px-4 mt-8">
+    <button
+      onClick={() => window.location.href = '/analytics'}
+      className="w-full bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-200 text-left flex items-center gap-2"
+    >
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+      Analytics
+    </button>
+  </div>
       </div>
       <div className="w-full h-full flex flex-col">
         <div className="navbar w-full h-20 flex justify-between items-center pr-8 pl-8 bg-white shadow-md border-b border-gray-200">

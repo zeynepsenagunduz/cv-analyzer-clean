@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import './index.css';
-import { Login, Register, DashboardUser, DashboardHeadHunter, AdminDashboard } from './pages';
+import { Login, Register, DashboardUser, DashboardHeadHunter, AdminDashboard, AnalyticsDashboard } from './pages';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: '/dashboard/admin',
     element: <AdminDashboard />,
+  },
+  {
+    path: '/analytics',
+    element: <AnalyticsDashboard />,
   },
 ]);
 

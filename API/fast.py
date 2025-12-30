@@ -4,6 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from helper import allowed_file, handleCV, processJobText, create_point, pdf_to_text,remove_special_characters
 from fastapi.middleware.cors import CORSMiddleware
 from db import get_db_connection
+from collections import Counter
 import json
 import os 
 import uuid
@@ -711,8 +712,94 @@ async def get_stats():
     return {"stats": stats}
 
 
+@app.get("/api/analytics/overview")
+def get_analytics_overview():
+    """
+    Genel sistem istatistikleri
+    """
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Toplam CV sayısı
+    cursor.execute("SELECT COUNT(*) FROM cvs")
+    total_cvs = cursor.fetchone()[0]
+    
+    # Toplam job posting sayısı
+    cursor.execute("SELECT COUNT(*) FROM jobposts")
+    total_jobs = cursor.fetchone()[0]
+    
+    # En popüler skill'ler (CV'lerde en çok geçen)
+    cursor.execute("""
+        SELECT keywords FROM cvs WHERE keywords IS NOT NULL AND keywords != '[]'
+    """)
+    all_cv_skills = []
+    for row in cursor.fetchall():
+        try:
+            skills = json.loads(row[0])
+            all_cv_skills.extend(skills)
+        except:
+            pass
+    
+    skill_counts = Counter(all_cv_skills)
+    top_skills = skill_counts.most_common(20)
+    
+    conn.close()
+    
+    return {
+        "total_cvs": total_cvs,
+        "total_jobs": total_jobs,
+        "total_matches": 0,
+        "avg_match_score": 0,
+        "top_skills": [{"skill": s[0], "count": s[1]} for s in top_skills]
+    }
 
 
-
-
-
+@app.get("/api/analytics/skill-trends")
+def get_skill_trends():
+    """
+    Skill trendleri - hangi skill'ler en çok aranıyor
+    """
+    from config import get_skills_by_category
+    
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Job posting'lerde en çok aranan skill'ler
+    cursor.execute("""
+        SELECT jobpost_keywords FROM jobposts 
+        WHERE jobpost_keywords IS NOT NULL AND jobpost_keywords != '[]'
+    """)
+    
+    all_job_skills = []
+    for row in cursor.fetchall():
+        try:
+            skills = json.loads(row[0])
+            all_job_skills.extend(skills)
+        except:
+            pass
+    
+    skill_counts = Counter(all_job_skills)
+    
+    # En çok aranan 30 skill
+    trending = skill_counts.most_common(30)
+    
+    # Kategorize et
+    def categorize_skill(skill):
+        categories = get_skills_by_category()
+        for category, skills in categories.items():
+            if skill.lower() in [s.lower() for s in skills]:
+                return category
+        return "other"
+    
+    conn.close()
+    
+    return {
+        "trending_skills": [
+            {
+                "skill": s[0],
+                "demand": s[1],
+                "category": categorize_skill(s[0])
+            } 
+            for s in trending
+        ]
+    }
