@@ -1,6 +1,89 @@
 import PyPDF2
 import string
 import os
+from config import get_skills  # ✅ Centralized skill list
+
+
+def normalize_text_for_skills(text):
+    """
+    Normalizes text while preserving special skill formats like Node.js, C++, C#
+    
+    Args:
+        text (str): Raw text to normalize
+    
+    Returns:
+        list: List of normalized words
+    
+    Example:
+        >>> normalize_text_for_skills("I know Node.js and C++")
+        ['i', 'know', 'nodejs', 'and', 'cplusplus']
+    """
+    # Step 1: Convert to lowercase
+    text = text.lower()
+    
+    # Step 2: Replace special skill patterns BEFORE removing punctuation
+    # This preserves skills like "Node.js" → "nodejs", "C++" → "cplusplus"
+    replacements = {
+        'node.js': ' nodejs ',
+        'vue.js': ' vuejs ',
+        'next.js': ' nextjs ',
+        'express.js': ' expressjs ',
+        'react.js': ' reactjs ',
+        'angular.js': ' angularjs ',
+        'c++': ' cplusplus ',
+        'c#': ' csharp ',
+        '.net': ' dotnet ',
+    }
+    
+    for original, replacement in replacements.items():
+        text = text.replace(original, replacement)
+    
+    # Step 3: Remove newlines
+    text = text.replace('\n', ' ')
+    
+    # Step 4: NOW remove punctuation (special skills are already protected)
+    text = text.translate(str.maketrans('', '', string.punctuation))
+    
+    # Step 5: Split into words and return
+    return text.split()
+
+
+def expand_with_synonyms(skills_list):
+    """
+    Expands a skill list by adding their main skill equivalents from synonyms
+    
+    Args:
+        skills_list (list): List of normalized skills (e.g., ['nodejs', 'cplusplus'])
+    
+    Returns:
+        list: Expanded list with main skills (e.g., ['nodejs', 'node.js', 'cplusplus', 'c++'])
+    
+    Example:
+        >>> expand_with_synonyms(['nodejs', 'cplusplus'])
+        ['nodejs', 'node.js', 'cplusplus', 'c++']
+    """
+    from config import SKILL_SYNONYMS
+    
+    expanded = list(skills_list)  # Copy original list
+    
+    # For each skill in the list
+    for skill in skills_list:
+        # Check each main skill and its synonyms
+        for main_skill, synonyms in SKILL_SYNONYMS.items():
+            # If current skill is a synonym of main_skill
+            if skill in synonyms:
+                # Add the main skill to the list
+                if main_skill not in expanded:
+                    expanded.append(main_skill)
+            # If current skill IS the main skill
+            elif skill == main_skill:
+                # Add all synonyms
+                for syn in synonyms:
+                    if syn not in expanded:
+                        expanded.append(syn)
+    
+    return expanded
+
 
 def binary_search(arr, low, high, x):
 
@@ -20,6 +103,7 @@ def binary_search(arr, low, high, x):
     else:
         return -1
 
+
 def intersectOfTwoLists(list1, list2):
     intersectList = []
     for item in list1:
@@ -30,6 +114,7 @@ def intersectOfTwoLists(list1, list2):
     #         intersectList.append(item)
 
     return intersectList
+
 
 def pdf_to_text(id):
     id = int(id)
@@ -78,11 +163,14 @@ def extractPdf(filePath):
 
     return allChunks
 
+
 def getSkills():
-    SKILLSPATH = './skills.txt'
-    with open(SKILLSPATH, 'r') as f:
-        skills = [x.lower().translate(str.maketrans('', '', string.punctuation)) for x in f.read().splitlines()]
-    return skills
+    """
+    DEPRECATED: Use get_skills() from config.py instead
+    This function is kept for backward compatibility
+    """
+    return get_skills()
+
 
 def createSubArray(arr, sub_arr_size):
     sub_arr = []
@@ -94,6 +182,7 @@ def createSubArray(arr, sub_arr_size):
             sub_arr.append(item[:-1].replace('-',' '))
     return sub_arr
     
+
 def remove_special_characters(text):
     # define the set of special characters and punctuation marks
     special_chars = string.punctuation + '\n\t'
@@ -108,54 +197,98 @@ def remove_special_characters(text):
 
     return text
 
+
+
+
 def handleCV(filename):
+    """
+    Extracts skills from a CV PDF file with improved skill detection
+    
+    Args:
+        filename (str): Name of the PDF file in ./static/cvs/
+    
+    Returns:
+        list: List of matched skills found in the CV
+    """
+    # Extract text from PDF (old method for compatibility)
     allTextList = extractPdf(filename)
-    skills =  [i.lower() for i in ['HTML', 'CSS', 'JavaScript', 'React', 'Angular', 'Vue.js', 'Bootstrap', 'jQuery', 'TypeScript', 'Webpack', 'Babel', 'ESLint', 'Prettier', 'Jest', 'Enzyme', 'Cypress', 'RESTful API', 'GraphQL', 'Node.js', 'Express.js', 'MongoDB', 'MySQL', 'PostgreSQL', 'Git', 'GitHub', 'GitLab', 'Bitbucket', 'Command Line', 'Agile', 'Scrum', 'Kanban', 'UI Design', 'UX Design', 'Responsive Design', 'Accessibility', 'Cross-Browser Compatibility', 'Performance Optimization', 'SEO', 'Google Analytics', 'Google Tag Manager', 'Google Search Console', 'Adobe Photoshop', 'Adobe Illustrator', 'Sketch', 'Figma', 'InVision', 'Zeplin', 'Web Performance', 'Web Security', 'Continuous Integration', 'Continuous Deployment', 'Containerization', 'Microservices', 'Serverless', 'Amazon Web Services', 'Google Cloud Platform', 'Microsoft Azure', 'Firebase', 'Heroku', 'Netlify', 'Vercel', 'Cloudflare', 'Content Delivery Network', 'Web Socket', 'Service Worker', 'Progressive Web App', 'Single Page Application', 'Server-Side Rendering', 'Static Site Generation', 'Headless CMS', 'Headless E-commerce', 'E-commerce Integration', 'Payment Gateway Integration', 'Third-Party API Integration', 'Authentication', 'Authorization', 'OAuth', 'JWT', 'Multilingual Website', 'Chatbot Integration', 'Video Integration', 'Audio Integration', 'Web Animation', 'WebRTC', 'Web Scraping', 'Data Visualization', 'Machine Learning', 'Artificial Intelligence', 'Blockchain', 'Cryptocurrency', 'Decentralized Application','Communication', 'Collaboration', 'Teamwork', 'Problem Solving', 'Critical Thinking', 'Time Management', 'Project Management', 'Leadership', 'Mentoring', 'Empathy', 'Active Listening', 'Open-Mindedness', 'Flexibility', 'Adaptability', 'Creativity', 'Innovation', 'Curiosity', 'Continuous Learning', 'Attention to Detail', 'Quality Assurance', 'Attention to User Experience', 'Customer Service', 'Marketing', 'Sales', 'Negotiation', 'Conflict Resolution', 'Stress Management', 'Self-Motivation', 'Self-Discipline', 'Self-Awareness', 'Self-Improvement', 'Self-Confidence', 'Self-Efficacy', 'Positive Attitude', 'Professionalism', 'Integrity', 'Ethics', 'Diversity and Inclusion', 'Cultural Awareness', 'Global Mindset', 'Entrepreneurship']]
+    
+    # Convert to string and normalize with special skill protection
+    text = ' '.join(allTextList)
+    processedText = normalize_text_for_skills(text)
+    
+    # Expand with synonyms for better matching
+    expandedText = expand_with_synonyms(processedText)
+    
+    skills = get_skills()  # ✅ Using centralized skill list from config.py
    
     intersect = []
     for i in range(5):
-        intersect += intersectOfTwoLists([x for x in skills if len(x.split()) == i+1],createSubArray(allTextList, i+1))
+        intersect += intersectOfTwoLists(
+            [x for x in skills if len(x.split()) == i+1],
+            createSubArray(expandedText, i+1)
+        )
 
     print(f'intersect : {intersect}')
     print(f'lenght of intersect {len(intersect)}')
-    return  intersect
-
-
+    return intersect
 
 
 
 def processJobText(jobText):
-    # skills = getSkills()
-    processedText = jobText.strip().replace('\n',' ').translate(str.maketrans('', '', string.punctuation)).lower().split()
-    # skills = getSkills()
-    skills =  [i.lower() for i in ['HTML', 'CSS', 'JavaScript', 'React', 'Angular', 'Vue.js', 'Bootstrap', 'jQuery', 'TypeScript', 'Webpack', 'Babel', 'ESLint', 'Prettier', 'Jest', 'Enzyme', 'Cypress', 'RESTful API', 'GraphQL', 'Node.js', 'Express.js', 'MongoDB', 'MySQL', 'PostgreSQL', 'Git', 'GitHub', 'GitLab', 'Bitbucket', 'Command Line', 'Agile', 'Scrum', 'Kanban', 'UI Design', 'UX Design', 'Responsive Design', 'Accessibility', 'Cross-Browser Compatibility', 'Performance Optimization', 'SEO', 'Google Analytics', 'Google Tag Manager', 'Google Search Console', 'Adobe Photoshop', 'Adobe Illustrator', 'Sketch', 'Figma', 'InVision', 'Zeplin', 'Web Performance', 'Web Security', 'Continuous Integration', 'Continuous Deployment', 'Containerization', 'Microservices', 'Serverless', 'Amazon Web Services', 'Google Cloud Platform', 'Microsoft Azure', 'Firebase', 'Heroku', 'Netlify', 'Vercel', 'Cloudflare', 'Content Delivery Network', 'Web Socket', 'Service Worker', 'Progressive Web App', 'Single Page Application', 'Server-Side Rendering', 'Static Site Generation', 'Headless CMS', 'Headless E-commerce', 'E-commerce Integration', 'Payment Gateway Integration', 'Third-Party API Integration', 'Authentication', 'Authorization', 'OAuth', 'JWT', 'Multilingual Website', 'Chatbot Integration', 'Video Integration', 'Audio Integration', 'Web Animation', 'WebRTC', 'Web Scraping', 'Data Visualization', 'Machine Learning', 'Artificial Intelligence', 'Blockchain', 'Cryptocurrency', 'Decentralized Application','Communication', 'Collaboration', 'Teamwork', 'Problem Solving', 'Critical Thinking', 'Time Management', 'Project Management', 'Leadership', 'Mentoring', 'Empathy', 'Active Listening', 'Open-Mindedness', 'Flexibility', 'Adaptability', 'Creativity', 'Innovation', 'Curiosity', 'Continuous Learning', 'Attention to Detail', 'Quality Assurance', 'Attention to User Experience', 'Customer Service', 'Marketing', 'Sales', 'Negotiation', 'Conflict Resolution', 'Stress Management', 'Self-Motivation', 'Self-Discipline', 'Self-Awareness', 'Self-Improvement', 'Self-Confidence', 'Self-Efficacy', 'Positive Attitude', 'Professionalism', 'Integrity', 'Ethics', 'Diversity and Inclusion', 'Cultural Awareness', 'Global Mindset', 'Entrepreneurship']]
+    """
+    Extracts skills from a job posting text with improved skill detection
+    
+    Args:
+        jobText (str): Raw job posting text
+    
+    Returns:
+        list: List of matched skills found in the job posting
+    
+    Example:
+        >>> processJobText("We need React, Node.js, and Docker experience")
+        ['react', 'node.js', 'docker']
+    """
+    # Use new normalize function that protects special skills
+    processedText = normalize_text_for_skills(jobText)
+    
+    # Expand with synonyms for better matching
+    expandedText = expand_with_synonyms(processedText)
+    
+    skills = get_skills()  # ✅ Using centralized skill list from config.py
 
     intersect = []
     for i in range(5):
-        intersect += intersectOfTwoLists([x for x in skills if len(x.split()) == i+1],createSubArray(processedText, i+1))
+        intersect += intersectOfTwoLists(
+            [x for x in skills if len(x.split()) == i+1],
+            createSubArray(expandedText, i+1)
+        )
 
     print(f'intersect : {intersect}')
     print(f'lenght of intersect {len(intersect)}')
-    return  intersect
-    
+    return intersect
 
 
-def allowed_file(filename,ALLOWED_EXTENSIONS):
+
+def allowed_file(filename, ALLOWED_EXTENSIONS):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-def create_point(cv_keywords,jobpost_keywords):
+def create_point(cv_keywords, jobpost_keywords):
+    """
+    Calculates matching percentage between CV and job posting
+    
+    Args:
+        cv_keywords (list): Skills found in CV
+        jobpost_keywords (list): Skills found in job posting
+    
+    Returns:
+        float: Matching percentage (0-100)
+    """
     if(len(jobpost_keywords) <= 4):
         return 0
     return (len(set(cv_keywords).intersection(jobpost_keywords)) / len(jobpost_keywords)) * 100
 
 
-
-
 # if __name__ == "__main__":
 #     print(getSkills())
-
-
-
-
-

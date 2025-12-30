@@ -1,55 +1,136 @@
-About the job
-Job Description
+FULL STACK DEVELOPER - CLOUD NATIVE
 
-About You
+Company: CloudTech Solutions
+Location: San Francisco, CA / Remote Hybrid
+Type: Full-time
+Salary: $120K - $180K + Equity
 
-We are looking for a Big Data Engineer to work with large data volumes read from scattered information sources in an organization's technology infrastructure.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-You bring to Applaudo the following competencies:
+ABOUT THE ROLE:
 
-2+ years of experience with Scala Spark
-3+ years of data delivery, ETL (extract, transform and load) and data warehouse design, analysis, and programming experience.
-Experiencie with Google Cloud Plattform.
-Experience with an excellent grasp of relational and dimensional data modeling
-Strong mathematical, statistical, and analytics skills
-1+ year of Agile experience
-English is required, as you will work directly with US-based clients.
+Join our team to build scalable, cloud-native applications using modern technologies.
+We're looking for a passionate Full Stack Developer experienced in both frontend
+and backend development, with strong knowledge of Node.js, React, Docker, Kubernetes,
+and cloud platforms (AWS or Google Cloud Platform).
 
-You will be accountable for the following responsibilities:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Extracting data from different data sources and transferring it into a data warehouse environment.
-Designing, maintaining, and implementing transactional and analytical data storage structures.
-Design, build and maintain data pipelines, consuming for multiple sources, and servicing multiple tenants
-Experience in one or more of the following DBMS: PostgreSQL, MySQL, Google Cloud Datastore, Cosmos
-Experience in one or more of the following programming languages: Scala, PL/SQL, Java
-Experience in one or more of the following cloud environment tools: GCP
-Elaborate informative, expressive, and meaningful reports that support business decision-making processes through the information provided.
-Reporting and subsequently translating the emanating results into good technical and consistent data designs.
+REQUIRED TECHNICAL SKILLS:
 
-Qualifications
+Backend:
+✓ Strong experience with Node.js and Express.js (3+ years)
+✓ RESTful API design and implementation
+✓ Database experience: MongoDB (NoSQL) and PostgreSQL (SQL)
+✓ Understanding of microservices architecture patterns
 
-Technical Skills:
+Frontend:
+✓ Modern React development with TypeScript
+✓ State management (Redux, Context API, or similar)
+✓ HTML, CSS, and responsive design principles
 
-2+ years of experience with Scala Spark
+DevOps & Cloud:
+✓ Containerization with Docker
+✓ Container orchestration with Kubernetes
+✓ Cloud platforms: AWS or Google Cloud Platform
+✓ CI/CD pipeline experience
 
-Experience with cloud environment tools
+Version Control:
+✓ Git version control and GitHub/GitLab workflows
+✓ Code review and collaborative development practices
 
-Additional Information
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Here at Applaudo Studios values as trust, communication, respect, excellence and team work are our keys to success. We know we are working with the best and thus treat each other with respect and admiration without asking.
+PREFERRED SKILLS:
 
-Submit your application today, and don't miss this opportunity to join the Best Digital team in the Region!
+• GraphQL API development and Apollo Server
+• Python and Django/Flask frameworks
+• Experience with serverless architectures (AWS Lambda, Cloud Functions)
+• Redis caching and session management
+• Elasticsearch for search functionality
+• Message queues (RabbitMQ, Kafka)
+• OAuth 2.0 and JWT authentication
+• MySQL database experience
+• Infrastructure as Code (Terraform, CloudFormation)
+• Monitoring tools (Prometheus, Grafana, Datadog)
 
-We truly appreciate all the hard and outstanding work our team makes every day at Applaudo Studios, and that's why the perks that we offer, are deeply thought and designed as a way to thank them for their commitment and excellence.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Some of our perks and benefits:
+KEY RESPONSIBILITIES:
 
-Work from home
-Flexible schedule
-Celebrations
-Special discounts
-Entertainment area
-Flexible work spaces
-Great work environment
-Private medical insurance
-Benefits may vary according to your location and/or availability. Request further information when applying.
+→ Design and develop full-stack web applications from concept to deployment
+→ Build and maintain RESTful APIs and GraphQL endpoints
+→ Architect and implement microservices using Node.js and Express.js
+→ Deploy and manage containerized applications with Docker and Kubernetes
+→ Implement database schemas and write optimized queries (MongoDB, PostgreSQL)
+→ Develop responsive React frontends with TypeScript
+→ Work with AWS or GCP cloud services (EC2, S3, Lambda, RDS, etc.)
+→ Set up and maintain CI/CD pipelines using GitHub Actions or Jenkins
+→ Write comprehensive unit tests and integration tests (Jest, Mocha, Cypress)
+→ Collaborate in an Agile/Scrum environment with sprint planning
+→ Participate in architecture discussions and technical decision-making
+→ Monitor application performance and optimize as needed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WHAT WE OFFER:
+
+💰 Competitive Compensation:
+   • $120K - $180K base salary (based on experience)
+   • Equity package with stock options
+   • Annual performance bonuses
+
+🏥 Comprehensive Benefits:
+   • Full health, dental, and vision insurance (100% coverage)
+   • 401(k) matching up to 6%
+   • Life and disability insurance
+
+🏠 Work-Life Balance:
+   • Remote-first culture (work from anywhere)
+   • Flexible working hours
+   • Unlimited PTO policy
+   • Paid parental leave
+
+📚 Professional Growth:
+   • $3,000 annual learning budget
+   • Conference and workshop attendance
+   • Access to online learning platforms
+   • Mentorship programs
+
+🛠️ Equipment & Setup:
+   • Latest MacBook Pro or custom workstation
+   • Monitor, keyboard, and accessories
+   • Home office stipend
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ABOUT CLOUDTECH SOLUTIONS:
+
+We're a rapidly growing company building next-generation cloud-native applications.
+Our stack includes Node.js, React, TypeScript, MongoDB, PostgreSQL, Docker,
+Kubernetes, and AWS. We value innovation, collaboration, and continuous learning.
+
+Our team uses modern development practices including:
+• Microservices architecture with Node.js and Express.js
+• Containerization with Docker and Kubernetes orchestration
+• Cloud infrastructure on AWS and Google Cloud Platform
+• CI/CD with automated testing and deployment
+• Git-based workflows with code reviews
+• Agile methodology with 2-week sprints
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+INTERVIEW PROCESS:
+
+1. Initial phone screen (30 minutes)
+2. Technical interview - coding challenges (90 minutes)
+3. System design interview (60 minutes)
+4. Team fit interview (45 minutes)
+5. Final interview with leadership (30 minutes)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TO APPLY:
+
+Email your resume and GitHub profile to: jobs@cloudtechsolutions.com
+Subject: Full Stack Developer - Cloud Native Application

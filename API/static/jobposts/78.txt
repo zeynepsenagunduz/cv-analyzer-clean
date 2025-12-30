@@ -1,8 +1,83 @@
-{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
+FRONTEND DEVELOPER POSITION
 
-{\pard \ql \f0 \sa180 \li0 \fi0 About the job Requirements Strong understanding of Modern JavaScript, ES6+ Strong understanding of markup, including HTML5 and CSS3 Good understanding of ReactJS, NextJS, Typescript Good understanding of React Hooks, State Management Good understanding of asynchronous request handling Proficient understanding of Server-Side Rendering, Isomorphic Web Applications, PWA Proficient understanding of cross-browser compatibility issues Familiarity with JavaScript module loaders Familiarity with Webpack and Parcel Experience with Git Understanding browser rendering behavior and performance\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Job Definition Develop web projects Ensure UI/UX feasibility Optimize speed and scalability Collaborate with team members\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Company: Ruut\par}
-}
+Company: Tech Innovations Inc.
+Location: Remote
+Type: Full-time
+Salary: $90K - $130K
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+JOB DESCRIPTION:
+
+We are looking for a talented Frontend Developer to join our dynamic team.
+You will be responsible for building modern, responsive web applications
+using the latest frontend technologies including React, TypeScript, and Vue.js.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+REQUIRED SKILLS:
+
+✓ 3+ years of experience with React and TypeScript
+✓ Strong knowledge of HTML, CSS, and JavaScript (ES6+)
+✓ Experience with Vue.js or Angular
+✓ Proficiency in building responsive designs
+✓ Experience with Git and GitHub for version control
+✓ Knowledge of RESTful APIs and API integration
+✓ Familiarity with Webpack and Babel for bundling
+✓ Testing experience with Jest or Cypress
+✓ Understanding of modern CSS frameworks (Bootstrap, Tailwind)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NICE TO HAVE:
+
+• Experience with GraphQL and Apollo Client
+• Knowledge of Bootstrap or Tailwind CSS
+• Understanding of web performance optimization
+• Experience with Agile/Scrum methodology
+• Familiarity with ESLint and Prettier
+• Knowledge of accessibility standards (WCAG)
+• Experience with progressive web apps (PWA)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+RESPONSIBILITIES:
+
+→ Develop new user-facing features using React and TypeScript
+→ Build reusable components and front-end libraries
+→ Optimize applications for maximum speed and scalability
+→ Collaborate with designers and backend developers
+→ Write clean, maintainable, and well-documented code
+→ Participate in code reviews and provide constructive feedback
+→ Implement responsive designs that work across devices
+→ Stay up-to-date with emerging frontend technologies
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WHAT WE OFFER:
+
+• Competitive salary ($90K - $130K based on experience)
+• Comprehensive health, dental, and vision insurance
+• 401(k) matching program
+• Remote work flexibility
+• Professional development budget
+• Latest MacBook Pro and equipment
+• Flexible PTO policy
+• Annual team retreats
+• Learning and conference stipend
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ABOUT US:
+
+Tech Innovations Inc. is a fast-growing startup building the next generation
+of web applications. We value creativity, collaboration, and continuous learning.
+Join us to work with cutting-edge technologies like React, TypeScript, GraphQL,
+and modern web development tools.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TO APPLY:
+
+Send your resume and portfolio to: careers@techinnovations.com
+Include "Frontend Developer" in the subject line
