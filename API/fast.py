@@ -2,6 +2,7 @@ from fastapi import FastAPI, File, UploadFile,HTTPException, Query
 from pydantic import BaseModel
 from fastapi.staticfiles import StaticFiles
 from helper import allowed_file, handleCV, processJobText, create_point, pdf_to_text,remove_special_characters
+from typing import Optional
 from fastapi.middleware.cors import CORSMiddleware
 from db import get_db_connection
 from collections import Counter
@@ -9,12 +10,155 @@ import json
 import os 
 import uuid
 import ast
+from fastapi import Depends
 from rank_bm25 import BM25Okapi
 from fastapi.responses import FileResponse
 from datetime import datetime
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+
+
+class Login(BaseModel):
+    username: str
+    password: str
+
+class BestJobs(BaseModel):
+    userid: str
+
+
+class Register(BaseModel):
+    username: str
+    mail: str
+    password: str
+    role: str
+    has_cv: bool
+    has_jobpost: bool
+
+class AddCourses(BaseModel):
+    name: str
+    keywords: str
+    link: str
+    id: int = None
+
+class Application(BaseModel):  # ✅ BUNU EKLE
+    userid: str
+    jobpostid: int
+    cover_letter: Optional[str] = ""
+
+app = FastAPI()
+
+# API/fast.py - En üste, import'lardan sonra
+
+def hybrid_score_for_applicants(cv_keywords, job_keywords, all_cv_texts, job_text, cv_index):
+    """
+    Hybrid Scoring for HeadHunter: BM25 (70%) + Simple Intersection (30%)
+    
+    Args:
+        cv_keywords (list): CV'deki beceriler
+        job_keywords (list): İş ilanındaki beceriler
+        all_cv_texts (list): Tüm CV metinleri
+        job_text (str): İş ilanı metni
+        cv_index (int): Bu CV'nin index'i
+    
+    Returns:
+        float: Hybrid skor (0-100)
+    """
+    # 1. BASİT KESİŞİM SKORU
+    if len(job_keywords) == 0:
+        simple_score = 0
+    else:
+        common = set(cv_keywords) & set(job_keywords)
+        simple_score = (len(common) / len(job_keywords)) * 100
+    
+    # 2. BM25 SKORU
+    try:
+        # Tokenize
+        tokenized_corpus = [text.lower().split() for text in all_cv_texts]
+        tokenized_query = job_text.lower().split()
+        
+        if not tokenized_corpus or not tokenized_query:
+            bm25_normalized = 0
+        else:
+            # BM25 hesapla
+            bm25 = BM25Okapi(tokenized_corpus, k1=1.5, b=0.75)
+            raw_scores = bm25.get_scores(tokenized_query)
+            
+            # Min-Max normalize
+            if len(raw_scores) == 0:
+                bm25_normalized = 0
+            else:
+                min_score = min(raw_scores)
+                max_score = max(raw_scores)
+                
+                if max_score == min_score:
+                    bm25_normalized = 50.0
+                else:
+                    bm25_normalized = ((raw_scores[cv_index] - min_score) / (max_score - min_score)) * 100
+    except Exception as e:
+        print(f"BM25 error in hybrid: {e}")
+        bm25_normalized = 0
+    
+    # 3. HYBRİD SKOR (70% BM25 + 30% Simple)
+    hybrid = (0.7 * bm25_normalized) + (0.3 * simple_score)
+    
+    return round(hybrid, 2)
+
+
+def hybrid_score_for_jobs(cv_keywords, job_keywords, cv_text, all_job_texts, job_index):
+    """
+    Hybrid Scoring for User: BM25 (70%) + Simple Intersection (30%)
+    
+    Args:
+        cv_keywords (list): CV'deki beceriler
+        job_keywords (list): İş ilanındaki beceriler
+        cv_text (str): CV metni
+        all_job_texts (list): Tüm iş ilanı metinleri
+        job_index (int): Bu iş ilanının index'i
+    
+    Returns:
+        float: Hybrid skor (0-100)
+    """
+    # 1. BASİT KESİŞİM SKORU
+    if len(job_keywords) == 0:
+        simple_score = 0
+    else:
+        common = set(cv_keywords) & set(job_keywords)
+        simple_score = (len(common) / len(job_keywords)) * 100
+    
+    # 2. BM25 SKORU
+    try:
+        # Tokenize
+        tokenized_corpus = [text.lower().split() for text in all_job_texts]
+        tokenized_query = cv_text.lower().split()
+        
+        if not tokenized_corpus or not tokenized_query:
+            bm25_normalized = 0
+        else:
+            # BM25 hesapla
+            bm25 = BM25Okapi(tokenized_corpus, k1=1.5, b=0.75)
+            raw_scores = bm25.get_scores(tokenized_query)
+            
+            # Min-Max normalize
+            if len(raw_scores) == 0:
+                bm25_normalized = 0
+            else:
+                min_score = min(raw_scores)
+                max_score = max(raw_scores)
+                
+                if max_score == min_score:
+                    bm25_normalized = 50.0
+                else:
+                    bm25_normalized = ((raw_scores[job_index] - min_score) / (max_score - min_score)) * 100
+    except Exception as e:
+        print(f"BM25 error in hybrid_score_for_jobs: {e}")
+        bm25_normalized = 0
+    
+    # 3. HYBRİD SKOR (70% BM25 + 30% Simple)
+    hybrid = (0.7 * bm25_normalized) + (0.3 * simple_score)
+    
+    return round(hybrid, 2)
+
 
 
 def safe_keywords(raw):
@@ -51,31 +195,6 @@ def safe_keywords(raw):
     # 3) düz metin fallback
     return [w for w in remove_special_characters(s).lower().split() if w]
 
-
-
-class Login(BaseModel):
-    username: str
-    password: str
-
-class BestJobs(BaseModel):
-    userid: str
-
-
-class Register(BaseModel):
-    username: str
-    mail: str
-    password: str
-    role: str
-    has_cv: bool
-    has_jobpost: bool
-
-class AddCourses(BaseModel):
-    name: str
-    keywords: str
-    link: str
-    id: int = None
-
-app = FastAPI()
 
 app.mount("/static/cvs", StaticFiles(directory="./static/cvs"), name="static")
 app.mount("/static/jobposts", StaticFiles(directory="./static/jobposts"), name="static")
@@ -282,136 +401,118 @@ def recommenderFunction(jobKeywords, cvKeywords):
 
     return courses
     
-"""""
+
 @app.post("/best-job")
 async def getPoint(userid: BestJobs):
-
+    """
+    Kullanıcı için en iyi 5 iş ilanını Hybrid Scoring ile bul
+    """
+    print("=" * 50)
+    print("BEST-JOB ENDPOINT - HYBRID SCORING")
+    print(f"userid: {userid.userid}")
+    print("=" * 50)
+    
+    # Kullanıcının CV'sini al
     cv_keywords = processJobText(pdf_to_text(userid.userid))
-
+    cv_text = " ".join(cv_keywords)
+    
+    print(f"CV keywords count: {len(cv_keywords)}")
+    print(f"CV keywords (first 5): {cv_keywords[:5]}...")
+    
     conn = get_db_connection()
     cursor = conn.cursor()
-
-    cursor.execute("SELECT * FROM jobposts")
+    
+    # Tüm iş ilanlarını al
+    cursor.execute("SELECT id, jobpost, jobpost_keywords, userid FROM jobposts")
     jobs = cursor.fetchall()
-
-    scores = {}
-    for count,job in enumerate(jobs):
-        print("jobs")
-        if len(jobs) > 0:
-            print(job[2] if len(job) > 2 else "N/A")
-        scores[job[0]] = create_point(cv_keywords, json.loads(job[2]))
-    # sort dict by value
-    sorted_scores = {k: v for k, v in sorted(scores.items(), key=lambda item: item[1], reverse=True)}
-
-    print(sorted_scores)
-
     
-    # top 5 item with key and value
-    best_job_keywords = []
-    for job in jobs:
-        if(job[0] == list(sorted_scores.keys())[0]):
-            best_job_keywords = json.loads(job[2])
-            break
-
-        #  "top_five": [
-        #         [
-        #         13,
-        #         85.71428571428571
-        #         ],
-        #         [
-        #         181,
-        #         85.71428571428571
-        #         ],
-        #         [
-        #         53,
-        #         83.33333333333334
-        #         ],
-        #         [
-        #         65,
-        #         83.33333333333334
-        #         ],
-        #         [
-        #         68,
-        #         83.33333333333334
-        #         ]
-        #     ]
+    print(f"Total jobs found: {len(jobs)}")
     
-    new_list = list(sorted_scores.items())[:5].copy()
-    
-    for count,i in enumerate(list(sorted_scores.items())[:5]):
-        cursor.execute("SELECT jobpost, jobpost_keywords FROM jobposts WHERE id=?", (i[0],))
-        result = cursor.fetchone()
-        new_list[count] = {"text": result[0], "keywords": remove_special_characters(result[1]).split(' '), "point": int(i[1])}
-
-    conn.close()
-    courses = recommenderFunction(best_job_keywords, cv_keywords)
-    return {"top_five": new_list, "cv_keywords": cv_keywords, "best_job_keywords": best_job_keywords,"courses": courses}
-
-"""
-@app.post("/best-job")
-async def getPoint(userid: BestJobs):
-    cv_keywords = processJobText(pdf_to_text(userid.userid))
-
-    conn = get_db_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("SELECT id, jobpost, jobpost_keywords,userid FROM jobposts")
-    jobs = cursor.fetchall()
-
     if not jobs:
         conn.close()
         return {"top_five": [], "cv_keywords": cv_keywords, "best_job_keywords": [], "courses": []}
-
-    scores = {}
-    job_kw_map = {}   # id -> keywords list
-    job_text_map = {} # id -> jobpost text
-    job_user_map = {}  # id -> userid
-
-
-    for job in jobs:
+    
+    # Tüm job metinlerini ve keyword'lerini hazırla
+    all_job_texts = []
+    job_index_map = {}
+    job_kw_map = {}
+    job_text_map = {}
+    job_user_map = {}
+    
+    for i, job in enumerate(jobs):
         job_id = job[0]
         job_text = job[1]
         raw_kw = job[2]
-        jobposts_userid = job[3]   # ✅ jobposts.userid
-
-
-        kw_list = safe_keywords(raw_kw)   # ✅ burada patlamaz
+        jobposts_userid = job[3]
+        
+        # Job keywords'ü listeye çevir
+        kw_list = safe_keywords(raw_kw)
+        
+        # Job keywords'ü text'e çevir
+        job_keywords_text = " ".join(kw_list)
+        
+        all_job_texts.append(job_keywords_text)
+        job_index_map[job_id] = i
         job_kw_map[job_id] = kw_list
         job_text_map[job_id] = job_text
-        job_user_map[job_id] = jobposts_userid  # ✅
-
-
-        scores[job_id] = create_point(cv_keywords, kw_list)
-
-    # skora göre sırala
+        job_user_map[job_id] = jobposts_userid
+    
+    print(f"Prepared {len(all_job_texts)} job texts for BM25")
+    
+    # Her iş ilanı için hybrid skor hesapla
+    scores = {}
+    for job_id, job_index in job_index_map.items():
+        job_keywords = job_kw_map[job_id]
+        
+        # Hybrid scoring
+        hybrid = hybrid_score_for_jobs(
+            cv_keywords,
+            job_keywords,
+            cv_text,
+            all_job_texts,
+            job_index
+        )
+        
+        scores[job_id] = hybrid
+    
+    print(f"Calculated hybrid scores for {len(scores)} jobs")
+    
+    # Skorlara göre sırala
     sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
-
-    # en iyi job keywords
-    best_job_id = sorted_scores[0][0]
+    
+    # En iyi job keywords
+    best_job_id = sorted_scores[0][0] if sorted_scores else None
     best_job_keywords = job_kw_map.get(best_job_id, [])
-
-    # top 5 response
+    
+    print(f"Best job ID: {best_job_id}, score: {sorted_scores[0][1] if sorted_scores else 0}")
+    
+    # Top 5 response
     top5 = sorted_scores[:5]
     new_list = []
     for job_id, point in top5:
         new_list.append({
             "id": job_id,
-            "userid": job_user_map.get(job_id),  #  dosya adı
+            "userid": job_user_map.get(job_id),
             "text": job_text_map.get(job_id, ""),
             "keywords": job_kw_map.get(job_id, []),
             "point": int(point)
         })
-
+    
+    print(f"Top 5 job scores: {[(job['id'], job['point']) for job in new_list]}")
+    print("=" * 50)
+    
     conn.close()
-
+    
+    # Kurs önerileri
     courses = recommenderFunction(best_job_keywords, cv_keywords)
-
+    
     return {
         "top_five": new_list,
         "cv_keywords": cv_keywords,
         "best_job_keywords": best_job_keywords,
         "courses": courses
     }
+
 
 
 # ============================================================
@@ -491,12 +592,18 @@ def bm25_matching(all_cv_texts, job_keywords_text):
         return {}
 
 
+
+
 @app.post("/best-applicant")
 async def best_applicant(userid: str = Query(...)):
+    """
+    HeadHunter için en iyi 5 adayı Hybrid Scoring ile bul
+    """
     print("=" * 50)
-    print("ENDPOINT ÇAĞRILDI!")
+    print("BEST-APPLICANT ENDPOINT - HYBRID SCORING")
     print(f"userid: {userid}")
     print("=" * 50)
+    
     conn = get_db_connection()
     cursor = conn.cursor()
     
@@ -512,50 +619,64 @@ async def best_applicant(userid: str = Query(...)):
     job_keywords = processJobText(jobpost_text)
     job_keywords_text = " ".join(job_keywords)
     
+    print(f"Job keywords: {job_keywords[:5]}...")
+    
     # Tüm CV'leri al
     cursor.execute("SELECT id, userid, keywords FROM cvs")
     cvs = cursor.fetchall()
+    
+    print(f"Total CVs found: {len(cvs)}")
     
     # Kullanıcı bilgilerini al
     cursor.execute("SELECT id, username, email FROM users")
     users = cursor.fetchall()
     user_map = {str(u[0]): {"username": u[1], "email": u[2]} for u in users}
     
-    # ═══════════════════════════════════════════════════════
-    # YENİ: BM25 RANKING ALGORITHM
-    # ═══════════════════════════════════════════════════════
-    
-    # Tüm CV keyword metinlerini hazırla
+    # Tüm CV metinlerini ve keyword'lerini hazırla
     all_cv_texts = []
     cv_index_to_userid = {}
+    cv_keywords_map = {}
     
     for i, row in enumerate(cvs):
         cv_id = row[0]
         cv_userid = row[1]
         raw_kw = row[2]
         
+        # CV keywords'ü listeye çevir
+        cv_keywords = safe_keywords(raw_kw)
+        
         # CV keywords'ü text'e çevir
-        cv_keywords_text = raw_kw.replace(",", " ").replace(";", " ")
-        cv_keywords_text = cv_keywords_text.replace('"', '').replace('[', '').replace(']', '')
-        cv_keywords_text = cv_keywords_text.strip()
+        cv_keywords_text = " ".join(cv_keywords)
+        
         all_cv_texts.append(cv_keywords_text)
         cv_index_to_userid[i] = cv_userid
+        cv_keywords_map[cv_userid] = cv_keywords
     
-    # BM25 ile skorla
-    index_scores = bm25_matching(all_cv_texts, job_keywords_text)
+    print(f"Prepared {len(all_cv_texts)} CV texts for BM25")
     
-    # Index'leri userid'lere çevir
+    # Her CV için hybrid skor hesapla
     scores = {}
-    for index, score in index_scores.items():
-        userid_item = cv_index_to_userid.get(index)
-        if userid_item:
-            scores[userid_item] = score
+    for i, cv_userid in cv_index_to_userid.items():
+        cv_keywords = cv_keywords_map[cv_userid]
+        
+        # Hybrid scoring
+        hybrid_score = hybrid_score_for_applicants(
+            cv_keywords,
+            job_keywords,
+            all_cv_texts,
+            job_keywords_text,
+            i  # CV index
+        )
+        
+        scores[cv_userid] = hybrid_score
     
-    # ═══════════════════════════════════════════════════════
+    print(f"Calculated hybrid scores for {len(scores)} CVs")
     
     # Skorlara göre sırala
     sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
     top5 = sorted_scores[:5]
+    
+    print(f"Top 5 scores: {[(uid, score) for uid, score in top5]}")
     
     # Sonuç listesi oluştur
     new_list = []
@@ -572,22 +693,20 @@ async def best_applicant(userid: str = Query(...)):
     best_cv_keywords = []
     if top5:
         best_userid = top5[0][0]
-        cursor.execute("SELECT keywords FROM cvs WHERE userid = ?", (best_userid,))
-        best_cv_row = cursor.fetchone()
-        if best_cv_row:
-            try:
-                from helper import safe_keywords
-                best_cv_keywords = safe_keywords(best_cv_row[0])
-            except:
-                best_cv_keywords = best_cv_row[0].split(",")
+        best_cv_keywords = cv_keywords_map.get(best_userid, [])
     
     conn.close()
+    
+    print(f"Returning top 5 applicants with hybrid scores")
+    print("=" * 50)
     
     return {
         "top_five": new_list,
         "best_cv_keywords": best_cv_keywords
     }
-  
+
+
+
 
 @app.get("/get-credit")
 async def getPoint(userid: str):
@@ -600,6 +719,8 @@ async def getPoint(userid: str):
     return {
         "credit": credit
     }
+
+
 
 @app.post("/set-credit")
 async def getPoint(userid: str, amount: int):
@@ -672,6 +793,8 @@ async def delete_cv(userid: str):
 
     return {"message": "CV deleted successfully"}
 
+
+
 @app.get("/delete-jobpost/{userid}")
 async def delete_cv(userid: str):
     conn = get_db_connection()
@@ -687,6 +810,8 @@ async def delete_cv(userid: str):
         pass
 
     return {"message": "CV deleted successfully"}
+
+
 
 
 @app.get("/admin/create-invite-code")
@@ -718,6 +843,8 @@ async def checkInvideCodeIsValid(invite_code: str):
         raise HTTPException(status_code=200, detail="Invite code is valid")
 
 
+
+
 @app.post("/admin/add-courses")
 async def add_courses(addCourses: AddCourses):
     conn = get_db_connection()
@@ -727,6 +854,8 @@ async def add_courses(addCourses: AddCourses):
     conn.commit()
     conn.close()
     return {"message": "Course added successfully"}
+
+
 
 
 @app.get("/admin/get-courses")
@@ -739,6 +868,8 @@ async def get_courses():
     return {"courses": [list(row) for row in result]}
 
 
+
+
 @app.get("/admin/get-course/{courseid}")
 async def get_courses(courseid: str):
     conn = get_db_connection()
@@ -747,6 +878,8 @@ async def get_courses(courseid: str):
     result = cursor.fetchone()
     conn.close()
     return {"courses": list(result) if result else None}
+
+
 
 
 @app.post("/admin/edit-courses")
@@ -795,6 +928,7 @@ async def get_stats():
     return {"stats": stats}
 
 
+
 @app.get("/api/analytics/overview")
 def get_analytics_overview():
     """
@@ -835,6 +969,7 @@ def get_analytics_overview():
         "avg_match_score": 0,
         "top_skills": [{"skill": s[0], "count": s[1]} for s in top_skills]
     }
+
 
 
 @app.get("/api/analytics/skill-trends")
@@ -886,6 +1021,8 @@ def get_skill_trends():
             for s in trending
         ]
     }
+
+
 
 @app.get("/api/user/profile/{userid}")
 def get_user_profile(userid: str):
@@ -1002,58 +1139,97 @@ def get_user_cv(userid: str):
 
 
 @app.post("/api/apply")
-def apply_to_job(userid: str, jobpostid: int, cover_letter: str = ""):
+async def apply_to_job(application: Application = Depends()):
     """
-    İş ilanına başvuru yap
+    Kullanıcının iş ilanına başvurması ve Hybrid skorun hesaplanması
     """
+    print("=" * 50)
+    print("APPLY ENDPOINT - HYBRID SCORING")
+    print(f"userid: {application.userid}, jobpostid: {application.jobpostid}")
+    print("=" * 50)
+    
     conn = get_db_connection()
     cursor = conn.cursor()
     
-    # Daha önce başvuru yapılmış mı kontrol et
-    cursor.execute("""
-        SELECT id FROM applications 
-        WHERE userid = ? AND jobpostid = ?
-    """, (userid, jobpostid))
-    
-    existing = cursor.fetchone()
-    if existing:
+    try:
+        # 1. Kullanıcının CV keywords'ünü al
+        cv_keywords = processJobText(pdf_to_text(application.userid))
+        cv_text = " ".join(cv_keywords)
+        
+        print(f"CV keywords count: {len(cv_keywords)}")
+        
+        # 2. Başvurulan iş ilanının keywords'ünü al
+        cursor.execute("SELECT jobpost_keywords FROM jobposts WHERE id = ?", (application.jobpostid,))
+        job_row = cursor.fetchone()
+        
+        if not job_row:
+            conn.close()
+            return {"success": False, "message": "Job post not found"}
+        
+        job_keywords = safe_keywords(job_row[0])
+        job_text = " ".join(job_keywords)
+        
+        print(f"Job keywords count: {len(job_keywords)}")
+        
+        # 3. TÜM İŞ İLANLARINI AL (BM25 için)
+        cursor.execute("SELECT id, jobpost_keywords FROM jobposts")
+        all_jobs = cursor.fetchall()
+        
+        all_job_texts = []
+        job_index_map = {}
+        
+        for i, job in enumerate(all_jobs):
+            job_id = job[0]
+            kw = safe_keywords(job[1])
+            job_index_map[job_id] = i
+            all_job_texts.append(" ".join(kw))
+        
+        # 4. HYBRİD SKOR HESAPLA
+        job_index = job_index_map.get(application.jobpostid)
+        
+        if job_index is not None:
+            match_score = hybrid_score_for_jobs(
+                cv_keywords,
+                job_keywords,
+                cv_text,
+                all_job_texts,
+                job_index
+            )
+        else:
+            # Fallback: basit kesişim
+            common = set(cv_keywords) & set(job_keywords)
+            match_score = (len(common) / len(job_keywords)) * 100 if job_keywords else 0
+        
+        print(f"Calculated hybrid match score: {match_score}%")
+        
+        # 5. BAŞVURUYU VERİTABANINA KAYDET
+        cursor.execute("""
+            INSERT INTO applications (userid, jobpostid, applied_at, status, match_score, cover_letter)
+            VALUES (?, ?, datetime('now'), 'pending', ?, ?)
+        """, (
+            application.userid,
+            application.jobpostid,
+            match_score,
+            application.cover_letter if hasattr(application, 'cover_letter') else ""
+        ))
+        
+        conn.commit()
+        print(f"Application saved successfully with hybrid score: {match_score}%")
+        print("=" * 50)
+        
         conn.close()
-        raise HTTPException(status_code=400, detail="Bu iş ilanına zaten başvurdunuz")
+        
+        return {
+            "success": True,
+            "message": "Application submitted successfully",
+            "match_score": round(match_score, 2)
+        }
+        
+    except Exception as e:
+        print(f"Error in apply endpoint: {e}")
+        conn.close()
+        return {"success": False, "message": str(e)}
     
-    # Matching score hesapla
-    # Kullanıcının CV'si
-    cursor.execute("SELECT keywords FROM cvs WHERE userid = ?", (userid,))
-    cv_row = cursor.fetchone()
-    user_skills = json.loads(cv_row[0]) if cv_row and cv_row[0] else []
-    
-    # Job post'un gereksinimleri
-    cursor.execute("SELECT jobpost_keywords FROM jobposts WHERE id = ?", (jobpostid,))
-    job_row = cursor.fetchone()
-    job_skills = json.loads(job_row[0]) if job_row and job_row[0] else []
-    
-    # Matching score hesapla (basit yöntem)
-    if len(job_skills) == 0:
-        match_score = 0
-    else:
-        matched_skills = set(user_skills) & set(job_skills)
-        match_score = (len(matched_skills) / len(job_skills)) * 100
-    
-    # Başvuruyu kaydet
-    cursor.execute("""
-        INSERT INTO applications (userid, jobpostid, match_score, cover_letter)
-        VALUES (?, ?, ?, ?)
-    """, (userid, jobpostid, round(match_score, 2), cover_letter))
-    
-    conn.commit()
-    application_id = cursor.lastrowid
-    conn.close()
-    
-    return {
-        "success": True,
-        "application_id": application_id,
-        "match_score": round(match_score, 2),
-        "message": "Başvurunuz başarıyla kaydedildi!"
-    }
 
 
 @app.get("/api/applications/user/{userid}")
@@ -1193,7 +1369,7 @@ def get_headhunter_profile(userid: str):
 @app.get("/api/headhunter/applications/{userid}")
 def get_headhunter_applications(userid: str):
     """
-    HeadHunter'ın iş ilanına gelen başvurular + algoritma önerileri
+    HeadHunter'ın iş ilanına gelen başvurular + Hybrid skorlamalı öneriler
     """
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -1212,8 +1388,7 @@ def get_headhunter_applications(userid: str):
     
     jobpost_id = jobpost[0]
     
-    # 2. En iyi 5 adayı al (algoritma önerisi - /best-applicant'tan)
-    # Job post'un keyword'lerini al
+    # 2. Job post'un keyword'lerini al
     cursor.execute("SELECT jobpost FROM jobposts WHERE id = ?", (jobpost_id,))
     jobtext_row = cursor.fetchone()
     
@@ -1223,8 +1398,9 @@ def get_headhunter_applications(userid: str):
     
     jobtext = jobtext_row[0]
     job_keywords = processJobText(jobtext)
+    job_keywords_text = " ".join(job_keywords)
     
-    # CV'leri al ve skorla
+    # 3. CV'leri al ve hybrid skorla
     cursor.execute("SELECT id, userid, keywords FROM cvs")
     cvs = cursor.fetchall()
     
@@ -1232,17 +1408,40 @@ def get_headhunter_applications(userid: str):
     users = cursor.fetchall()
     user_map = {str(u[0]): {"username": u[1], "email": u[2]} for u in users}
     
-    scores = {}
-    for row in cvs:
+    # Tüm CV metinlerini hazırla
+    all_cv_texts = []
+    cv_index_to_userid = {}
+    cv_keywords_map = {}
+    
+    for i, row in enumerate(cvs):
         cv_userid = row[1]
         raw_kw = row[2]
-        kw_list = safe_keywords(raw_kw)
-        scores[cv_userid] = create_point(kw_list, job_keywords)
+        cv_keywords = safe_keywords(raw_kw)
+        cv_text = " ".join(cv_keywords)
+        
+        all_cv_texts.append(cv_text)
+        cv_index_to_userid[i] = cv_userid
+        cv_keywords_map[cv_userid] = cv_keywords
+    
+    # Hybrid skorları hesapla
+    scores = {}
+    for i, cv_userid in cv_index_to_userid.items():
+        cv_keywords = cv_keywords_map[cv_userid]
+        
+        hybrid = hybrid_score_for_applicants(
+            cv_keywords,
+            job_keywords,
+            all_cv_texts,
+            job_keywords_text,
+            i
+        )
+        
+        scores[cv_userid] = hybrid
     
     sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
     top5 = sorted_scores[:5]
     
-    # 3. Bu iş ilanına yapılan başvuruları al
+    # 4. Bu iş ilanına yapılan başvuruları al
     cursor.execute("""
         SELECT 
             a.userid,
@@ -1256,7 +1455,7 @@ def get_headhunter_applications(userid: str):
     applications_raw = cursor.fetchall()
     application_userids = set([str(app[0]) for app in applications_raw])
     
-    # 4. Top 5'i formatla (başvuru durumu ile)
+    # 5. Top 5'i formatla (başvuru durumu ile)
     top_five_list = []
     for u, p in top5:
         user_info = user_map.get(str(u), {"username": "Unknown", "email": "N/A"})
@@ -1269,7 +1468,7 @@ def get_headhunter_applications(userid: str):
             "has_applied": has_applied
         })
     
-    # 5. Tüm başvuruları formatla
+    # 6. Tüm başvuruları formatla
     applications_list = []
     for app in applications_raw:
         user_info = user_map.get(str(app[0]), {"username": "Unknown", "email": "N/A"})

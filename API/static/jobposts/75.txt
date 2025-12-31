@@ -1,0 +1,28 @@
+FULL STACK DEVELOPER (ReactJS / NodeJS)
+
+Location: Istanbul (Hybrid) / Remote (TR)
+Type: Full-time
+
+ABOUT THE ROLE
+We’re building an HR tech platform that parses CVs and matches candidates to job requirements. You’ll ship
+features end-to-end: React.js UI, Node.js/Express.js APIs, and database-backed services. We care about clean
+code, security, and measurable performance.
+
+WHAT YOU’LL DO
+- Build SPA screens with ReactJS + TypeScript (TS), using Vite for fast builds.
+- Develop REST API endpoints with NodeJS (ExpressJS) for uploads, scoring, and reporting.
+- Implement auth flows: JWT + OAuth (role-based authorization).
+- Work with PostgreSQL (psql) and Redis caching for faster reads.
+- Add tests with Jest and Cypress; improve CI/CD with GitHub Actions.
+- Containerize services (Docker) and support Nginx reverse proxy setups.
+
+MUST HAVE (Skills)
+React / Reactjs, JavaScript (JS / ES6), TypeScript (TS)
+Node.js (nodejs), Express.js (expressjs)
+RESTful API (REST API), PostgreSQL (postgres/psql), Redis
+Authentication + Authorization, JWT, OAuth
+Git, Agile/Scrum
+
+NICE TO HAVE
+Docker, Kubernetes (k8s), AWS (Amazon Web Services), GraphQL
+Performance Optimization, Web Security

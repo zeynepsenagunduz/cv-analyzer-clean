@@ -456,25 +456,6 @@ def normalize_skill(skill):
     return skill_lower
 
 
-def get_skill_weight(skill):
-    """
-    Returns the weight of a skill for scoring purposes
-    
-    Args:
-        skill (str): Skill name
-    
-    Returns:
-        float: Weight value (default: 1.0)
-    
-    Example:
-        >>> get_skill_weight('react')
-        3.0
-        >>> get_skill_weight('html')
-        1.0
-    """
-    normalized = normalize_skill(skill)
-    return SKILL_WEIGHTS.get(normalized, 1.0)
-
 
 if __name__ == "__main__":
     # Test the configuration
@@ -485,5 +466,5 @@ if __name__ == "__main__":
     print(f"  'k8s' → '{normalize_skill('k8s')}'")
     print(f"  'reactjs' → '{normalize_skill('reactjs')}'")
     print(f"\nSkill weights:")
-    print(f"  react: {get_skill_weight('react')}")
-    print(f"  html: {get_skill_weight('html')}")
+    
+    
