@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import './index.css';
-import { Login, Register, DashboardUser, DashboardHeadHunter, AdminDashboard, AnalyticsDashboard, UserProfile, ViewCV } from './pages';const router = createBrowserRouter([
+import { Login, Register, DashboardUser, DashboardHeadHunter, AdminDashboard, AnalyticsDashboard, UserProfile, ViewCV, HeadHunterProfile, HeadHunterApplications, UserApplications } from './pages';const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
@@ -44,6 +44,19 @@ import { Login, Register, DashboardUser, DashboardHeadHunter, AdminDashboard, An
     path: '/view-cv',
     element: <ViewCV />,
   },
+  {
+    path: '/headhunter/profile',
+    element: <HeadHunterProfile />,
+  },
+  {
+    path: '/headhunter/applications',
+    element: <HeadHunterApplications />,
+  },
+  {
+    path: '/user/applications',
+    element: <UserApplications />,
+  },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(<RouterProvider router={router} />);

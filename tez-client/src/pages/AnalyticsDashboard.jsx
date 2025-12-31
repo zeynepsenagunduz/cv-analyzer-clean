@@ -206,7 +206,15 @@ export default function AnalyticsDashboard() {
         
         <div className="flex flex-col gap-4 w-full px-4 mt-8">
           <button
-            onClick={() => window.location.href = '/dashboard/user'}
+            onClick={() => {
+              const userData = JSON.parse(window.localStorage.getItem('userData'));
+              const role = userData?.role;
+              if (role === 'headhunter') {
+                window.location.href = '/dashboard/headhunter';
+              } else {
+                window.location.href = '/dashboard/user';
+              }
+            }}
             className="w-full bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-200 text-left flex items-center gap-2"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

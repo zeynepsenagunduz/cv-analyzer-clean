@@ -10,6 +10,7 @@ import os
 import uuid
 import ast
 from fastapi.responses import FileResponse
+from datetime import datetime
 
 
 def safe_keywords(raw):
@@ -129,6 +130,8 @@ async def login(data: Login):
         print(f"Role value (index 4): {role_value}, Type: {type(role_value)}")
         
         conn.close()
+        
+        
         return {
             "userid": int(returnData[0]), 
             "role": str(returnData[4]),  # Index 4 kullan
@@ -388,7 +391,8 @@ async def getPoint(userid: BestJobs):
     new_list = []
     for job_id, point in top5:
         new_list.append({
-            "userid": job_user_map.get(job_id),  # ✅ dosya adı
+            "id": job_id,
+            "userid": job_user_map.get(job_id),  #  dosya adı
             "text": job_text_map.get(job_id, ""),
             "keywords": job_kw_map.get(job_id, []),
             "point": int(point)
@@ -466,9 +470,9 @@ async def best_applicant(userid: str = Query(...)):
         return {"top_five": [], "job_keywords": job_keywords, "best_cv_keywords": []}
 
     # ✅ users tablosundan userid -> username map
-    cursor.execute("SELECT id, username FROM users")
+    cursor.execute("SELECT id, username, email FROM users")
     users = cursor.fetchall()
-    user_map = {str(u[0]): u[1] for u in users}
+    user_map = {str(u[0]): {"username": u[1], "email": u[2]} for u in users}
 
     scores = {}
     cv_kw_map = {}
@@ -492,9 +496,11 @@ async def best_applicant(userid: str = Query(...)):
     # ✅ username ekle
     new_list = []
     for u, p in top5:
+        user_info = user_map.get(str(u), {"username": "Unknown", "email": "N/A"})
         new_list.append({
             "userid": u,
-            "username": user_map.get(str(u), "Unknown"),
+            "username": user_info["username"],
+            "email": user_info["email"],
             "point": int(p)
         })
 
@@ -912,3 +918,297 @@ def get_user_cv(userid: str):
         media_type="application/pdf",
         filename=f"cv_{userid}.pdf"
     )
+
+
+# ============================================================
+# APPLICATION ENDPOINTS
+# ============================================================
+
+
+
+@app.post("/api/apply")
+def apply_to_job(userid: str, jobpostid: int, cover_letter: str = ""):
+    """
+    İş ilanına başvuru yap
+    """
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Daha önce başvuru yapılmış mı kontrol et
+    cursor.execute("""
+        SELECT id FROM applications 
+        WHERE userid = ? AND jobpostid = ?
+    """, (userid, jobpostid))
+    
+    existing = cursor.fetchone()
+    if existing:
+        conn.close()
+        raise HTTPException(status_code=400, detail="Bu iş ilanına zaten başvurdunuz")
+    
+    # Matching score hesapla
+    # Kullanıcının CV'si
+    cursor.execute("SELECT keywords FROM cvs WHERE userid = ?", (userid,))
+    cv_row = cursor.fetchone()
+    user_skills = json.loads(cv_row[0]) if cv_row and cv_row[0] else []
+    
+    # Job post'un gereksinimleri
+    cursor.execute("SELECT jobpost_keywords FROM jobposts WHERE id = ?", (jobpostid,))
+    job_row = cursor.fetchone()
+    job_skills = json.loads(job_row[0]) if job_row and job_row[0] else []
+    
+    # Matching score hesapla (basit yöntem)
+    if len(job_skills) == 0:
+        match_score = 0
+    else:
+        matched_skills = set(user_skills) & set(job_skills)
+        match_score = (len(matched_skills) / len(job_skills)) * 100
+    
+    # Başvuruyu kaydet
+    cursor.execute("""
+        INSERT INTO applications (userid, jobpostid, match_score, cover_letter)
+        VALUES (?, ?, ?, ?)
+    """, (userid, jobpostid, round(match_score, 2), cover_letter))
+    
+    conn.commit()
+    application_id = cursor.lastrowid
+    conn.close()
+    
+    return {
+        "success": True,
+        "application_id": application_id,
+        "match_score": round(match_score, 2),
+        "message": "Başvurunuz başarıyla kaydedildi!"
+    }
+
+
+@app.get("/api/applications/user/{userid}")
+def get_user_applications(userid: str):
+    """
+    Kullanıcının yaptığı tüm başvuruları getir
+    """
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute("""
+        SELECT 
+            a.id,
+            a.jobpostid,
+            a.applied_at,
+            a.status,
+            a.match_score,
+            j.userid
+        FROM applications a
+        JOIN jobposts j ON a.jobpostid = j.id
+        WHERE a.userid = ?
+        ORDER BY a.applied_at DESC
+    """, (userid,))
+    
+    applications = []
+    for row in cursor.fetchall():
+        applications.append({
+            "id": row[0],
+            "jobpostid": row[1],
+            "applied_at": row[2],
+            "status": row[3],
+            "match_score": row[4],
+            "job_userid": row[5]
+        })
+    
+    conn.close()
+    return {"applications": applications}
+
+
+@app.get("/api/applications/job/{jobpostid}")
+def get_job_applications(jobpostid: int):
+    """
+    Bir iş ilanına gelen başvuruları getir (HeadHunter için)
+    """
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute("""
+        SELECT 
+            a.id,
+            a.userid,
+            a.applied_at,
+            a.status,
+            a.match_score,
+            a.cover_letter,
+            u.username,
+            u.email
+        FROM applications a
+        JOIN users u ON a.userid = u.id
+        WHERE a.jobpostid = ?
+        ORDER BY a.match_score DESC, a.applied_at DESC
+    """, (jobpostid,))
+    
+    applications = []
+    for row in cursor.fetchall():
+        applications.append({
+            "id": row[0],
+            "userid": row[1],
+            "applied_at": row[2],
+            "status": row[3],
+            "match_score": row[4],
+            "cover_letter": row[5],
+            "username": row[6],
+            "email": row[7]
+        })
+    
+    conn.close()
+    return {"applications": applications}
+
+
+@app.put("/api/applications/{application_id}/status")
+def update_application_status(application_id: int, status: str):
+    """
+    Başvuru durumunu güncelle (HeadHunter için)
+    status: pending, viewed, accepted, rejected
+    """
+    valid_statuses = ["pending", "viewed", "accepted", "rejected"]
+    if status not in valid_statuses:
+        raise HTTPException(status_code=400, detail="Geçersiz durum")
+    
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute("""
+        UPDATE applications 
+        SET status = ?
+        WHERE id = ?
+    """, (status, application_id))
+    
+    conn.commit()
+    conn.close()
+    
+    return {"success": True, "message": "Başvuru durumu güncellendi"}
+
+# ============================================================
+# HEADHUNTER PROFILE ENDPOINT
+# ============================================================
+
+@app.get("/api/headhunter/profile/{userid}")
+def get_headhunter_profile(userid: str):
+    """
+    HeadHunter profil bilgileri
+    """
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Kullanıcı bilgileri
+    cursor.execute("SELECT username, email, has_jobpost FROM users WHERE id = ?", (userid,))
+    user = cursor.fetchone()
+    
+    if not user:
+        conn.close()
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    conn.close()
+    
+    return {
+        "username": user[0],
+        "email": user[1],
+        "has_jobpost": user[2]
+    }
+
+# ============================================================
+# HEADHUNTER APPLICATIONS PAGE ENDPOINT
+# ============================================================
+
+@app.get("/api/headhunter/applications/{userid}")
+def get_headhunter_applications(userid: str):
+    """
+    HeadHunter'ın iş ilanına gelen başvurular + algoritma önerileri
+    """
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # 1. HeadHunter'ın job post id'sini bul
+    cursor.execute("SELECT id FROM jobposts WHERE userid = ?", (userid,))
+    jobpost = cursor.fetchone()
+    
+    if not jobpost:
+        conn.close()
+        return {
+            "top_five": [],
+            "applications": [],
+            "message": "Henüz iş ilanı yüklenmemiş"
+        }
+    
+    jobpost_id = jobpost[0]
+    
+    # 2. En iyi 5 adayı al (algoritma önerisi - /best-applicant'tan)
+    # Job post'un keyword'lerini al
+    cursor.execute("SELECT jobpost FROM jobposts WHERE id = ?", (jobpost_id,))
+    jobtext_row = cursor.fetchone()
+    
+    if not jobtext_row:
+        conn.close()
+        return {"top_five": [], "applications": []}
+    
+    jobtext = jobtext_row[0]
+    job_keywords = processJobText(jobtext)
+    
+    # CV'leri al ve skorla
+    cursor.execute("SELECT id, userid, keywords FROM cvs")
+    cvs = cursor.fetchall()
+    
+    cursor.execute("SELECT id, username, email FROM users")
+    users = cursor.fetchall()
+    user_map = {str(u[0]): {"username": u[1], "email": u[2]} for u in users}
+    
+    scores = {}
+    for row in cvs:
+        cv_userid = row[1]
+        raw_kw = row[2]
+        kw_list = safe_keywords(raw_kw)
+        scores[cv_userid] = create_point(kw_list, job_keywords)
+    
+    sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+    top5 = sorted_scores[:5]
+    
+    # 3. Bu iş ilanına yapılan başvuruları al
+    cursor.execute("""
+        SELECT 
+            a.userid,
+            a.applied_at,
+            a.match_score
+        FROM applications a
+        WHERE a.jobpostid = ?
+        ORDER BY a.applied_at DESC
+    """, (jobpost_id,))
+    
+    applications_raw = cursor.fetchall()
+    application_userids = set([str(app[0]) for app in applications_raw])
+    
+    # 4. Top 5'i formatla (başvuru durumu ile)
+    top_five_list = []
+    for u, p in top5:
+        user_info = user_map.get(str(u), {"username": "Unknown", "email": "N/A"})
+        has_applied = str(u) in application_userids
+        top_five_list.append({
+            "userid": u,
+            "username": user_info["username"],
+            "email": user_info["email"],
+            "point": int(p),
+            "has_applied": has_applied
+        })
+    
+    # 5. Tüm başvuruları formatla
+    applications_list = []
+    for app in applications_raw:
+        user_info = user_map.get(str(app[0]), {"username": "Unknown", "email": "N/A"})
+        applications_list.append({
+            "userid": app[0],
+            "username": user_info["username"],
+            "email": user_info["email"],
+            "applied_at": app[1],
+            "match_score": app[2]
+        })
+    
+    conn.close()
+    
+    return {
+        "top_five": top_five_list,
+        "applications": applications_list
+    }
