@@ -1,0 +1,42 @@
+FULL STACK DEVELOPER (REACT / NODE.JS / PYTHON)
+
+Company:  Mid-size SaaS (HR Tech / CV-Job Matching)
+Location: Istanbul (Hybrid) / Remote within Türkiye
+Type:     Full-time
+
+ABOUT THE ROLE
+We are looking for a Full Stack Developer to build and scale a CV-to-job matching product. You will work on
+frontend experiences, backend APIs, and ranking/matching services (BM25 + cosine similarity) with a strong
+focus on performance, reliability, and clean engineering practices.
+
+RESPONSIBILITIES
+- Build user-facing features with React and TypeScript (upload CVs, manage job posts, view match results).
+- Design and implement RESTful APIs with Node.js/Express.js and/or Python (Flask/Django style services).
+- Implement authentication and authorization (JWT, OAuth) and follow web security best practices.
+- Improve relevance and ranking quality (keyword normalization, n-grams, BM25, cosine similarity).
+- Work with databases (PostgreSQL/MySQL/MongoDB) and caching (Redis) where needed.
+- Write automated tests (Jest/Cypress and/or Pytest) and participate in CI/CD pipelines (GitHub Actions).
+- Containerize and deploy services with Docker; bonus if you have Kubernetes and cloud experience (AWS/GCP/Azure).
+
+REQUIRED SKILLS
+- Strong JavaScript + React experience (TypeScript is a plus).
+- Backend development with Node.js/Express.js and/or Python.
+- Experience with RESTful API design and integration.
+- Familiarity with Git and collaborative workflows (GitHub/GitLab).
+- Understanding of performance optimization, accessibility, and responsive design.
+- Comfortable working in Agile/Scrum teams; good communication and problem solving.
+
+NICE TO HAVE
+- Ranking/search concepts: BM25, cosine similarity, TF-IDF, information retrieval.
+- GraphQL, Next.js, Tailwind CSS, Vite.
+- Docker, Kubernetes, Nginx, CI/CD (Jenkins, GitHub Actions).
+- Data tools: Pandas, NumPy, Scikit-learn; basic machine learning.
+- Cloud platforms: AWS, GCP, Azure, Firebase.
+
+WHAT WE OFFER
+- Competitive salary + flexible work model
+- Learning budget and mentorship
+- Modern tooling and a product-focused engineering culture
+
+HOW TO APPLY
+Send your CV or portfolio plus a short note about a project you’re proud of.

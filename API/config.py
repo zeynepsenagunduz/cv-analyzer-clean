@@ -213,8 +213,45 @@ SKILLS = [
     'Diversity and Inclusion',
     'Cultural Awareness',
     'Global Mindset',
-    'Entrepreneurship'
+    'Entrepreneurship',
+     # Modern Frontend
+    'Next.js',
+    'Tailwind CSS',
+    'Vite',
+    'Svelte',
+    
+    # Data Science & ML
+    'TensorFlow',
+    'PyTorch',
+    'Scikit-learn',
+    'Pandas',
+    'NumPy',
+    'Jupyter',
+    
+    # DevOps & Infrastructure
+    'Terraform',
+    'Ansible',
+    'Jenkins',
+    'GitHub Actions',
+    'Nginx',
+    'Apache',
+    
+    # Testing
+    'Selenium',
+    'Pytest',
+    'JUnit',
+    
+    # Mobile
+    'React Native',
+    'Flutter',
+    
+    # Databases & Messaging
+    'Redis',
+    'Elasticsearch',
+    'Kafka',
+    'RabbitMQ'
 ]
+
 
 
 # ============================================================
@@ -256,18 +293,21 @@ def get_skills_by_category():
     return {
         'frontend': [
             'html', 'css', 'javascript', 'react', 'angular', 'vue.js',
-            'bootstrap', 'jquery', 'typescript'
+            'bootstrap', 'jquery', 'typescript', 'next.js', 'tailwind css',
+            'vite', 'svelte'
         ],
         'backend': [
-            'node.js', 'express.js'
+            'node.js', 'express.js', 'django', 'flask', 'spring boot',
+            'laravel', 'ruby on rails', '.net', 'asp.net'
         ],
         'database': [
-            'mongodb', 'mysql', 'postgresql'
+            'mongodb', 'mysql', 'postgresql', 'redis', 'elasticsearch'
         ],
         'devops': [
             'git', 'github', 'gitlab', 'bitbucket', 'continuous integration',
             'continuous deployment', 'containerization', 'microservices',
-            'serverless'
+            'serverless', 'docker', 'kubernetes', 'terraform', 'ansible',
+            'jenkins', 'github actions', 'nginx', 'apache'
         ],
         'cloud': [
             'amazon web services', 'google cloud platform', 'microsoft azure',
@@ -278,10 +318,22 @@ def get_skills_by_category():
             'adobe illustrator', 'sketch', 'figma', 'invision', 'zeplin'
         ],
         'testing': [
-            'jest', 'enzyme', 'cypress', 'quality assurance'
+            'jest', 'enzyme', 'cypress', 'quality assurance', 'selenium',
+            'pytest', 'junit'
         ],
         'methodology': [
             'agile', 'scrum', 'kanban', 'project management'
+        ],
+        'data_science': [
+            'tensorflow', 'pytorch', 'scikit-learn', 'pandas', 'numpy',
+            'jupyter', 'machine learning', 'artificial intelligence',
+            'data visualization'
+        ],
+        'mobile': [
+            'react native', 'flutter', 'swift', 'kotlin'
+        ],
+        'messaging': [
+            'kafka', 'rabbitmq'
         ],
         'soft_skills': [
             'communication', 'collaboration', 'teamwork', 'problem solving',
@@ -289,7 +341,6 @@ def get_skills_by_category():
             'adaptability', 'continuous learning'
         ]
     }
-
 
 # ============================================================
 # CONFIGURATION CONSTANTS
@@ -310,33 +361,7 @@ MIN_JOB_SKILLS = 4  # Minimum skills required in job post for matching
 DB_PATH = "tez_db.sqlite"
 CV_UPLOAD_PATH = "./static/cvs"
 
-# Scoring weights (can be used for weighted matching)
-SKILL_WEIGHTS = {
-    # Critical technical skills (weight: 3.0)
-    'react': 3.0,
-    'node.js': 3.0,
-    'kubernetes': 3.0,
-    'docker': 3.0,
-    'aws': 3.0,
-    
-    # Important skills (weight: 2.0)
-    'javascript': 2.0,
-    'typescript': 2.0,
-    'git': 2.0,
-    'restful api': 2.0,
-    'mongodb': 2.0,
-    'postgresql': 2.0,
-    
-    # Nice to have (weight: 1.0)
-    'bootstrap': 1.0,
-    'jquery': 1.0,
-    
-    # Soft skills (weight: 1.5)
-    'communication': 1.5,
-    'teamwork': 1.5,
-    'leadership': 1.5,
-    'problem solving': 1.5
-}
+
 
 # Skill synonyms for better matching
 # Format: 'main_skill': ['alternative1', 'alternative2']
@@ -384,6 +409,15 @@ SKILL_SYNONYMS = {
     # API
     'restful api': ['rest', 'rest api', 'restapi'],
     'graphql': ['gql', 'graph ql'],
+     'next.js': ['nextjs', 'next'],
+    'tailwind css': ['tailwind', 'tailwindcss'],
+    'tensorflow': ['tf'],
+    'pytorch': ['torch'],
+    'scikit-learn': ['sklearn', 'scikit'],
+    'pandas': ['pd'],
+    'numpy': ['np'],
+    'react native': ['rn', 'reactnative'],
+    'github actions': ['gh actions'],
 }
 
 

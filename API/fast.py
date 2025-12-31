@@ -9,8 +9,12 @@ import json
 import os 
 import uuid
 import ast
+from rank_bm25 import BM25Okapi
 from fastapi.responses import FileResponse
 from datetime import datetime
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
 
 def safe_keywords(raw):
@@ -409,109 +413,180 @@ async def getPoint(userid: BestJobs):
         "courses": courses
     }
 
-"""""
-@app.post("/best-applicant")
-async def getPoint(userid: str):
 
-    with open(f"./static/jobposts/{userid}.txt", "r") as f:
-        jobtext = f.read()
-   
-    job_keywords = processJobText(jobtext)
+# ============================================================
+# BM25 RANKING ALGORITHM
+# ============================================================
 
-    conn = get_db_connection()
-    cursor = conn.cursor()
+# ============================================================
+# BM25 RANKING ALGORITHM
+# ============================================================
 
-    cursor.execute("SELECT * FROM cvs")
-    cvs = cursor.fetchall()
-
-    scores = {}
-    for cv in cvs:
-        scores[cv[1]] = create_point(json.loads(cv[2]), job_keywords)
-    sorted_scores = {k: v for k, v in sorted(scores.items(), key=lambda item: item[1], reverse=True)}
-
-    best_cv_keywords = []
-    for cv in cvs:
-        if(cv[1] == list(sorted_scores.keys())[0]):
-            best_cv_keywords = json.loads(cv[2])
-            break
+def bm25_matching(all_cv_texts, job_keywords_text):
+    """
+    BM25 Okapi algoritması ile CV-Job matching
     
-    new_list = list(sorted_scores.items())[:5].copy()
-
-    for count,i in enumerate(list(sorted_scores.items())[:5]):
-        new_list[count] = {"userid": i[0], "point": int(i[1])}
-
-    conn.close()
-
-    return {"top_five": new_list , "job_keywords": job_keywords, "best_cv_keywords":  best_cv_keywords  }
-
-"""
+    BM25 avantajları:
+    - Frekans doygunluğu (aynı kelime 100 kere tekrar ederse fazla puan vermiyor)
+    - Uzunluk normalizasyonu (uzun dokümanlar avantajlı değil)
+    - TF-IDF'ten daha dengeli skorlar
+    
+    Args:
+        all_cv_texts: Tüm CV keyword metinleri (list of strings)
+        job_keywords_text: Job post keyword metni (string)
+    
+    Returns:
+        dict: {cv_index: score} (0-100 arası)
+    """
+    try:
+        # DEBUG
+        print(f"DEBUG BM25 - CV sayısı: {len(all_cv_texts)}")
+        print(f"DEBUG BM25 - Job text: {job_keywords_text[:100]}")
+        
+        # Boş kontrol
+        if not all_cv_texts or not job_keywords_text:
+            print("DEBUG BM25 - Boş input!")
+            return {}
+        
+        # Tokenize (kelimelere ayır)
+        tokenized_corpus = []
+        for cv_text in all_cv_texts:
+            tokens = cv_text.lower().split()
+            tokenized_corpus.append(tokens)
+        
+        print(f"DEBUG BM25 - İlk CV tokens: {tokenized_corpus[0][:10] if tokenized_corpus else 'BOŞ'}")
+        
+        tokenized_query = job_keywords_text.lower().split()
+        print(f"DEBUG BM25 - Job tokens: {tokenized_query[:10]}")
+        
+        # BM25 modeli oluştur (k1=1.5, b=0.75 - standart değerler)
+        bm25 = BM25Okapi(tokenized_corpus, k1=1.5, b=0.75)
+        
+        # Her CV için BM25 skoru hesapla
+        raw_scores = bm25.get_scores(tokenized_query)
+        print(f"DEBUG BM25 - Raw scores (ilk 5): {raw_scores[:5] if len(raw_scores) > 0 else 'BOŞ'}")
+        print(f"DEBUG BM25 - Max raw score: {max(raw_scores) if len(raw_scores) > 0 else 0}")
+        
+        # Skorları normalize et (0-100 arası)
+        scores = {}
+        max_score = max(raw_scores) if len(raw_scores) > 0 and max(raw_scores) > 0 else 1
+        
+        for i, raw_score in enumerate(raw_scores):
+            # Normalize
+            normalized = (raw_score / max_score) * 100
+            
+            # Sınırla (0-100)
+            normalized = max(0.0, min(100.0, normalized))
+            
+            scores[i] = round(normalized, 2)
+        
+        print(f"DEBUG BM25 - Final scores (ilk 5): {list(scores.items())[:5]}")
+        
+        return scores
+        
+    except Exception as e:
+        print(f"BM25 error: {e}")
+        import traceback
+        traceback.print_exc()
+        return {}
 
 
 @app.post("/best-applicant")
 async def best_applicant(userid: str = Query(...)):
-    path = f"./static/jobposts/{userid}.txt"
-    if not os.path.exists(path):
-        raise HTTPException(status_code=404, detail="Jobpost file not found")
-
-    with open(path, "r", encoding="utf-8", errors="ignore") as f:
-        jobtext = f.read()
-
-    job_keywords = processJobText(jobtext)
-
+    print("=" * 50)
+    print("ENDPOINT ÇAĞRILDI!")
+    print(f"userid: {userid}")
+    print("=" * 50)
     conn = get_db_connection()
     cursor = conn.cursor()
-
-    # ✅ CV'leri al
+    
+    # Job post'u al
+    cursor.execute("SELECT jobpost FROM jobposts WHERE userid = ?", (userid,))
+    jobpost_row = cursor.fetchone()
+    
+    if not jobpost_row:
+        conn.close()
+        return {"top_five": [], "best_cv_keywords": [], "message": "Job post bulunamadı"}
+    
+    jobpost_text = jobpost_row[0]
+    job_keywords = processJobText(jobpost_text)
+    job_keywords_text = " ".join(job_keywords)
+    
+    # Tüm CV'leri al
     cursor.execute("SELECT id, userid, keywords FROM cvs")
     cvs = cursor.fetchall()
-
-    if not cvs:
-        conn.close()
-        return {"top_five": [], "job_keywords": job_keywords, "best_cv_keywords": []}
-
-    # ✅ users tablosundan userid -> username map
+    
+    # Kullanıcı bilgilerini al
     cursor.execute("SELECT id, username, email FROM users")
     users = cursor.fetchall()
     user_map = {str(u[0]): {"username": u[1], "email": u[2]} for u in users}
-
-    scores = {}
-    cv_kw_map = {}
-
-    for row in cvs:
+    
+    # ═══════════════════════════════════════════════════════
+    # YENİ: BM25 RANKING ALGORITHM
+    # ═══════════════════════════════════════════════════════
+    
+    # Tüm CV keyword metinlerini hazırla
+    all_cv_texts = []
+    cv_index_to_userid = {}
+    
+    for i, row in enumerate(cvs):
+        cv_id = row[0]
         cv_userid = row[1]
         raw_kw = row[2]
-
-        kw_list = safe_keywords(raw_kw)
-        cv_kw_map[cv_userid] = kw_list
-
-        scores[cv_userid] = create_point(kw_list, job_keywords)
-
+        
+        # CV keywords'ü text'e çevir
+        cv_keywords_text = raw_kw.replace(",", " ").replace(";", " ")
+        cv_keywords_text = cv_keywords_text.replace('"', '').replace('[', '').replace(']', '')
+        cv_keywords_text = cv_keywords_text.strip()
+        all_cv_texts.append(cv_keywords_text)
+        cv_index_to_userid[i] = cv_userid
+    
+    # BM25 ile skorla
+    index_scores = bm25_matching(all_cv_texts, job_keywords_text)
+    
+    # Index'leri userid'lere çevir
+    scores = {}
+    for index, score in index_scores.items():
+        userid_item = cv_index_to_userid.get(index)
+        if userid_item:
+            scores[userid_item] = score
+    
+    # ═══════════════════════════════════════════════════════
+    
+    # Skorlara göre sırala
     sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
-
-    best_cv_userid = sorted_scores[0][0]
-    best_cv_keywords = cv_kw_map.get(best_cv_userid, [])
-
     top5 = sorted_scores[:5]
-
-    # ✅ username ekle
+    
+    # Sonuç listesi oluştur
     new_list = []
-    for u, p in top5:
-        user_info = user_map.get(str(u), {"username": "Unknown", "email": "N/A"})
+    for userid_item, point in top5:
+        user_info = user_map.get(str(userid_item), {"username": "Unknown", "email": "N/A"})
         new_list.append({
-            "userid": u,
+            "userid": userid_item,
             "username": user_info["username"],
             "email": user_info["email"],
-            "point": int(p)
+            "point": int(point)
         })
-
+    
+    # En iyi CV'nin keywords'ünü al
+    best_cv_keywords = []
+    if top5:
+        best_userid = top5[0][0]
+        cursor.execute("SELECT keywords FROM cvs WHERE userid = ?", (best_userid,))
+        best_cv_row = cursor.fetchone()
+        if best_cv_row:
+            try:
+                from helper import safe_keywords
+                best_cv_keywords = safe_keywords(best_cv_row[0])
+            except:
+                best_cv_keywords = best_cv_row[0].split(",")
+    
     conn.close()
-
+    
     return {
         "top_five": new_list,
-        "job_keywords": job_keywords,
         "best_cv_keywords": best_cv_keywords
     }
-
   
 
 @app.get("/get-credit")
