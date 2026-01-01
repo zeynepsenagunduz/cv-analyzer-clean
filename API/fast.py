@@ -1,7 +1,7 @@
 from fastapi import FastAPI, File, UploadFile,HTTPException, Query
 from pydantic import BaseModel
 from fastapi.staticfiles import StaticFiles
-from helper import allowed_file, handleCV, processJobText, create_point, pdf_to_text,remove_special_characters
+from helper import allowed_file, handleCV, processJobText, create_point, pdf_to_text,remove_special_characters,calculate_simple_intersection, calculate_bm25_score, calculate_hybrid_score
 from typing import Optional
 from fastapi.middleware.cors import CORSMiddleware
 from db import get_db_connection
@@ -83,112 +83,33 @@ ALLOWED_EXTENSIONS = set(['pdf','txt'])
 def hybrid_score_for_applicants(cv_keywords, job_keywords, all_cv_texts, job_text, cv_index):
     """
     Hybrid Scoring for HeadHunter: BM25 (70%) + Simple Intersection (30%)
-    
-    Args:
-        cv_keywords (list): CV'deki beceriler
-        job_keywords (list): İş ilanındaki beceriler
-        all_cv_texts (list): Tüm CV metinleri
-        job_text (str): İş ilanı metni
-        cv_index (int): Bu CV'nin index'i
-    
-    Returns:
-        float: Hybrid skor (0-100)
     """
-    # 1. BASİT KESİŞİM SKORU
-    if len(job_keywords) == 0:
-        simple_score = 0
-    else:
-        common = set(cv_keywords) & set(job_keywords)
-        simple_score = (len(common) / len(job_keywords)) * 100
+    # 1. Basit Kesişim
+    simple_score = calculate_simple_intersection(cv_keywords, job_keywords)
     
-    # 2. BM25 SKORU
-    try:
-        # Tokenize
-        tokenized_corpus = [text.lower().split() for text in all_cv_texts]
-        tokenized_query = job_text.lower().split()
-        
-        if not tokenized_corpus or not tokenized_query:
-            bm25_normalized = 0
-        else:
-            # BM25 hesapla
-            bm25 = BM25Okapi(tokenized_corpus, k1=1.5, b=0.75)
-            raw_scores = bm25.get_scores(tokenized_query)
-            
-            # Min-Max normalize
-            if len(raw_scores) == 0:
-                bm25_normalized = 0
-            else:
-                min_score = min(raw_scores)
-                max_score = max(raw_scores)
-                
-                if max_score == min_score:
-                    bm25_normalized = 50.0
-                else:
-                    bm25_normalized = ((raw_scores[cv_index] - min_score) / (max_score - min_score)) * 100
-    except Exception as e:
-        print(f"BM25 error in hybrid: {e}")
-        bm25_normalized = 0
+    # 2. BM25
+    bm25_score = calculate_bm25_score(job_text, all_cv_texts, cv_index)
     
-    # 3. HYBRİD SKOR (70% BM25 + 30% Simple)
-    hybrid = (0.7 * bm25_normalized) + (0.3 * simple_score)
+    # 3. Hybrid
+    hybrid_score = calculate_hybrid_score(simple_score, bm25_score, bm25_weight=0.7)
     
-    return round(hybrid, 2)
+    return hybrid_score
 
 
 def hybrid_score_for_jobs(cv_keywords, job_keywords, cv_text, all_job_texts, job_index):
     """
     Hybrid Scoring for User: BM25 (70%) + Simple Intersection (30%)
-    
-    Args:
-        cv_keywords (list): CV'deki beceriler
-        job_keywords (list): İş ilanındaki beceriler
-        cv_text (str): CV metni
-        all_job_texts (list): Tüm iş ilanı metinleri
-        job_index (int): Bu iş ilanının index'i
-    
-    Returns:
-        float: Hybrid skor (0-100)
     """
-    # 1. BASİT KESİŞİM SKORU
-    if len(job_keywords) == 0:
-        simple_score = 0
-    else:
-        common = set(cv_keywords) & set(job_keywords)
-        simple_score = (len(common) / len(job_keywords)) * 100
+    # 1. Basit Kesişim
+    simple_score = calculate_simple_intersection(cv_keywords, job_keywords)
     
-    # 2. BM25 SKORU
-    try:
-        # Tokenize
-        tokenized_corpus = [text.lower().split() for text in all_job_texts]
-        tokenized_query = cv_text.lower().split()
-        
-        if not tokenized_corpus or not tokenized_query:
-            bm25_normalized = 0
-        else:
-            # BM25 hesapla
-            bm25 = BM25Okapi(tokenized_corpus, k1=1.5, b=0.75)
-            raw_scores = bm25.get_scores(tokenized_query)
-            
-            # Min-Max normalize
-            if len(raw_scores) == 0:
-                bm25_normalized = 0
-            else:
-                min_score = min(raw_scores)
-                max_score = max(raw_scores)
-                
-                if max_score == min_score:
-                    bm25_normalized = 50.0
-                else:
-                    bm25_normalized = ((raw_scores[job_index] - min_score) / (max_score - min_score)) * 100
-    except Exception as e:
-        print(f"BM25 error in hybrid_score_for_jobs: {e}")
-        bm25_normalized = 0
+    # 2. BM25
+    bm25_score = calculate_bm25_score(cv_text, all_job_texts, job_index)
     
-    # 3. HYBRİD SKOR (70% BM25 + 30% Simple)
-    hybrid = (0.7 * bm25_normalized) + (0.3 * simple_score)
+    # 3. Hybrid
+    hybrid_score = calculate_hybrid_score(simple_score, bm25_score, bm25_weight=0.7)
     
-    return round(hybrid, 2)
-
+    return hybrid_score
 
 
 def safe_keywords(raw):

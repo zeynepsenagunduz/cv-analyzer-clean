@@ -1,7 +1,9 @@
 import PyPDF2
 import string
 import os
-from config import get_skills  # ✅ Centralized skill list
+from config import get_skills  # Centralized skill list
+from rank_bm25 import BM25Okapi
+
 
 
 def normalize_text_for_skills(text):
@@ -288,6 +290,90 @@ def create_point(cv_keywords, jobpost_keywords):
     if(len(jobpost_keywords) <= 4):
         return 0
     return (len(set(cv_keywords).intersection(jobpost_keywords)) / len(jobpost_keywords)) * 100
+
+
+
+
+
+
+def calculate_simple_intersection(cv_keywords, job_keywords):
+    """
+    Basit Set Kesişimi Skoru
+    
+    Args:
+        cv_keywords (list): CV becerileri
+        job_keywords (list): İş ilanı becerileri
+    
+    Returns:
+        float: Kesişim skoru (0-100)
+    """
+    if len(job_keywords) == 0:
+        return 0.0
+    
+    common = set(cv_keywords) & set(job_keywords)
+    score = (len(common) / len(job_keywords)) * 100
+    
+    return round(score, 2)
+
+
+def calculate_bm25_score(query_text, corpus_texts, target_index):
+    """
+    BM25 Skoru (Min-Max Normalized)
+    
+    Args:
+        query_text (str): Sorgu metni
+        corpus_texts (list): Tüm döküman metinleri
+        target_index (int): Hedef dökümanın index'i
+    
+    Returns:
+        float: Normalized BM25 skoru (0-100)
+    """
+    try:
+        # Tokenize
+        tokenized_corpus = [text.lower().split() for text in corpus_texts]
+        tokenized_query = query_text.lower().split()
+        
+        if not tokenized_corpus or not tokenized_query:
+            return 0.0
+        
+        # BM25 hesapla
+        bm25 = BM25Okapi(tokenized_corpus, k1=1.5, b=0.75)
+        raw_scores = bm25.get_scores(tokenized_query)
+        
+        if len(raw_scores) == 0:
+            return 0.0
+        
+        # Min-Max normalize
+        min_score = min(raw_scores)
+        max_score = max(raw_scores)
+        
+        if max_score == min_score:
+            return 50.0
+        
+        normalized = ((raw_scores[target_index] - min_score) / (max_score - min_score)) * 100
+        return round(normalized, 2)
+        
+    except Exception as e:
+        print(f"BM25 calculation error: {e}")
+        return 0.0
+
+
+def calculate_hybrid_score(simple_score, bm25_score, bm25_weight=0.7):
+    """
+    Hybrid Scoring: BM25 + Simple Intersection
+    
+    Args:
+        simple_score (float): Basit kesişim skoru
+        bm25_score (float): BM25 skoru
+        bm25_weight (float): BM25 ağırlığı (default: 0.7)
+    
+    Returns:
+        float: Hybrid skor (0-100)
+    """
+    simple_weight = 1.0 - bm25_weight
+    hybrid = (bm25_weight * bm25_score) + (simple_weight * simple_score)
+    
+    return round(hybrid, 2)
 
 
 # if __name__ == "__main__":
