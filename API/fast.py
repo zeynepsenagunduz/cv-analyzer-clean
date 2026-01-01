@@ -14,9 +14,7 @@ from fastapi import Depends
 from rank_bm25 import BM25Okapi
 from fastapi.responses import FileResponse
 from datetime import datetime
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-import numpy as np
+
 
 
 
@@ -442,83 +440,6 @@ async def getPoint(userid: BestJobs):
         "courses": courses
     }
 
-
-
-# ============================================================
-# BM25 RANKING ALGORITHM
-# ============================================================
-
-# ============================================================
-# BM25 RANKING ALGORITHM
-# ============================================================
-
-def bm25_matching(all_cv_texts, job_keywords_text):
-    """
-    BM25 Okapi algoritması ile CV-Job matching
-    
-    BM25 avantajları:
-    - Frekans doygunluğu (aynı kelime 100 kere tekrar ederse fazla puan vermiyor)
-    - Uzunluk normalizasyonu (uzun dokümanlar avantajlı değil)
-    - TF-IDF'ten daha dengeli skorlar
-    
-    Args:
-        all_cv_texts: Tüm CV keyword metinleri (list of strings)
-        job_keywords_text: Job post keyword metni (string)
-    
-    Returns:
-        dict: {cv_index: score} (0-100 arası)
-    """
-    try:
-        # DEBUG
-        print(f"DEBUG BM25 - CV sayısı: {len(all_cv_texts)}")
-        print(f"DEBUG BM25 - Job text: {job_keywords_text[:100]}")
-        
-        # Boş kontrol
-        if not all_cv_texts or not job_keywords_text:
-            print("DEBUG BM25 - Boş input!")
-            return {}
-        
-        # Tokenize (kelimelere ayır)
-        tokenized_corpus = []
-        for cv_text in all_cv_texts:
-            tokens = cv_text.lower().split()
-            tokenized_corpus.append(tokens)
-        
-        print(f"DEBUG BM25 - İlk CV tokens: {tokenized_corpus[0][:10] if tokenized_corpus else 'BOŞ'}")
-        
-        tokenized_query = job_keywords_text.lower().split()
-        print(f"DEBUG BM25 - Job tokens: {tokenized_query[:10]}")
-        
-        # BM25 modeli oluştur (k1=1.5, b=0.75 - standart değerler)
-        bm25 = BM25Okapi(tokenized_corpus, k1=1.5, b=0.75)
-        
-        # Her CV için BM25 skoru hesapla
-        raw_scores = bm25.get_scores(tokenized_query)
-        print(f"DEBUG BM25 - Raw scores (ilk 5): {raw_scores[:5] if len(raw_scores) > 0 else 'BOŞ'}")
-        print(f"DEBUG BM25 - Max raw score: {max(raw_scores) if len(raw_scores) > 0 else 0}")
-        
-        # Skorları normalize et (0-100 arası)
-        scores = {}
-        max_score = max(raw_scores) if len(raw_scores) > 0 and max(raw_scores) > 0 else 1
-        
-        for i, raw_score in enumerate(raw_scores):
-            # Normalize
-            normalized = (raw_score / max_score) * 100
-            
-            # Sınırla (0-100)
-            normalized = max(0.0, min(100.0, normalized))
-            
-            scores[i] = round(normalized, 2)
-        
-        print(f"DEBUG BM25 - Final scores (ilk 5): {list(scores.items())[:5]}")
-        
-        return scores
-        
-    except Exception as e:
-        print(f"BM25 error: {e}")
-        import traceback
-        traceback.print_exc()
-        return {}
 
 
 

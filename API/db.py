@@ -10,11 +10,11 @@ def get_db_connection():
     return conn
 
 def init_database():
-    """Veritabanı şemasını oluşturur"""
+    """Veritabanı şemasını oluşturur ve tabloları günceller"""
     conn = get_db_connection()
     cursor = conn.cursor()
     
-    # users tablosu
+    # 1. users tablosu
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -28,7 +28,7 @@ def init_database():
         )
     ''')
     
-    # cvs tablosu
+    # 2. cvs tablosu
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS cvs (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -38,7 +38,7 @@ def init_database():
         )
     ''')
     
-    # jobposts tablosu
+    # 3. jobposts tablosu
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS jobposts (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -48,8 +48,24 @@ def init_database():
             FOREIGN KEY (userid) REFERENCES users(id)
         )
     ''')
+
+    # 4. applications tablosu (fast.py'daki yeni yapıya göre)
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS applications (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            userid TEXT NOT NULL,
+            jobpostid INTEGER NOT NULL,
+            applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            status TEXT DEFAULT 'pending',
+            match_score REAL,
+            hr_match_score REAL,
+            cover_letter TEXT,
+            FOREIGN KEY (userid) REFERENCES users(id),
+            FOREIGN KEY (jobpostid) REFERENCES jobposts(id)
+        )
+    ''')
     
-    # courses tablosu
+    # 5. courses tablosu
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS courses (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -59,7 +75,7 @@ def init_database():
         )
     ''')
     
-    # invitecodes tablosu
+    # 6. invitecodes tablosu
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS invitecodes (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -70,5 +86,7 @@ def init_database():
     
     conn.commit()
     conn.close()
-    print("Veritabanı şeması oluşturuldu.")
+    print("Veritabanı şeması başarıyla güncellendi.")
 
+if __name__ == "__main__":
+    init_database()

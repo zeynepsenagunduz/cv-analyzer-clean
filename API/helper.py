@@ -3,6 +3,7 @@ import string
 import os
 from config import get_skills  # Centralized skill list
 from rank_bm25 import BM25Okapi
+from config import SKILL_SYNONYMS
 
 
 
@@ -64,7 +65,7 @@ def expand_with_synonyms(skills_list):
         >>> expand_with_synonyms(['nodejs', 'cplusplus'])
         ['nodejs', 'node.js', 'cplusplus', 'c++']
     """
-    from config import SKILL_SYNONYMS
+    
     
     expanded = list(skills_list)  # Copy original list
     
@@ -148,12 +149,6 @@ def extractPdf(filePath):
     return allChunks
 
 
-def getSkills():
-    """
-    DEPRECATED: Use get_skills() from config.py instead
-    This function is kept for backward compatibility
-    """
-    return get_skills()
 
 
 def createSubArray(arr, sub_arr_size):
