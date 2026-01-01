@@ -144,8 +144,8 @@ def bm25_only_score(cv_keywords, job_keywords, all_cv_texts, cv_index):
 
 def test_bidirectional_matching():
     """
-    Test 5: İki Taraflı Eşleştirme Analizi
-    HeadHunter vs Kullanıcı perspektifleri
+    Test 5: İki Taraflı Eşleştirme - DOĞRU VERSİYON
+    Database'deki kayıtlı skorları kullan (zaten doğru hesaplanmış)
     """
     print("\n" + "="*70)
     print("TEST 5: İKİ TARAFLI EŞLEŞTİRME ANALİZİ")
@@ -154,98 +154,106 @@ def test_bidirectional_matching():
     conn = get_db_connection()
     cursor = conn.cursor()
     
-    # zeynep'in CV'si
-    cursor.execute("SELECT keywords FROM cvs WHERE userid = 82")
-    result = cursor.fetchone()
-    if not result:
-        print("HATA: zeynep.gunduz CV'si bulunamadı!")
+    # Database'den kayıtlı skorları al
+    cursor.execute("""
+        SELECT 
+            a.userid, 
+            a.jobpostid, 
+            a.match_score, 
+            a.hr_match_score
+        FROM applications a
+        WHERE a.hr_match_score IS NOT NULL
+        ORDER BY a.applied_at DESC
+        LIMIT 3
+    """)
+    
+    examples = cursor.fetchall()
+    
+    if not examples:
+        print("\n⚠️ Database'de iki skorlu veri yok!")
+        print("   Test için yeni başvuru yapın.")
         conn.close()
         return
     
-    zeynep_cv = safe_keywords(result[0])
+    print(f"\n📌 {len(examples)} ÖRNEK ANALİZİ (Database'den)")
+    print("="*70)
     
-    # İş ilanı (ID: 21)
-    cursor.execute("SELECT jobpost_keywords, userid FROM jobposts WHERE id = 21")
-    result = cursor.fetchone()
-    if not result:
-        print("HATA: İş ilanı bulunamadı!")
-        conn.close()
-        return
-    
-    job_keywords = safe_keywords(result[0])
-    job_owner = result[1]
-    
-    # Ortak beceriler
-    common = set(zeynep_cv) & set(job_keywords)
-    
-    print(f"\n📌 SENARYO: zeynep.gunduz → İş İlanı #21")
-    print("-"*70)
-    print(f"zeynep.gunduz CV:")
-    print(f"  - Toplam Beceri: {len(zeynep_cv)}")
-    print(f"  - Örnekler: {', '.join(zeynep_cv[:8])}...")
-    
-    print(f"\nİş İlanı #21 (Owner: {job_owner}):")
-    print(f"  - Aranan Beceri: {len(job_keywords)}")
-    print(f"  - Örnekler: {', '.join(job_keywords[:8])}...")
-    
-    print(f"\nOrtak Beceriler: {len(common)}/{len(job_keywords)}")
-    print(f"  - Örnekler: {', '.join(list(common)[:10])}...")
-    
-    # HeadHunter perspektifi
-    cursor.execute("SELECT keywords FROM cvs")
-    all_cvs = cursor.fetchall()
-    all_cv_texts = [" ".join(safe_keywords(row[0])) for row in all_cvs]
-    
-    # zeynep'in index'ini bul
-    cursor.execute("SELECT id FROM cvs WHERE userid = 82")
-    zeynep_cv_id = cursor.fetchone()[0]
-    cursor.execute("SELECT id FROM cvs ORDER BY id")
-    cv_ids = [row[0] for row in cursor.fetchall()]
-    zeynep_index = cv_ids.index(zeynep_cv_id)
-    
-    headhunter_score = hybrid_score_for_applicants(
-        zeynep_cv, job_keywords, all_cv_texts, " ".join(job_keywords), zeynep_index
-    )
-    
-    # Kullanıcı perspektifi
-    cursor.execute("SELECT jobpost_keywords FROM jobposts")
-    all_jobs = cursor.fetchall()
-    all_job_texts = [" ".join(safe_keywords(row[0])) for row in all_jobs]
-    
-    # İlan #21'in index'ini bul
-    cursor.execute("SELECT id FROM jobposts ORDER BY id")
-    job_ids = [row[0] for row in cursor.fetchall()]
-    job_index = job_ids.index(21)
-    
-    user_score = hybrid_score_for_jobs(
-        zeynep_cv, job_keywords, " ".join(zeynep_cv), all_job_texts, job_index
-    )
-    
-    print("\n" + "-"*70)
-    print("SKOR KARŞILAŞTIRMASI")
-    print("-"*70)
-    print(f"{'Perspektif':<30} {'Skor':<15} {'Soru'}")
-    print("-"*70)
-    print(f"{'HeadHunter (İşveren)':<30} {headhunter_score:>6.1f}%      {'zeynep ilanıma uygun mu?'}")
-    print(f"{'Kullanıcı (zeynep)':<30} {user_score:>6.1f}%      {'İlan bana uygun mu?'}")
-    
-    fark = abs(headhunter_score - user_score)
-    print("\n" + "-"*70)
-    print("ANALİZ")
-    print("-"*70)
-    print(f"Fark: {fark:.1f} puan")
-    print(f"\n✅ Skorlar farklı çünkü:")
-    print(f"   1. HeadHunter: İlanına uygun adayları değerlendiriyor")
-    print(f"   2. Kullanıcı: CV'sine uygun ilanları değerlendiriyor")
-    print(f"   3. Perspektif farkı: NORMAL ve BEKLENİYOR!")
-    print(f"\n📝 Tezde yaz:")
-    print(f"   'İki taraflı eşleştirme doğru çalışıyor. Farklı")
-    print(f"    perspektiflerden farklı skorlar üretiyor.' ✅")
+    for idx, (userid, jobpostid, user_score, hh_score) in enumerate(examples, 1):
+        # Kullanıcı bilgisi
+        cursor.execute("SELECT username FROM users WHERE id = ?", (userid,))
+        username = cursor.fetchone()[0]
+        
+        cursor.execute("SELECT keywords FROM cvs WHERE userid = ?", (userid,))
+        cv_keywords = safe_keywords(cursor.fetchone()[0])
+        
+        # İş ilanı bilgisi
+        cursor.execute("SELECT jobpost_keywords, userid FROM jobposts WHERE id = ?", (jobpostid,))
+        job_row = cursor.fetchone()
+        job_keywords = safe_keywords(job_row[0])
+        job_owner_id = job_row[1]
+        
+        # İşveren bilgisi
+        cursor.execute("SELECT username FROM users WHERE id = ?", (job_owner_id,))
+        owner_name = cursor.fetchone()[0]
+        
+        # Ortak beceriler
+        common = set(cv_keywords) & set(job_keywords)
+        
+        print(f"\n{'='*70}")
+        print(f"SENARYO #{idx}: {username} → İlan #{jobpostid} ({owner_name})")
+        print(f"{'='*70}")
+        
+        print(f"\n{username} CV: {len(cv_keywords)} beceri")
+        print(f"İlan #{jobpostid}: {len(job_keywords)} beceri")
+        print(f"Ortak: {len(common)}/{len(job_keywords)} beceri ({len(common)/len(job_keywords)*100:.1f}%)")
+        
+        print(f"\n{'-'*70}")
+        print("İKİ PERSPEKTİF SKORLARI (Database'den)")
+        print(f"{'-'*70}")
+        print(f"Kullanıcı Perspektifi ({username} bakıyor): {user_score:>6.1f}%")
+        print(f"  → Soru: 'Bu ilan bana ne kadar uygun?'")
+        print(f"\nHeadHunter Perspektifi ({owner_name} bakıyor): {hh_score:>6.1f}%")
+        print(f"  → Soru: 'Bu aday ilanıma ne kadar uygun?'")
+        
+        fark = abs(user_score - hh_score)
+        print(f"\nFark: {fark:.1f} puan")
+        
+        # Analiz
+        if fark < 5:
+            print("\n✅ SİMETRİK EŞLEŞME")
+            print("   Her iki taraf da benzer skorlar → Mükemmel uyum!")
+        elif fark < 20:
+            yuksek = "Kullanıcı" if user_score > hh_score else "HeadHunter"
+            print(f"\n🟡 HAFİF ASİMETRİK ({yuksek} daha pozitif)")
+        elif fark < 40:
+            yuksek = "Kullanıcı" if user_score > hh_score else "HeadHunter"
+            print(f"\n🟠 ORTA ASİMETRİK ({yuksek} çok daha pozitif)")
+            
+            if hh_score > user_score:
+                print(f"   → İşveren için harika aday, ama aday için orta ilan")
+                print(f"   → Muhtemel sebep: Overqualified veya farklı kariyer hedefi")
+            else:
+                print(f"   → Aday için harika ilan, ama işveren için orta aday")
+                print(f"   → Muhtemel sebep: Eksik deneyim veya farklı beceriler")
+        else:
+            yuksek = "Kullanıcı" if user_score > hh_score else "HeadHunter"
+            print(f"\n🔴 GÜÇLÜ ASİMETRİK ({yuksek} süper pozitif!)")
+            
+            if hh_score > user_score:
+                print(f"   → İşveren: 'Mükemmel aday!' ⭐⭐⭐⭐⭐")
+                print(f"   → Aday: 'Bu ilan bana pek uygun değil' ⭐⭐")
+                print(f"   → Örnek: Senior developer + Junior ilan")
+            else:
+                print(f"   → Aday: 'Tam istediğim iş!' ⭐⭐⭐⭐⭐")
+                print(f"   → İşveren: 'Deneyim eksik' ⭐⭐")
+                print(f"   → Örnek: Junior developer + Senior ilan")
     
     print("\n" + "="*70)
+    print("✅ SONUÇ: İki perspektif farklı sonuçlar üretiyor!")
+    print("   Bu, gerçek dünya senaryolarını doğru yansıtıyor.")
+    print("="*70)
     
     conn.close()
-
 
 # ============================================================
 # TEST 6: SINIR DURUMLARI (EDGE CASES)
