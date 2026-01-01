@@ -19,6 +19,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
 
+
+
 class Login(BaseModel):
     username: str
     password: str
@@ -41,14 +43,42 @@ class AddCourses(BaseModel):
     link: str
     id: int = None
 
-class Application(BaseModel):  # ✅ BUNU EKLE
+class Application(BaseModel):  
     userid: str
     jobpostid: int
     cover_letter: Optional[str] = ""
 
+
+class Item(BaseModel):
+    jobtext: str
+
 app = FastAPI()
 
-# API/fast.py - En üste, import'lardan sonra
+
+app.mount("/static/cvs", StaticFiles(directory="./static/cvs"), name="static")
+app.mount("/static/jobposts", StaticFiles(directory="./static/jobposts"), name="static")
+
+# CORS ayarları
+origins = [
+    "*"  # Tüm originlere izin ver
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],  # Tüm HTTP metodlarına izin ver
+    allow_headers=["*"],  # Tüm headerlara izin ver
+    expose_headers=["*"],  # Tüm headerları expose et
+    max_age=3600,  # Preflight isteklerinin cache süresi (saniye)
+)
+
+
+
+ALLOWED_EXTENSIONS = set(['pdf','txt'])
+
+
+
 
 def hybrid_score_for_applicants(cv_keywords, job_keywords, all_cv_texts, job_text, cv_index):
     """
@@ -196,28 +226,6 @@ def safe_keywords(raw):
     return [w for w in remove_special_characters(s).lower().split() if w]
 
 
-app.mount("/static/cvs", StaticFiles(directory="./static/cvs"), name="static")
-app.mount("/static/jobposts", StaticFiles(directory="./static/jobposts"), name="static")
-
-# CORS ayarları
-origins = [
-    "*"  # Tüm originlere izin ver
-]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],  # Tüm HTTP metodlarına izin ver
-    allow_headers=["*"],  # Tüm headerlara izin ver
-    expose_headers=["*"],  # Tüm headerları expose et
-    max_age=3600,  # Preflight isteklerinin cache süresi (saniye)
-)
-
-class Item(BaseModel):
-    jobtext: str
-
-ALLOWED_EXTENSIONS = set(['pdf','txt'])
 
 @app.post("/login")
 async def login(data: Login):
@@ -1139,97 +1147,133 @@ def get_user_cv(userid: str):
 
 
 @app.post("/api/apply")
-async def apply_to_job(application: Application = Depends()):
+async def apply_to_job(
+    userid: str = None,
+    jobpostid: int = None,
+    cover_letter: str = "",
+    application: Application = None
+):
     """
-    Kullanıcının iş ilanına başvurması ve Hybrid skorun hesaplanması
+    Başvuru yap - Query Parameter veya JSON Body kabul eder
     """
-    print("=" * 50)
-    print("APPLY ENDPOINT - HYBRID SCORING")
-    print(f"userid: {application.userid}, jobpostid: {application.jobpostid}")
-    print("=" * 50)
+    # Query parameter veya JSON'dan al
+    if application:
+        user_id = application.userid
+        job_post_id = application.jobpostid
+        cover = application.cover_letter or ""
+    else:
+        user_id = userid
+        job_post_id = jobpostid
+        cover = cover_letter or ""
+    
+    print("="*60)
+    print("BAŞVURU GELDİ!")
+    print(f"UserID: {user_id}")
+    print(f"JobPostID: {job_post_id}")
+    print("="*60)
     
     conn = get_db_connection()
     cursor = conn.cursor()
-    
+
     try:
-        # 1. Kullanıcının CV keywords'ünü al
-        cv_keywords = processJobText(pdf_to_text(application.userid))
-        cv_text = " ".join(cv_keywords)
+        # Kullanıcı CV'si
+        print("1. CV alınıyor...")
+        cursor.execute("SELECT keywords FROM cvs WHERE userid = ?", (user_id,))
+        cv_result = cursor.fetchone()
+        if not cv_result:
+            print("❌ CV bulunamadı!")
+            raise HTTPException(status_code=404, detail="CV not found")
         
-        print(f"CV keywords count: {len(cv_keywords)}")
+        cv_keywords = safe_keywords(cv_result[0])
+        print(f"✅ CV bulundu: {len(cv_keywords)} beceri")
+
+        # İş ilanı
+        print("2. İş ilanı alınıyor...")
+        cursor.execute("SELECT jobpost_keywords FROM jobposts WHERE id = ?", (job_post_id,))
+        job_result = cursor.fetchone()
+        if not job_result:
+            print("❌ İş ilanı bulunamadı!")
+            raise HTTPException(status_code=404, detail="Job post not found")
         
-        # 2. Başvurulan iş ilanının keywords'ünü al
-        cursor.execute("SELECT jobpost_keywords FROM jobposts WHERE id = ?", (application.jobpostid,))
-        job_row = cursor.fetchone()
-        
-        if not job_row:
-            conn.close()
-            return {"success": False, "message": "Job post not found"}
-        
-        job_keywords = safe_keywords(job_row[0])
-        job_text = " ".join(job_keywords)
-        
-        print(f"Job keywords count: {len(job_keywords)}")
-        
-        # 3. TÜM İŞ İLANLARINI AL (BM25 için)
-        cursor.execute("SELECT id, jobpost_keywords FROM jobposts")
+        job_keywords = safe_keywords(job_result[0])
+        print(f"✅ İlan bulundu: {len(job_keywords)} beceri")
+
+        # KULLANICI PERSPEKTİFİ
+        print("3. Kullanıcı skoru hesaplanıyor...")
+        cursor.execute("SELECT id, jobpost_keywords FROM jobposts ORDER BY id")
         all_jobs = cursor.fetchall()
+        all_job_texts = [" ".join(safe_keywords(row[1])) for row in all_jobs]
         
-        all_job_texts = []
-        job_index_map = {}
+        job_ids = [row[0] for row in all_jobs]
+        job_index = job_ids.index(job_post_id)
         
-        for i, job in enumerate(all_jobs):
-            job_id = job[0]
-            kw = safe_keywords(job[1])
-            job_index_map[job_id] = i
-            all_job_texts.append(" ".join(kw))
+        user_score = hybrid_score_for_jobs(
+            cv_keywords,
+            job_keywords,
+            " ".join(cv_keywords),
+            all_job_texts,
+            job_index
+        )
+        print(f"✅ Kullanıcı skoru: {user_score}%")
+
+        # HEADHUNTER PERSPEKTİFİ
+        print("4. HeadHunter skoru hesaplanıyor...")
+        cursor.execute("SELECT id, keywords FROM cvs ORDER BY id")
+        all_cvs = cursor.fetchall()
+        all_cv_texts = [" ".join(safe_keywords(row[1])) for row in all_cvs]
         
-        # 4. HYBRİD SKOR HESAPLA
-        job_index = job_index_map.get(application.jobpostid)
+        cursor.execute("SELECT id FROM cvs WHERE userid = ?", (user_id,))
+        cv_id_result = cursor.fetchone()
+        if not cv_id_result:
+            raise HTTPException(status_code=404, detail="CV ID not found")
         
-        if job_index is not None:
-            match_score = hybrid_score_for_jobs(
-                cv_keywords,
-                job_keywords,
-                cv_text,
-                all_job_texts,
-                job_index
-            )
-        else:
-            # Fallback: basit kesişim
-            common = set(cv_keywords) & set(job_keywords)
-            match_score = (len(common) / len(job_keywords)) * 100 if job_keywords else 0
+        user_cv_id = cv_id_result[0]
+        cv_ids = [row[0] for row in all_cvs]
+        cv_index = cv_ids.index(user_cv_id)
         
-        print(f"Calculated hybrid match score: {match_score}%")
-        
-        # 5. BAŞVURUYU VERİTABANINA KAYDET
+        headhunter_score = hybrid_score_for_applicants(
+            cv_keywords,
+            job_keywords,
+            all_cv_texts,
+            " ".join(job_keywords),
+            cv_index
+        )
+        print(f"✅ HeadHunter skoru: {headhunter_score}%")
+
+        # VERİTABANINA KAYDET
+        print("5. Veritabanına kaydediliyor...")
         cursor.execute("""
-            INSERT INTO applications (userid, jobpostid, applied_at, status, match_score, cover_letter)
-            VALUES (?, ?, datetime('now'), 'pending', ?, ?)
+            INSERT INTO applications 
+            (userid, jobpostid, match_score, hr_match_score, cover_letter, applied_at, status)
+            VALUES (?, ?, ?, ?, ?, datetime('now'), 'pending')
         """, (
-            application.userid,
-            application.jobpostid,
-            match_score,
-            application.cover_letter if hasattr(application, 'cover_letter') else ""
+            user_id,
+            job_post_id,
+            user_score,
+            headhunter_score,
+            cover
         ))
-        
+
         conn.commit()
-        print(f"Application saved successfully with hybrid score: {match_score}%")
-        print("=" * 50)
-        
-        conn.close()
-        
+        print("✅ Veritabanına kaydedildi!")
+        print("="*60)
+
         return {
             "success": True,
             "message": "Application submitted successfully",
-            "match_score": round(match_score, 2)
-        }
-        
+            "matchScore": user_score,
+            "match_score": user_score  # Frontend için
+}
+
     except Exception as e:
-        print(f"Error in apply endpoint: {e}")
-        conn.close()
-        return {"success": False, "message": str(e)}
+        print(f"❌ HATA: {e}")
+        import traceback
+        traceback.print_exc()
+        conn.rollback()
+        raise HTTPException(status_code=500, detail=str(e))
     
+    finally:
+        conn.close()
 
 
 @app.get("/api/applications/user/{userid}")

@@ -35,7 +35,7 @@ def check_user(userid):
         try:
             print(f"\nBy column name:")
             print(f"id: {user['id']}")
-            print(f"username: {user['username']}")
+            print(f"username: {user['username']}") 
             print(f"email: {user['email']}")
             print(f"role: {user['role']} (Type: {type(user['role'])})")
             print(f"has_cv: {user['has_cv']}")
