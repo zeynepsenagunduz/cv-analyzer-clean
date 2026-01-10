@@ -363,9 +363,7 @@ CV_UPLOAD_PATH = "./static/cvs"
 
 
 
-# Skill synonyms for better matching
-# Format: 'main_skill': ['alternative1', 'alternative2']
-# These work with normalize_text_for_skills() in helper.py
+
 SKILL_SYNONYMS = {
     # Programming Languages
     'javascript': ['js', 'ecmascript', 'es6', 'es2015'],

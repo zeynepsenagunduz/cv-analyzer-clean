@@ -961,9 +961,9 @@ def get_user_profile(userid: str):
         "recommended_skills": recommended_skills
     }
 
-# ============================================================
+
 # CV FILE ENDPOINT
-# ============================================================
+
 
 @app.get("/api/user/cv/{userid}")
 def get_user_cv(userid: str):
@@ -980,12 +980,6 @@ def get_user_cv(userid: str):
         media_type="application/pdf",
         filename=f"cv_{userid}.pdf"
     )
-
-
-# ============================================================
-# APPLICATION ENDPOINTS
-# ============================================================
-
 
 
 @app.post("/api/apply")
@@ -1248,9 +1242,23 @@ def get_headhunter_profile(userid: str):
         "has_jobpost": user[2]
     }
 
-# ============================================================
+
+
+@app.get("/api/headhunter/jobpost/{userid}")
+def get_headhunter_jobpost(userid: str):
+    jobpost_path = f"static/jobposts/{userid}.txt"
+    
+    if not os.path.exists(jobpost_path):
+        raise HTTPException(status_code=404, detail="Job post dosyası bulunamadı")
+    
+    return FileResponse(
+        path=jobpost_path,
+        media_type="text/plain",
+        filename=f"jobpost_{userid}.txt"
+    )
+
 # HEADHUNTER APPLICATIONS PAGE ENDPOINT
-# ============================================================
+
 
 @app.get("/api/headhunter/applications/{userid}")
 def get_headhunter_applications(userid: str):

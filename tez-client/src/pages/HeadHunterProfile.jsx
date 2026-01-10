@@ -176,6 +176,27 @@ export default function HeadHunterProfile() {
                   {profile?.has_jobpost ? 'YAYINDA' : 'PASİF'}
                 </div>
               </div>
+              {profile?.has_jobpost && (
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <button
+                    onClick={() => {
+                      const userid = JSON.parse(window.localStorage.getItem('userData')).userid;
+                      const link = document.createElement('a');
+                      link.href = `http://localhost:8000/api/headhunter/jobpost/${userid}`;
+                      link.download = `jobpost_${profile?.username}.txt`;
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                    className="flex items-center gap-2 text-white bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-semibold rounded-xl text-sm px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Job Post İndir
+                  </button>
+                </div>
+              )}
 
               {!profile?.has_jobpost && (
                 <div className="mt-6 pt-6 border-t border-gray-200">
